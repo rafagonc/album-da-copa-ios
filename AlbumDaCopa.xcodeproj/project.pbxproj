@@ -22,6 +22,8 @@
 		2A106DE218EA55BE00D2FC98 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A106DC618EA55BE00D2FC98 /* CoreData.framework */; };
 		2A106DEA18EA55BE00D2FC98 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A106DE818EA55BE00D2FC98 /* InfoPlist.strings */; };
 		2A106DEC18EA55BE00D2FC98 /* AlbumDaCopaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A106DEB18EA55BE00D2FC98 /* AlbumDaCopaTests.m */; };
+		2A106E3818EA686800D2FC98 /* stickers.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A106E3718EA686800D2FC98 /* stickers.json */; };
+		2A106E4A18EA6CB500D2FC98 /* Sticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A106E4918EA6CB500D2FC98 /* Sticker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		2A106DE718EA55BE00D2FC98 /* AlbumDaCopaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AlbumDaCopaTests-Info.plist"; sourceTree = "<group>"; };
 		2A106DE918EA55BE00D2FC98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A106DEB18EA55BE00D2FC98 /* AlbumDaCopaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumDaCopaTests.m; sourceTree = "<group>"; };
+		2A106E3718EA686800D2FC98 /* stickers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stickers.json; sourceTree = "<group>"; };
+		2A106E4818EA6CB500D2FC98 /* Sticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sticker.h; sourceTree = "<group>"; };
+		2A106E4918EA6CB500D2FC98 /* Sticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sticker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +89,7 @@
 		2A106DB418EA55BE00D2FC98 = {
 			isa = PBXGroup;
 			children = (
+				2A106E3718EA686800D2FC98 /* stickers.json */,
 				2A106DC818EA55BE00D2FC98 /* AlbumDaCopa */,
 				2A106DE518EA55BE00D2FC98 /* AlbumDaCopaTests */,
 				2A106DBF18EA55BE00D2FC98 /* Frameworks */,
@@ -120,6 +126,8 @@
 				2A106DD718EA55BE00D2FC98 /* Images.xcassets */,
 				2A106DD418EA55BE00D2FC98 /* AlbumDaCopa.xcdatamodeld */,
 				2A106DC918EA55BE00D2FC98 /* Supporting Files */,
+				2A106E4818EA6CB500D2FC98 /* Sticker.h */,
+				2A106E4918EA6CB500D2FC98 /* Sticker.m */,
 			);
 			path = AlbumDaCopa;
 			sourceTree = "<group>";
@@ -230,6 +238,7 @@
 			files = (
 				2A106DCD18EA55BE00D2FC98 /* InfoPlist.strings in Resources */,
 				2A106DD818EA55BE00D2FC98 /* Images.xcassets in Resources */,
+				2A106E3818EA686800D2FC98 /* stickers.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A106E4A18EA6CB500D2FC98 /* Sticker.m in Sources */,
 				2A106DD618EA55BE00D2FC98 /* AlbumDaCopa.xcdatamodeld in Sources */,
 				2A106DD318EA55BE00D2FC98 /* AppDelegate.m in Sources */,
 				2A106DCF18EA55BE00D2FC98 /* main.m in Sources */,

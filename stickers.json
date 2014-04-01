@@ -1,0 +1,3842 @@
+[
+  {
+    "section" : "Introduction",
+    "name" : "Panini special sticker",
+    "type" : "metal",
+    "index" : "00"
+  },
+  {
+    "section" : "Introduction",
+    "name" : "FIFA - My game is fair play",
+    "type" : "metal",
+    "index" : "1"
+  },
+  {
+    "section" : "Introduction",
+    "name" : "Official Emblem (puzzle 1)",
+    "type" : "metal",
+    "index" : "2"
+  },
+  {
+    "section" : "Introduction",
+    "name" : "Official Emblem (puzzle 2)",
+    "type" : "metal",
+    "index" : "3"
+  },
+  {
+    "section" : "Introduction",
+    "name" : "Official Mascot (puzzle 2)",
+    "type" : "metal",
+    "index" : "4"
+  },
+  {
+    "section" : "Introduction",
+    "name" : "Official Mascot (puzzle 1)",
+    "type" : "metal",
+    "index" : "5"
+  },
+  {
+    "section" : "Introduction",
+    "name" : "FIFA World Cup Trophy",
+    "type" : "metal",
+    "index" : "6"
+  },
+  {
+    "section" : "Introduction",
+    "name" : "Brazuca - Official Ball",
+    "type" : "metal",
+    "index" : "7"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Estádio Mineirão - Belo Horizonte (puzzle 1)",
+    "type" : "-",
+    "index" : "8"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Estádio Mineirão - Belo Horizonte (puzzle 2)",
+    "type" : "-",
+    "index" : "9"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Estádio Nacional - Brasília (puzzle 1)",
+    "type" : "-",
+    "index" : "10"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Estádio Nacional - Brasília (puzzle 2)",
+    "type" : "-",
+    "index" : "11"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Arena Pantanal - Cuiabá (puzzle 1)",
+    "type" : "-",
+    "index" : "12"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Arena Pantanal - Cuiabá (puzzle 2)",
+    "type" : "-",
+    "index" : "13"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Arena da Baixada - Curitiba (puzzle 1)",
+    "type" : "-",
+    "index" : "14"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Arena da Baixada - Curitiba (puzzle 2)",
+    "type" : "-",
+    "index" : "15"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Estádio Castelão - Fortaleza (puzzle 1)",
+    "type" : "-",
+    "index" : "16"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Estádio Castelão - Fortaleza (puzzle 2)",
+    "type" : "-",
+    "index" : "17"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Arena Amazônia - Manaus (puzzle 1)",
+    "type" : "-",
+    "index" : "18"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Arena Amazônia - Manaus (puzzle 2)",
+    "type" : "-",
+    "index" : "19"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Estádio das Dunas - Natal (puzzle 1)",
+    "type" : "-",
+    "index" : "20"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Estádio das Dunas - Natal (puzzle 2)",
+    "type" : "-",
+    "index" : "21"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Estádio Beira-Rio - Porto Alegre (puzzle 1)",
+    "type" : "-",
+    "index" : "22"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Estádio Beira-Rio - Porto Alegre (puzzle 2)",
+    "type" : "-",
+    "index" : "23"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Arena Pernambuco - Recife (puzzle 1)",
+    "type" : "-",
+    "index" : "24"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Arena Pernambuco - Recife (puzzle 2)",
+    "type" : "-",
+    "index" : "25"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Estádio Maracanã - Rio de Janeiro (puzzle 1)",
+    "type" : "-",
+    "index" : "26"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Estádio Maracanã - Rio de Janeiro (puzzle 2)",
+    "type" : "-",
+    "index" : "27"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Arena Fonte Nova - Salvador (puzzle 1)",
+    "type" : "-",
+    "index" : "28"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Arena Fonte Nova - Salvador (puzzle 2)",
+    "type" : "-",
+    "index" : "29"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Arena Corinthians - São Paolo (puzzle 1)",
+    "type" : "-",
+    "index" : "30"
+  },
+  {
+    "section" : "Stadiums",
+    "name" : "Arena Corinthians - São Paolo (puzzle 2)",
+    "type" : "-",
+    "index" : "31"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "32"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "33"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "Júlio César",
+    "type" : "-",
+    "index" : "34"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "Thiago Silva",
+    "type" : "-",
+    "index" : "35"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "David Luiz",
+    "type" : "-",
+    "index" : "36"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "Dani Alves",
+    "type" : "-",
+    "index" : "37"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "Marcelo",
+    "type" : "-",
+    "index" : "38"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "Dante",
+    "type" : "-",
+    "index" : "39"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "Ramires",
+    "type" : "-",
+    "index" : "40"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "Paulinho",
+    "type" : "-",
+    "index" : "41"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "Luiz Gustavo",
+    "type" : "-",
+    "index" : "42"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "Hernanes",
+    "type" : "-",
+    "index" : "43"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "Oscar",
+    "type" : "-",
+    "index" : "44"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "Bernard",
+    "type" : "-",
+    "index" : "45"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "Willian",
+    "type" : "-",
+    "index" : "46"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "Robinho",
+    "type" : "-",
+    "index" : "47"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "Neymar Jr.",
+    "type" : "-",
+    "index" : "48"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "Hulk",
+    "type" : "-",
+    "index" : "49"
+  },
+  {
+    "section" : "Brasil",
+    "name" : "Fred",
+    "type" : "-",
+    "index" : "50"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "51"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "52"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Stipe Pletikosa",
+    "type" : "-",
+    "index" : "53"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Darijo Srna",
+    "type" : "-",
+    "index" : "54"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Vedran Ćorluka",
+    "type" : "-",
+    "index" : "55"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Ivan Strinić",
+    "type" : "-",
+    "index" : "56"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Dejan Lovren",
+    "type" : "-",
+    "index" : "57"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Domagoj Vida",
+    "type" : "-",
+    "index" : "58"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Šime Vrsaljko",
+    "type" : "-",
+    "index" : "59"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Ognjen Vukojević",
+    "type" : "-",
+    "index" : "60"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Niko Kranjčar",
+    "type" : "-",
+    "index" : "61"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Luka Modrić",
+    "type" : "-",
+    "index" : "62"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Ivan Rakitić",
+    "type" : "-",
+    "index" : "63"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Mateo Kovačić",
+    "type" : "-",
+    "index" : "64"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Ivan Perišić",
+    "type" : "-",
+    "index" : "65"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Ivica Olić",
+    "type" : "-",
+    "index" : "66"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Eduardo",
+    "type" : "-",
+    "index" : "67"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Nikica Jelavić",
+    "type" : "-",
+    "index" : "68"
+  },
+  {
+    "section" : "Hrvatska",
+    "name" : "Mario Mandžukić",
+    "type" : "-",
+    "index" : "69"
+  },
+  {
+    "section" : "México",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "70"
+  },
+  {
+    "section" : "México",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "71"
+  },
+  {
+    "section" : "México",
+    "name" : "Jesús Corona",
+    "type" : "-",
+    "index" : "72"
+  },
+  {
+    "section" : "México",
+    "name" : "Rafael Márquez",
+    "type" : "-",
+    "index" : "73"
+  },
+  {
+    "section" : "México",
+    "name" : "Francisco Rodríguez",
+    "type" : "-",
+    "index" : "74"
+  },
+  {
+    "section" : "México",
+    "name" : "Héctor Moreno",
+    "type" : "-",
+    "index" : "75"
+  },
+  {
+    "section" : "México",
+    "name" : "Miguel Layún",
+    "type" : "-",
+    "index" : "76"
+  },
+  {
+    "section" : "México",
+    "name" : "Paul Aguilar",
+    "type" : "-",
+    "index" : "77"
+  },
+  {
+    "section" : "México",
+    "name" : "Diego Reyes",
+    "type" : "-",
+    "index" : "78"
+  },
+  {
+    "section" : "México",
+    "name" : "Andrés Guardado",
+    "type" : "-",
+    "index" : "79"
+  },
+  {
+    "section" : "México",
+    "name" : "Héctor Herrera",
+    "type" : "-",
+    "index" : "80"
+  },
+  {
+    "section" : "México",
+    "name" : "Carlos Peña",
+    "type" : "-",
+    "index" : "81"
+  },
+  {
+    "section" : "México",
+    "name" : "Luis Montes",
+    "type" : "-",
+    "index" : "82"
+  },
+  {
+    "section" : "México",
+    "name" : "Giovani Dos Santos",
+    "type" : "-",
+    "index" : "83"
+  },
+  {
+    "section" : "México",
+    "name" : "Aldo De Nigris",
+    "type" : "-",
+    "index" : "84"
+  },
+  {
+    "section" : "México",
+    "name" : "Javier Hernández",
+    "type" : "-",
+    "index" : "85"
+  },
+  {
+    "section" : "México",
+    "name" : "Oribe Peralta",
+    "type" : "-",
+    "index" : "86"
+  },
+  {
+    "section" : "México",
+    "name" : "Raúl Jiménez",
+    "type" : "-",
+    "index" : "87"
+  },
+  {
+    "section" : "México",
+    "name" : "Moisés Muñoz",
+    "type" : "-",
+    "index" : "88"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "89"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "90"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Charles Itandje",
+    "type" : "-",
+    "index" : "91"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Aurélien Chedjou",
+    "type" : "-",
+    "index" : "92"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Nicolas Nikoulou",
+    "type" : "-",
+    "index" : "93"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Dany Nounkeu",
+    "type" : "-",
+    "index" : "94"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Henri Bedimo",
+    "type" : "-",
+    "index" : "95"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Benoît Assou-Ekotto",
+    "type" : "-",
+    "index" : "96"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Joel Matip",
+    "type" : "-",
+    "index" : "97"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Stéphane Mbia",
+    "type" : "-",
+    "index" : "98"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Alex Song",
+    "type" : "-",
+    "index" : "99"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Eyong Enoh",
+    "type" : "-",
+    "index" : "100"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Jean Makoun",
+    "type" : "-",
+    "index" : "101"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Landry Nguémo",
+    "type" : "-",
+    "index" : "102"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Vincent Aboubakar",
+    "type" : "-",
+    "index" : "103"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Eric Choupo-Moting",
+    "type" : "-",
+    "index" : "104"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Benjamin Moukandjo",
+    "type" : "-",
+    "index" : "105"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Pierre Webó",
+    "type" : "-",
+    "index" : "106"
+  },
+  {
+    "section" : "Cameroun",
+    "name" : "Samuel Eto'o",
+    "type" : "-",
+    "index" : "107"
+  },
+  {
+    "section" : "España",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "108"
+  },
+  {
+    "section" : "España",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "109"
+  },
+  {
+    "section" : "España",
+    "name" : "Iker Casillas",
+    "type" : "-",
+    "index" : "110"
+  },
+  {
+    "section" : "España",
+    "name" : "Sergio Ramos",
+    "type" : "-",
+    "index" : "111"
+  },
+  {
+    "section" : "España",
+    "name" : "Gerard Piqué",
+    "type" : "-",
+    "index" : "112"
+  },
+  {
+    "section" : "España",
+    "name" : "Raúl Albiol",
+    "type" : "-",
+    "index" : "113"
+  },
+  {
+    "section" : "España",
+    "name" : "Álvaro Arbeloa",
+    "type" : "-",
+    "index" : "114"
+  },
+  {
+    "section" : "España",
+    "name" : "Jordi Alba",
+    "type" : "-",
+    "index" : "115"
+  },
+  {
+    "section" : "España",
+    "name" : "Xabi Alonso",
+    "type" : "-",
+    "index" : "116"
+  },
+  {
+    "section" : "España",
+    "name" : "Sergio Busquets",
+    "type" : "-",
+    "index" : "117"
+  },
+  {
+    "section" : "España",
+    "name" : "Havi Hernández",
+    "type" : "-",
+    "index" : "118"
+  },
+  {
+    "section" : "España",
+    "name" : "Andrés Iniesta",
+    "type" : "-",
+    "index" : "119"
+  },
+  {
+    "section" : "España",
+    "name" : "Cesc Fábregas",
+    "type" : "-",
+    "index" : "120"
+  },
+  {
+    "section" : "España",
+    "name" : "David Silva",
+    "type" : "-",
+    "index" : "121"
+  },
+  {
+    "section" : "España",
+    "name" : "Jesús Navas",
+    "type" : "-",
+    "index" : "122"
+  },
+  {
+    "section" : "España",
+    "name" : "Juan Mata",
+    "type" : "-",
+    "index" : "123"
+  },
+  {
+    "section" : "España",
+    "name" : "Pedro Rodríguez",
+    "type" : "-",
+    "index" : "124"
+  },
+  {
+    "section" : "España",
+    "name" : "David Villa",
+    "type" : "-",
+    "index" : "125"
+  },
+  {
+    "section" : "España",
+    "name" : "Álvaro Negredo",
+    "type" : "-",
+    "index" : "126"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "127"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "128"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Jasper Cillessen",
+    "type" : "-",
+    "index" : "129"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Daryl Janmaat",
+    "type" : "-",
+    "index" : "130"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Stefan De Vrij",
+    "type" : "-",
+    "index" : "131"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Ron Vlaar",
+    "type" : "-",
+    "index" : "132"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Bruno Martins Indi",
+    "type" : "-",
+    "index" : "133"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Daley Blind",
+    "type" : "-",
+    "index" : "134"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Jordy Clasie",
+    "type" : "-",
+    "index" : "135"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Nigel De Jong",
+    "type" : "-",
+    "index" : "136"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Kevin Strootman",
+    "type" : "-",
+    "index" : "137"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Rafael Van Der Vaart",
+    "type" : "-",
+    "index" : "138"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Wesley Sneijder",
+    "type" : "-",
+    "index" : "139"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Arjen Robben",
+    "type" : "-",
+    "index" : "140"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Memphis Depay",
+    "type" : "-",
+    "index" : "141"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Dirk Kuyt",
+    "type" : "-",
+    "index" : "142"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Jeremain Lens",
+    "type" : "-",
+    "index" : "143"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Klaas-Jan Huntelaar",
+    "type" : "-",
+    "index" : "144"
+  },
+  {
+    "section" : "Nederland",
+    "name" : "Robin Van Persie",
+    "type" : "-",
+    "index" : "145"
+  },
+  {
+    "section" : "Chile",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "146"
+  },
+  {
+    "section" : "Chile",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "147"
+  },
+  {
+    "section" : "Chile",
+    "name" : "Claudio Bravo",
+    "type" : "-",
+    "index" : "148"
+  },
+  {
+    "section" : "Chile",
+    "name" : "Marcos González",
+    "type" : "-",
+    "index" : "149"
+  },
+  {
+    "section" : "Chile",
+    "name" : "Eugenio Mena",
+    "type" : "-",
+    "index" : "150"
+  },
+  {
+    "section" : "Chile",
+    "name" : "Gonzalo Jara",
+    "type" : "-",
+    "index" : "151"
+  },
+  {
+    "section" : "Chile",
+    "name" : "José Rojas",
+    "type" : "-",
+    "index" : "152"
+  },
+  {
+    "section" : "Chile",
+    "name" : "Gary Medel",
+    "type" : "-",
+    "index" : "153"
+  },
+  {
+    "section" : "Chile",
+    "name" : "Mauricio Isla",
+    "type" : "-",
+    "index" : "154"
+  },
+  {
+    "section" : "Chile",
+    "name" : "Jorge Valdivia",
+    "type" : "-",
+    "index" : "155"
+  },
+  {
+    "section" : "Chile",
+    "name" : "David Pizarro",
+    "type" : "-",
+    "index" : "156"
+  },
+  {
+    "section" : "Chile",
+    "name" : "Matías Fernández",
+    "type" : "-",
+    "index" : "157"
+  },
+  {
+    "section" : "Chile",
+    "name" : "Marcelo Díaz",
+    "type" : "-",
+    "index" : "158"
+  },
+  {
+    "section" : "Chile",
+    "name" : "Arturo Vidal",
+    "type" : "-",
+    "index" : "159"
+  },
+  {
+    "section" : "Chile",
+    "name" : "Jean Beausejour",
+    "type" : "-",
+    "index" : "160"
+  },
+  {
+    "section" : "Chile",
+    "name" : "Charles Aránguiz",
+    "type" : "-",
+    "index" : "161"
+  },
+  {
+    "section" : "Chile",
+    "name" : "Mauricio Pinilla",
+    "type" : "-",
+    "index" : "162"
+  },
+  {
+    "section" : "Chile",
+    "name" : "Eduardo Vargas",
+    "type" : "-",
+    "index" : "163"
+  },
+  {
+    "section" : "Chile",
+    "name" : "Alexis Sánchez",
+    "type" : "-",
+    "index" : "164"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "165"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "166"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Mathew Ryan",
+    "type" : "-",
+    "index" : "167"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Lucas Neill",
+    "type" : "-",
+    "index" : "168"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Jason Davidson",
+    "type" : "-",
+    "index" : "169"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Mark Milligan",
+    "type" : "-",
+    "index" : "170"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Ivan Franjic",
+    "type" : "-",
+    "index" : "171"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Rhys Williams",
+    "type" : "-",
+    "index" : "172"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Brett Holman",
+    "type" : "-",
+    "index" : "173"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Mile Jedinak",
+    "type" : "-",
+    "index" : "174"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Matt McKay",
+    "type" : "-",
+    "index" : "175"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Mark Bresciano",
+    "type" : "-",
+    "index" : "176"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Tom Rogic",
+    "type" : "-",
+    "index" : "177"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Tim Cahill",
+    "type" : "-",
+    "index" : "178"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Dario Vidosic",
+    "type" : "-",
+    "index" : "179"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Tommy Oar",
+    "type" : "-",
+    "index" : "180"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Ben Halloran",
+    "type" : "-",
+    "index" : "181"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Mathew Leckie",
+    "type" : "-",
+    "index" : "182"
+  },
+  {
+    "section" : "Australia",
+    "name" : "Joshua Kennedy",
+    "type" : "-",
+    "index" : "183"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "184"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "185"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "David Ospina",
+    "type" : "-",
+    "index" : "186"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "Mario Yepes",
+    "type" : "-",
+    "index" : "187"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "Cristian Zapata",
+    "type" : "-",
+    "index" : "188"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "Luis Perea",
+    "type" : "-",
+    "index" : "189"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "Pablo Armero",
+    "type" : "-",
+    "index" : "190"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "Camilo Zuniga",
+    "type" : "-",
+    "index" : "191"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "Aldo Ramirez",
+    "type" : "-",
+    "index" : "192"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "Carlos Sanchez",
+    "type" : "-",
+    "index" : "193"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "Abel Aguilar",
+    "type" : "-",
+    "index" : "194"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "Fredy Guarin",
+    "type" : "-",
+    "index" : "195"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "Juan Cuadrado",
+    "type" : "-",
+    "index" : "196"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "Macnelly Torres",
+    "type" : "-",
+    "index" : "197"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "Carlos Bacca",
+    "type" : "-",
+    "index" : "198"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "James Rodriguez",
+    "type" : "-",
+    "index" : "199"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "Teofilo Gutierrez",
+    "type" : "-",
+    "index" : "200"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "Jackson Martinez",
+    "type" : "-",
+    "index" : "201"
+  },
+  {
+    "section" : "Colombia",
+    "name" : "Falcao Colombia",
+    "type" : "-",
+    "index" : "202"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "203"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "204"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Orestis Karnezis",
+    "type" : "-",
+    "index" : "205"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Vasilis Torosidis",
+    "type" : "-",
+    "index" : "206"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Sokratis Papastathopoulos",
+    "type" : "-",
+    "index" : "207"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Giannis Maniatis",
+    "type" : "-",
+    "index" : "208"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Dimitris Siovas",
+    "type" : "-",
+    "index" : "209"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Jose Holebas",
+    "type" : "-",
+    "index" : "210"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Kostas Manolas",
+    "type" : "-",
+    "index" : "211"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Andreas Samaris",
+    "type" : "-",
+    "index" : "212"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Giorgos Karagounis",
+    "type" : "-",
+    "index" : "213"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Kostas Katsouranis",
+    "type" : "-",
+    "index" : "214"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Alexandros Tziolis",
+    "type" : "-",
+    "index" : "215"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Panagiotis Kone",
+    "type" : "-",
+    "index" : "216"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Sotiris Ninis",
+    "type" : "-",
+    "index" : "217"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Giorgos Samaras",
+    "type" : "-",
+    "index" : "218"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Dimitris Salpingidis",
+    "type" : "-",
+    "index" : "219"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Fanis Gekas",
+    "type" : "-",
+    "index" : "220"
+  },
+  {
+    "section" : "Hellas",
+    "name" : "Kostas Mitroglou",
+    "type" : "-",
+    "index" : "221"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "222"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "223"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Boubacar Barry",
+    "type" : "-",
+    "index" : "224"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Kolo Toure",
+    "type" : "-",
+    "index" : "225"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Serge Aurier",
+    "type" : "-",
+    "index" : "226"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Souleymane Bamba",
+    "type" : "-",
+    "index" : "227"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Arthur Boka",
+    "type" : "-",
+    "index" : "228"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Benjamin Angoua",
+    "type" : "-",
+    "index" : "229"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Didier Zokora",
+    "type" : "-",
+    "index" : "230"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Yaya Toure",
+    "type" : "-",
+    "index" : "231"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Cheick Tiote",
+    "type" : "-",
+    "index" : "232"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Jean-Jacques Gosso",
+    "type" : "-",
+    "index" : "233"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Serey Die",
+    "type" : "-",
+    "index" : "234"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Romaric",
+    "type" : "-",
+    "index" : "235"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Gervinho",
+    "type" : "-",
+    "index" : "236"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Salomon Kalou",
+    "type" : "-",
+    "index" : "237"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Wilfried Bony",
+    "type" : "-",
+    "index" : "238"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Lacina Traore",
+    "type" : "-",
+    "index" : "239"
+  },
+  {
+    "section" : "Côte d'Ivoire",
+    "name" : "Didier Drogba",
+    "type" : "-",
+    "index" : "240"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "241"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "242"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Eiji Kawashima",
+    "type" : "-",
+    "index" : "243"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Maya Yoshida",
+    "type" : "-",
+    "index" : "244"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Yasuyuki Konno",
+    "type" : "-",
+    "index" : "245"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Atsuto Uchida",
+    "type" : "-",
+    "index" : "246"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Yuto Nagatomo",
+    "type" : "-",
+    "index" : "247"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Gotoku Sakai",
+    "type" : "-",
+    "index" : "248"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Hiroki Sakai",
+    "type" : "-",
+    "index" : "249"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Masato Morishige",
+    "type" : "-",
+    "index" : "250"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Yasuhito Endo",
+    "type" : "-",
+    "index" : "251"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Makoto Hasebe",
+    "type" : "-",
+    "index" : "252"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Keisuke Honda",
+    "type" : "-",
+    "index" : "253"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Hotaru Yamaguchi",
+    "type" : "-",
+    "index" : "254"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Hiroshi Kiyotake",
+    "type" : "-",
+    "index" : "255"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Shinji Kagawa",
+    "type" : "-",
+    "index" : "256"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Shinji Okazaki",
+    "type" : "-",
+    "index" : "257"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Yoichiro Kakitani",
+    "type" : "-",
+    "index" : "258"
+  },
+  {
+    "section" : "Japan",
+    "name" : "Yuya Osako",
+    "type" : "-",
+    "index" : "259"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "260"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "261"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Fernando Muslera",
+    "type" : "-",
+    "index" : "262"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Diego Lugano",
+    "type" : "-",
+    "index" : "263"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Diego Godin",
+    "type" : "-",
+    "index" : "264"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Maxi Pereira",
+    "type" : "-",
+    "index" : "265"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Martin Caceres",
+    "type" : "-",
+    "index" : "266"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Alvaro Pereira",
+    "type" : "-",
+    "index" : "267"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Walter Gargano",
+    "type" : "-",
+    "index" : "268"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Egidio Arevalo Rios",
+    "type" : "-",
+    "index" : "269"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Diego Perez",
+    "type" : "-",
+    "index" : "270"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Alvaro Gonzalez",
+    "type" : "-",
+    "index" : "271"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Cristian Rodriguez",
+    "type" : "-",
+    "index" : "272"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Gaston Ramirez",
+    "type" : "-",
+    "index" : "273"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Christian Stuani",
+    "type" : "-",
+    "index" : "274"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Abel Hernandez",
+    "type" : "-",
+    "index" : "275"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Diego Forlan",
+    "type" : "-",
+    "index" : "276"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Edinson Cavani",
+    "type" : "-",
+    "index" : "277"
+  },
+  {
+    "section" : "Uruguay",
+    "name" : "Luis Suarez",
+    "type" : "-",
+    "index" : "278"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "279"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "280"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Keylor Navas",
+    "type" : "-",
+    "index" : "281"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Giancarlo Gonzalez",
+    "type" : "-",
+    "index" : "282"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Michael Umana",
+    "type" : "-",
+    "index" : "283"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Cristian Gamboa",
+    "type" : "-",
+    "index" : "284"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Johnny Acosta",
+    "type" : "-",
+    "index" : "285"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Junior Diaz",
+    "type" : "-",
+    "index" : "286"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Roy Miller",
+    "type" : "-",
+    "index" : "287"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Ariel Rodriguez",
+    "type" : "-",
+    "index" : "288"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Christian Bolanos",
+    "type" : "-",
+    "index" : "289"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Jose Miguel Cubero",
+    "type" : "-",
+    "index" : "290"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Celso Borges",
+    "type" : "-",
+    "index" : "291"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Michael Barrantes",
+    "type" : "-",
+    "index" : "292"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Yeltsin Tejeda",
+    "type" : "-",
+    "index" : "293"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Diego Calvo",
+    "type" : "-",
+    "index" : "294"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Bryan Ruiz",
+    "type" : "-",
+    "index" : "295"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Joel Campbell",
+    "type" : "-",
+    "index" : "296"
+  },
+  {
+    "section" : "Costa Rica",
+    "name" : "Alvaro Saborio",
+    "type" : "-",
+    "index" : "297"
+  },
+  {
+    "section" : "England",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "298"
+  },
+  {
+    "section" : "England",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "299"
+  },
+  {
+    "section" : "England",
+    "name" : "Joe Hart",
+    "type" : "-",
+    "index" : "300"
+  },
+  {
+    "section" : "England",
+    "name" : "Ashley Cole",
+    "type" : "-",
+    "index" : "301"
+  },
+  {
+    "section" : "England",
+    "name" : "Glen Johnson",
+    "type" : "-",
+    "index" : "302"
+  },
+  {
+    "section" : "England",
+    "name" : "Gary Cahill",
+    "type" : "-",
+    "index" : "303"
+  },
+  {
+    "section" : "England",
+    "name" : "Phil Jagielka",
+    "type" : "-",
+    "index" : "304"
+  },
+  {
+    "section" : "England",
+    "name" : "Kyle Walker",
+    "type" : "-",
+    "index" : "305"
+  },
+  {
+    "section" : "England",
+    "name" : "Leighton Baines",
+    "type" : "-",
+    "index" : "306"
+  },
+  {
+    "section" : "England",
+    "name" : "Stodd Gerrard",
+    "type" : "-",
+    "index" : "307"
+  },
+  {
+    "section" : "England",
+    "name" : "Frank Lampard",
+    "type" : "-",
+    "index" : "308"
+  },
+  {
+    "section" : "England",
+    "name" : "Michael Carrick",
+    "type" : "-",
+    "index" : "309"
+  },
+  {
+    "section" : "England",
+    "name" : "Jack Wilshere",
+    "type" : "-",
+    "index" : "310"
+  },
+  {
+    "section" : "England",
+    "name" : "James Milner",
+    "type" : "-",
+    "index" : "311"
+  },
+  {
+    "section" : "England",
+    "name" : "Andros Townsend",
+    "type" : "-",
+    "index" : "312"
+  },
+  {
+    "section" : "England",
+    "name" : "Alex Oxlade-Chamberlain",
+    "type" : "-",
+    "index" : "313"
+  },
+  {
+    "section" : "England",
+    "name" : "Danny Welbeck",
+    "type" : "-",
+    "index" : "314"
+  },
+  {
+    "section" : "England",
+    "name" : "Daniel Sturridge",
+    "type" : "-",
+    "index" : "315"
+  },
+  {
+    "section" : "England",
+    "name" : "Wayne Rooney",
+    "type" : "-",
+    "index" : "316"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "317"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "318"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Gianluigi Buffon",
+    "type" : "-",
+    "index" : "319"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Andrea Barzagli",
+    "type" : "-",
+    "index" : "320"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Leonardo Bonucci",
+    "type" : "-",
+    "index" : "321"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Giorgio Chiellini",
+    "type" : "-",
+    "index" : "322"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Ignazio Abate",
+    "type" : "-",
+    "index" : "323"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Mattia De Sciglio",
+    "type" : "-",
+    "index" : "324"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Tiago Motta",
+    "type" : "-",
+    "index" : "325"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Daniele De Rossi",
+    "type" : "-",
+    "index" : "326"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Andrea Pirlo",
+    "type" : "-",
+    "index" : "327"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Riccardo Montolivo",
+    "type" : "-",
+    "index" : "328"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Claudio Marchisio",
+    "type" : "-",
+    "index" : "329"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Emanuele Giaccherini",
+    "type" : "-",
+    "index" : "330"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Antonio Candreva",
+    "type" : "-",
+    "index" : "331"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Alessio Cerci",
+    "type" : "-",
+    "index" : "332"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Alberto Gilardino",
+    "type" : "-",
+    "index" : "333"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Giuseppe Rossi",
+    "type" : "-",
+    "index" : "334"
+  },
+  {
+    "section" : "Italia",
+    "name" : "Mario Balotelli",
+    "type" : "-",
+    "index" : "335"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "336"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "337"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Diego Benaglio",
+    "type" : "-",
+    "index" : "338"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Stephan Lichsteiner",
+    "type" : "-",
+    "index" : "339"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Ricrado Rodriguez",
+    "type" : "-",
+    "index" : "340"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Steve Von Bergan",
+    "type" : "-",
+    "index" : "341"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Fabian Schär",
+    "type" : "-",
+    "index" : "342"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Philippe Senderos",
+    "type" : "-",
+    "index" : "343"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Johan Djourou",
+    "type" : "-",
+    "index" : "344"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Tranquillo Barnetta",
+    "type" : "-",
+    "index" : "345"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Gökhan Inler",
+    "type" : "-",
+    "index" : "346"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Valon Behrami",
+    "type" : "-",
+    "index" : "347"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Blerim Džemaili",
+    "type" : "-",
+    "index" : "348"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Granit Xhaka",
+    "type" : "-",
+    "index" : "349"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Valentin Stocker",
+    "type" : "-",
+    "index" : "350"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Xherdan Shaqiri",
+    "type" : "-",
+    "index" : "351"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Admir Mehmedi",
+    "type" : "-",
+    "index" : "352"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Eren Derdiyok",
+    "type" : "-",
+    "index" : "353"
+  },
+  {
+    "section" : "Switzerland",
+    "name" : "Haris Seferović",
+    "type" : "-",
+    "index" : "354"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "355"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "356"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Alexander Domínguez",
+    "type" : "-",
+    "index" : "357"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Walter Ayoví",
+    "type" : "-",
+    "index" : "358"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Frickson Erazo",
+    "type" : "-",
+    "index" : "359"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Jorge Guagua",
+    "type" : "-",
+    "index" : "360"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Gabriel Achilier",
+    "type" : "-",
+    "index" : "361"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Juan Carlos Paredes",
+    "type" : "-",
+    "index" : "362"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Édison Méndez",
+    "type" : "-",
+    "index" : "363"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Enner Valencia",
+    "type" : "-",
+    "index" : "364"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Luis Saritama",
+    "type" : "-",
+    "index" : "365"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Christian Noboa",
+    "type" : "-",
+    "index" : "366"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Segundo Castillo",
+    "type" : "-",
+    "index" : "367"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Joao Rojas",
+    "type" : "-",
+    "index" : "368"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Antonio Valencia",
+    "type" : "-",
+    "index" : "369"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Renato Ibarra",
+    "type" : "-",
+    "index" : "370"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Jefferson Montero",
+    "type" : "-",
+    "index" : "371"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Felipe Caicedo",
+    "type" : "-",
+    "index" : "372"
+  },
+  {
+    "section" : "Ecuador",
+    "name" : "Jaime Ayoví",
+    "type" : "-",
+    "index" : "373"
+  },
+  {
+    "section" : "France",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "374"
+  },
+  {
+    "section" : "France",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "375"
+  },
+  {
+    "section" : "France",
+    "name" : "Hugo Lloris",
+    "type" : "-",
+    "index" : "376"
+  },
+  {
+    "section" : "France",
+    "name" : "Patrice Evra",
+    "type" : "-",
+    "index" : "377"
+  },
+  {
+    "section" : "France",
+    "name" : "Mathieu Debuchy",
+    "type" : "-",
+    "index" : "378"
+  },
+  {
+    "section" : "France",
+    "name" : "Raphaël Varane",
+    "type" : "-",
+    "index" : "379"
+  },
+  {
+    "section" : "France",
+    "name" : "Laurent Koscielny",
+    "type" : "-",
+    "index" : "380"
+  },
+  {
+    "section" : "France",
+    "name" : "Mamadou Sakho",
+    "type" : "-",
+    "index" : "381"
+  },
+  {
+    "section" : "France",
+    "name" : "Éric Abidal",
+    "type" : "-",
+    "index" : "382"
+  },
+  {
+    "section" : "France",
+    "name" : "Moussa Sissoko",
+    "type" : "-",
+    "index" : "383"
+  },
+  {
+    "section" : "France",
+    "name" : "Yohan Cabaye",
+    "type" : "-",
+    "index" : "384"
+  },
+  {
+    "section" : "France",
+    "name" : "Blaise Matuidi",
+    "type" : "-",
+    "index" : "385"
+  },
+  {
+    "section" : "France",
+    "name" : "Paul Pogba",
+    "type" : "-",
+    "index" : "386"
+  },
+  {
+    "section" : "France",
+    "name" : "Mathieu Valbuena",
+    "type" : "-",
+    "index" : "387"
+  },
+  {
+    "section" : "France",
+    "name" : "Samir Nasri",
+    "type" : "-",
+    "index" : "388"
+  },
+  {
+    "section" : "France",
+    "name" : "Franck Ribéry",
+    "type" : "-",
+    "index" : "389"
+  },
+  {
+    "section" : "France",
+    "name" : "Loïc Rémy",
+    "type" : "-",
+    "index" : "390"
+  },
+  {
+    "section" : "France",
+    "name" : "Olivier Giroud",
+    "type" : "-",
+    "index" : "391"
+  },
+  {
+    "section" : "France",
+    "name" : "Karim Benzema",
+    "type" : "-",
+    "index" : "392"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "393"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "394"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Noel Valladares",
+    "type" : "-",
+    "index" : "395"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Emilio Izaguirre",
+    "type" : "-",
+    "index" : "396"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Víctor Bernárdez",
+    "type" : "-",
+    "index" : "397"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Maynor Figueroa",
+    "type" : "-",
+    "index" : "398"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Juan Carlos Garcia",
+    "type" : "-",
+    "index" : "399"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Brayan Beckeles",
+    "type" : "-",
+    "index" : "400"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Jorge Carlos",
+    "type" : "-",
+    "index" : "401"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Arnold Peralta",
+    "type" : "-",
+    "index" : "402"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Boniek Garcia",
+    "type" : "-",
+    "index" : "403"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Roger Espinoza",
+    "type" : "-",
+    "index" : "404"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Luis Garrido",
+    "type" : "-",
+    "index" : "405"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Wilson Palacios",
+    "type" : "-",
+    "index" : "406"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Andy Najar",
+    "type" : "-",
+    "index" : "407"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Jerry Palacios",
+    "type" : "-",
+    "index" : "408"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Marvin Chávez",
+    "type" : "-",
+    "index" : "409"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Jerry Bengtson",
+    "type" : "-",
+    "index" : "410"
+  },
+  {
+    "section" : "Honduras",
+    "name" : "Carlo Costly",
+    "type" : "-",
+    "index" : "411"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "412"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "413"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Sergio Romero",
+    "type" : "-",
+    "index" : "414"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Pablo Zabaleta",
+    "type" : "-",
+    "index" : "415"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Ezequiel Garay",
+    "type" : "-",
+    "index" : "416"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Federico Fernández",
+    "type" : "-",
+    "index" : "417"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Hugo Campagnaro",
+    "type" : "-",
+    "index" : "418"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Marcos Rojo",
+    "type" : "-",
+    "index" : "419"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Lucas Biglia",
+    "type" : "-",
+    "index" : "420"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Javier Mascherano",
+    "type" : "-",
+    "index" : "421"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Fernando Gago",
+    "type" : "-",
+    "index" : "422"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Éver Banega",
+    "type" : "-",
+    "index" : "423"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Maxi Rodríguez",
+    "type" : "-",
+    "index" : "424"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Ángel di María",
+    "type" : "-",
+    "index" : "425"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Ezequiel Lavezzi",
+    "type" : "-",
+    "index" : "426"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Rodrigo Palacio",
+    "type" : "-",
+    "index" : "427"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Sergio Agüero",
+    "type" : "-",
+    "index" : "428"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Gonzalo Higuaín",
+    "type" : "-",
+    "index" : "429"
+  },
+  {
+    "section" : "Argentina",
+    "name" : "Lionel Messi",
+    "type" : "-",
+    "index" : "430"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "431"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "432"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Asmir Begović",
+    "type" : "-",
+    "index" : "433"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Emir Spahić",
+    "type" : "-",
+    "index" : "434"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Avdija Vršajević",
+    "type" : "-",
+    "index" : "435"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Ermin Bičakčić",
+    "type" : "-",
+    "index" : "436"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Toni Šunjić",
+    "type" : "-",
+    "index" : "437"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Sead Kolašinac",
+    "type" : "-",
+    "index" : "438"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Senad Lulić",
+    "type" : "-",
+    "index" : "439"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Senijad Ibričić",
+    "type" : "-",
+    "index" : "440"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Mensur Mujdža",
+    "type" : "-",
+    "index" : "441"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Haris Medunjanin",
+    "type" : "-",
+    "index" : "442"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Zvjezdan Misimović",
+    "type" : "-",
+    "index" : "443"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Miralem Pjanić",
+    "type" : "-",
+    "index" : "444"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Sejad Salihović",
+    "type" : "-",
+    "index" : "445"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Adnan Zahirović",
+    "type" : "-",
+    "index" : "446"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Izet Hajrović",
+    "type" : "-",
+    "index" : "447"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Vedad Ibišević",
+    "type" : "-",
+    "index" : "448"
+  },
+  {
+    "section" : "Bosna i Hercegovina",
+    "name" : "Edin Džeko",
+    "type" : "-",
+    "index" : "449"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "450"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "451"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Daniel Davari",
+    "type" : "-",
+    "index" : "452"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Jalal Hosseini",
+    "type" : "-",
+    "index" : "453"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Khosro Heydari",
+    "type" : "-",
+    "index" : "454"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Hossein Mahini",
+    "type" : "-",
+    "index" : "455"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Pejman Montazeri",
+    "type" : "-",
+    "index" : "456"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Ehsan Hajsafi",
+    "type" : "-",
+    "index" : "457"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Hashem Beikzadeh",
+    "type" : "-",
+    "index" : "458"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Amir Hossein Sadeghi",
+    "type" : "-",
+    "index" : "459"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Javad Nekounam",
+    "type" : "-",
+    "index" : "460"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Andranik Teymourian",
+    "type" : "-",
+    "index" : "461"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Mojtaba Jabbari",
+    "type" : "-",
+    "index" : "462"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Masoud Shojaei",
+    "type" : "-",
+    "index" : "463"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Ashkan Dejagah",
+    "type" : "-",
+    "index" : "464"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Reza Ghoochannejhad",
+    "type" : "-",
+    "index" : "465"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Gholamreza Rezaei",
+    "type" : "-",
+    "index" : "466"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Karim Ansarifard",
+    "type" : "-",
+    "index" : "467"
+  },
+  {
+    "section" : "Iran",
+    "name" : "Mohammad Khalatbari",
+    "type" : "-",
+    "index" : "468"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "469"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "470"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "Vincent Enyeama",
+    "type" : "-",
+    "index" : "471"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "Joseph Yobo",
+    "type" : "-",
+    "index" : "472"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "Efe Ambrose",
+    "type" : "-",
+    "index" : "473"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "Godfrey Oboabona",
+    "type" : "-",
+    "index" : "474"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "Elderson Echiejile",
+    "type" : "-",
+    "index" : "475"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "Azubuike Egwuekwe",
+    "type" : "-",
+    "index" : "476"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "Kenneth Omeruo",
+    "type" : "-",
+    "index" : "477"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "John Ogu",
+    "type" : "-",
+    "index" : "478"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "John Obi Mikel",
+    "type" : "-",
+    "index" : "479"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "Ogenyi Onazi",
+    "type" : "-",
+    "index" : "480"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "Sunday Mba",
+    "type" : "-",
+    "index" : "481"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "Victor Moses",
+    "type" : "-",
+    "index" : "482"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "Nnamdi Oduamadi",
+    "type" : "-",
+    "index" : "483"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "Ahmed Musa",
+    "type" : "-",
+    "index" : "484"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "Ideye Brown",
+    "type" : "-",
+    "index" : "485"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "Shola Ameobi",
+    "type" : "-",
+    "index" : "486"
+  },
+  {
+    "section" : "Nigeria",
+    "name" : "Emmanuel Emenike",
+    "type" : "-",
+    "index" : "487"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "488"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "489"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "Manuel Neuer",
+    "type" : "-",
+    "index" : "490"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "Philipp Lahm",
+    "type" : "-",
+    "index" : "491"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "Per Mertesacker",
+    "type" : "-",
+    "index" : "492"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "Jérôme Boateng",
+    "type" : "-",
+    "index" : "493"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "Mats Hummels",
+    "type" : "-",
+    "index" : "494"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "Marcel Schmelzer",
+    "type" : "-",
+    "index" : "495"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "Sami Khedira",
+    "type" : "-",
+    "index" : "496"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "Bastian Schweinsteiger",
+    "type" : "-",
+    "index" : "497"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "Toni Kroos",
+    "type" : "-",
+    "index" : "498"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "Mesut Özil",
+    "type" : "-",
+    "index" : "499"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "Mario Götze",
+    "type" : "-",
+    "index" : "500"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "Julian Draxler",
+    "type" : "-",
+    "index" : "501"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "Marco Reus",
+    "type" : "-",
+    "index" : "502"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "André Schürrle",
+    "type" : "-",
+    "index" : "503"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "Lukas Podolski",
+    "type" : "-",
+    "index" : "504"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "Thomas Müller",
+    "type" : "-",
+    "index" : "505"
+  },
+  {
+    "section" : "Deutschland",
+    "name" : "Miroslav Klose",
+    "type" : "-",
+    "index" : "506"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "507"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "508"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "Rui Patricio",
+    "type" : "-",
+    "index" : "509"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "Pepe",
+    "type" : "-",
+    "index" : "510"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "Bruno Alves",
+    "type" : "-",
+    "index" : "511"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "João Pereira",
+    "type" : "-",
+    "index" : "512"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "Fábio Coentrão",
+    "type" : "-",
+    "index" : "513"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "Ricardo Costa",
+    "type" : "-",
+    "index" : "514"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "Antunes",
+    "type" : "-",
+    "index" : "515"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "Josué",
+    "type" : "-",
+    "index" : "516"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "Miguel Veloso",
+    "type" : "-",
+    "index" : "517"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "João Moutinho",
+    "type" : "-",
+    "index" : "518"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "Raul Meireles",
+    "type" : "-",
+    "index" : "519"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "William Carvalho",
+    "type" : "-",
+    "index" : "520"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "Nani",
+    "type" : "-",
+    "index" : "521"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "Silvestre Varela",
+    "type" : "-",
+    "index" : "522"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "Cristiano Ronaldo",
+    "type" : "-",
+    "index" : "523"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "Hélder Postiga",
+    "type" : "-",
+    "index" : "524"
+  },
+  {
+    "section" : "Portugal",
+    "name" : "Hugo Almeida",
+    "type" : "-",
+    "index" : "525"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "526"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "527"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "Fatau Dauda",
+    "type" : "-",
+    "index" : "528"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "Samuel Inkoom",
+    "type" : "-",
+    "index" : "529"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "Jonathan Mensah",
+    "type" : "-",
+    "index" : "530"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "Daniel Opare",
+    "type" : "-",
+    "index" : "531"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "Harrison Afful",
+    "type" : "-",
+    "index" : "532"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "John Boye",
+    "type" : "-",
+    "index" : "533"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "Michael Essien",
+    "type" : "-",
+    "index" : "534"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "Emmanuel Badu",
+    "type" : "-",
+    "index" : "535"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "Kwadwo Asamoah",
+    "type" : "-",
+    "index" : "536"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "Sulley Muntari",
+    "type" : "-",
+    "index" : "537"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "Wakaso Mubarak",
+    "type" : "-",
+    "index" : "538"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "Kevin-Prince Boateng",
+    "type" : "-",
+    "index" : "539"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "Waris Majeed",
+    "type" : "-",
+    "index" : "540"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "Christian Atsu",
+    "type" : "-",
+    "index" : "541"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "André Ayew",
+    "type" : "-",
+    "index" : "542"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "Jordan Ayew",
+    "type" : "-",
+    "index" : "543"
+  },
+  {
+    "section" : "Ghana",
+    "name" : "Asamoah Gyan",
+    "type" : "-",
+    "index" : "544"
+  },
+  {
+    "section" : "USA",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "545"
+  },
+  {
+    "section" : "USA",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "546"
+  },
+  {
+    "section" : "USA",
+    "name" : "Tim Howard",
+    "type" : "-",
+    "index" : "547"
+  },
+  {
+    "section" : "USA",
+    "name" : "Geoff Cameron",
+    "type" : "-",
+    "index" : "548"
+  },
+  {
+    "section" : "USA",
+    "name" : "Omar Gonzalez",
+    "type" : "-",
+    "index" : "549"
+  },
+  {
+    "section" : "USA",
+    "name" : "Clarence Goodson",
+    "type" : "-",
+    "index" : "550"
+  },
+  {
+    "section" : "USA",
+    "name" : "Matt Besler",
+    "type" : "-",
+    "index" : "551"
+  },
+  {
+    "section" : "USA",
+    "name" : "Fabian Johnson",
+    "type" : "-",
+    "index" : "552"
+  },
+  {
+    "section" : "USA",
+    "name" : "DaMarcus Beasley",
+    "type" : "-",
+    "index" : "553"
+  },
+  {
+    "section" : "USA",
+    "name" : "Jermaine Jones",
+    "type" : "-",
+    "index" : "554"
+  },
+  {
+    "section" : "USA",
+    "name" : "Michael Bradley",
+    "type" : "-",
+    "index" : "555"
+  },
+  {
+    "section" : "USA",
+    "name" : "Brad Evans",
+    "type" : "-",
+    "index" : "556"
+  },
+  {
+    "section" : "USA",
+    "name" : "Graham Zusi",
+    "type" : "-",
+    "index" : "557"
+  },
+  {
+    "section" : "USA",
+    "name" : "Mix Diskerud",
+    "type" : "-",
+    "index" : "558"
+  },
+  {
+    "section" : "USA",
+    "name" : "Clint Dempsey",
+    "type" : "-",
+    "index" : "559"
+  },
+  {
+    "section" : "USA",
+    "name" : "Aron Johannsson",
+    "type" : "-",
+    "index" : "560"
+  },
+  {
+    "section" : "USA",
+    "name" : "Landon Donovan",
+    "type" : "-",
+    "index" : "561"
+  },
+  {
+    "section" : "USA",
+    "name" : "Eddie Johnson",
+    "type" : "-",
+    "index" : "562"
+  },
+  {
+    "section" : "USA",
+    "name" : "Jozy Altidore",
+    "type" : "-",
+    "index" : "563"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "564"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "565"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Thibaut Courtois",
+    "type" : "-",
+    "index" : "566"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Vincent Kompany",
+    "type" : "-",
+    "index" : "567"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Toby Alderweireld",
+    "type" : "-",
+    "index" : "568"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Jan Vertonghen",
+    "type" : "-",
+    "index" : "569"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Daniel Van Buyten",
+    "type" : "-",
+    "index" : "570"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Thomas Vermaelen",
+    "type" : "-",
+    "index" : "571"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Stodd Defour",
+    "type" : "-",
+    "index" : "572"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Axel Witsel",
+    "type" : "-",
+    "index" : "573"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Mousa Dembélé",
+    "type" : "-",
+    "index" : "574"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Kevin De Bruyne",
+    "type" : "-",
+    "index" : "575"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Marouane Fellaini",
+    "type" : "-",
+    "index" : "576"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Nacer Chadli",
+    "type" : "-",
+    "index" : "577"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Eden Hazard",
+    "type" : "-",
+    "index" : "578"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Dries Mertens",
+    "type" : "-",
+    "index" : "579"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Kevin Mirallas",
+    "type" : "-",
+    "index" : "580"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Romelu Lukaku",
+    "type" : "-",
+    "index" : "581"
+  },
+  {
+    "section" : "Belgique\/Belgiä",
+    "name" : "Christian Benteke",
+    "type" : "-",
+    "index" : "582"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "583"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "584"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "Raïs M'Bolhi",
+    "type" : "-",
+    "index" : "585"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "Madjid Bougherra",
+    "type" : "-",
+    "index" : "586"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "Carl Medjani",
+    "type" : "-",
+    "index" : "587"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "Adlène Guedioura",
+    "type" : "-",
+    "index" : "588"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "Djamel Mesbah",
+    "type" : "-",
+    "index" : "589"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "Mehdi Mostefa",
+    "type" : "-",
+    "index" : "590"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "Faouzi Ghoulam",
+    "type" : "-",
+    "index" : "591"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "Essaid Belkalem",
+    "type" : "-",
+    "index" : "592"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "Hassan Yebda",
+    "type" : "-",
+    "index" : "593"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "Mehdi Lacen",
+    "type" : "-",
+    "index" : "594"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "Yacine Brahimi",
+    "type" : "-",
+    "index" : "595"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "Saphir Taïder",
+    "type" : "-",
+    "index" : "596"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "Sofiane Feghouli",
+    "type" : "-",
+    "index" : "597"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "Rafik Djebbour",
+    "type" : "-",
+    "index" : "598"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "Nabil Ghilas",
+    "type" : "-",
+    "index" : "599"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "El Arbi Soudani",
+    "type" : "-",
+    "index" : "600"
+  },
+  {
+    "section" : "Algérie",
+    "name" : "Islam Slimani",
+    "type" : "-",
+    "index" : "601"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "602"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "603"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Igor Akinfeev",
+    "type" : "-",
+    "index" : "604"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Sergei Ignashevich",
+    "type" : "-",
+    "index" : "605"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Aleksei Berezutski",
+    "type" : "-",
+    "index" : "606"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Vasili Berezutski",
+    "type" : "-",
+    "index" : "607"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Dmitri Kombarov",
+    "type" : "-",
+    "index" : "608"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Aleksandr Anyukov",
+    "type" : "-",
+    "index" : "609"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Aleksei Kozlov",
+    "type" : "-",
+    "index" : "610"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Roman Shirokov",
+    "type" : "-",
+    "index" : "611"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Igor Denisov",
+    "type" : "-",
+    "index" : "612"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Viktor Fayzulin",
+    "type" : "-",
+    "index" : "613"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Vladimir Bystrov",
+    "type" : "-",
+    "index" : "614"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Denis Glushakov",
+    "type" : "-",
+    "index" : "615"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Aleksandr Samedov",
+    "type" : "-",
+    "index" : "616"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Alan Dzagoev",
+    "type" : "-",
+    "index" : "617"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Fedor Smolov",
+    "type" : "-",
+    "index" : "618"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Aleksandr Kokorin",
+    "type" : "-",
+    "index" : "619"
+  },
+  {
+    "section" : "Russia",
+    "name" : "Aleksandr Kerzhakov",
+    "type" : "-",
+    "index" : "620"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Badge",
+    "type" : "metal",
+    "index" : "621"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Team",
+    "type" : "-",
+    "index" : "622"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Jung Sung-Ryong",
+    "type" : "-",
+    "index" : "623"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Kwak Tae-Hwi",
+    "type" : "-",
+    "index" : "624"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Hong Jeong-Ho",
+    "type" : "-",
+    "index" : "625"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Kim Young-Gwon",
+    "type" : "-",
+    "index" : "626"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Park Joo-Ho",
+    "type" : "-",
+    "index" : "627"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Shin Kwang-Hoon",
+    "type" : "-",
+    "index" : "628"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Lee Yong",
+    "type" : "-",
+    "index" : "629"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Han Kook-Young",
+    "type" : "-",
+    "index" : "630"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Lee Chung-Yong",
+    "type" : "-",
+    "index" : "631"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Ki Sung-Yueng",
+    "type" : "-",
+    "index" : "632"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Koo Ja-Cheol",
+    "type" : "-",
+    "index" : "633"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Kim Bo-Kyung",
+    "type" : "-",
+    "index" : "634"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Son Heung-Min",
+    "type" : "-",
+    "index" : "635"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Ji Dong-Won",
+    "type" : "-",
+    "index" : "636"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Kim Shin-Wook",
+    "type" : "-",
+    "index" : "637"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Park Chu-Young",
+    "type" : "-",
+    "index" : "638"
+  },
+  {
+    "section" : "Korea Republic",
+    "name" : "Lee Keun-Ho",
+    "type" : "-",
+    "index" : "639"
+  }
+]
