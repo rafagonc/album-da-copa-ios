@@ -14,13 +14,17 @@
 
 @interface Sticker : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * userHasIt;
+@property (nonatomic, retain) NSNumber * onAlbum;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * section;
 @property (nonatomic, retain) NSString * type;
 @property (nonatomic, retain) NSNumber * index;
+@property (nonatomic, retain) NSNumber * leftovers;
 
+
+#pragma mark - METHODS
 
 #pragma mark - STATIC
 +(void)createAllStickersToDatabase ;
++(NSMutableDictionary *)allStickers;
 @end

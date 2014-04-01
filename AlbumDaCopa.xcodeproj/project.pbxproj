@@ -24,6 +24,12 @@
 		2A106DEC18EA55BE00D2FC98 /* AlbumDaCopaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A106DEB18EA55BE00D2FC98 /* AlbumDaCopaTests.m */; };
 		2A106E3818EA686800D2FC98 /* stickers.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A106E3718EA686800D2FC98 /* stickers.json */; };
 		2A106E4A18EA6CB500D2FC98 /* Sticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A106E4918EA6CB500D2FC98 /* Sticker.m */; };
+		2A56128C18EB055400A3BAF0 /* StickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A56128A18EB055400A3BAF0 /* StickerTableViewController.m */; };
+		2A56128D18EB055400A3BAF0 /* StickerTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A56128B18EB055400A3BAF0 /* StickerTableViewController.xib */; };
+		2A56129518EB0E5900A3BAF0 /* StickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A56129318EB0E5900A3BAF0 /* StickerCell.m */; };
+		2A56129618EB0E5900A3BAF0 /* StickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A56129418EB0E5900A3BAF0 /* StickerCell.xib */; };
+		2A56129A18EB181600A3BAF0 /* Delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A56129818EB181600A3BAF0 /* Delete.png */; };
+		2A56129B18EB181600A3BAF0 /* Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A56129918EB181600A3BAF0 /* Check.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,14 @@
 		2A106E3718EA686800D2FC98 /* stickers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stickers.json; sourceTree = "<group>"; };
 		2A106E4818EA6CB500D2FC98 /* Sticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sticker.h; sourceTree = "<group>"; };
 		2A106E4918EA6CB500D2FC98 /* Sticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sticker.m; sourceTree = "<group>"; };
+		2A56128918EB055400A3BAF0 /* StickerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerTableViewController.h; sourceTree = "<group>"; };
+		2A56128A18EB055400A3BAF0 /* StickerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerTableViewController.m; sourceTree = "<group>"; };
+		2A56128B18EB055400A3BAF0 /* StickerTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StickerTableViewController.xib; sourceTree = "<group>"; };
+		2A56129218EB0E5900A3BAF0 /* StickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerCell.h; sourceTree = "<group>"; };
+		2A56129318EB0E5900A3BAF0 /* StickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerCell.m; sourceTree = "<group>"; };
+		2A56129418EB0E5900A3BAF0 /* StickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StickerCell.xib; sourceTree = "<group>"; };
+		2A56129818EB181600A3BAF0 /* Delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Delete.png; sourceTree = "<group>"; };
+		2A56129918EB181600A3BAF0 /* Check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Check.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,13 +135,9 @@
 		2A106DC818EA55BE00D2FC98 /* AlbumDaCopa */ = {
 			isa = PBXGroup;
 			children = (
-				2A106DD118EA55BE00D2FC98 /* AppDelegate.h */,
-				2A106DD218EA55BE00D2FC98 /* AppDelegate.m */,
-				2A106DD718EA55BE00D2FC98 /* Images.xcassets */,
-				2A106DD418EA55BE00D2FC98 /* AlbumDaCopa.xcdatamodeld */,
 				2A106DC918EA55BE00D2FC98 /* Supporting Files */,
-				2A106E4818EA6CB500D2FC98 /* Sticker.h */,
-				2A106E4918EA6CB500D2FC98 /* Sticker.m */,
+				2A56128818EB051A00A3BAF0 /* Core Data */,
+				2A56128E18EB056A00A3BAF0 /* Views */,
 			);
 			path = AlbumDaCopa;
 			sourceTree = "<group>";
@@ -135,6 +145,12 @@
 		2A106DC918EA55BE00D2FC98 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2A56129818EB181600A3BAF0 /* Delete.png */,
+				2A56129918EB181600A3BAF0 /* Check.png */,
+				2A106DD118EA55BE00D2FC98 /* AppDelegate.h */,
+				2A106DD218EA55BE00D2FC98 /* AppDelegate.m */,
+				2A106DD718EA55BE00D2FC98 /* Images.xcassets */,
+				2A106DD418EA55BE00D2FC98 /* AlbumDaCopa.xcdatamodeld */,
 				2A106DCA18EA55BE00D2FC98 /* AlbumDaCopa-Info.plist */,
 				2A106DCB18EA55BE00D2FC98 /* InfoPlist.strings */,
 				2A106DCE18EA55BE00D2FC98 /* main.m */,
@@ -159,6 +175,44 @@
 				2A106DE818EA55BE00D2FC98 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2A56128818EB051A00A3BAF0 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				2A106E4818EA6CB500D2FC98 /* Sticker.h */,
+				2A106E4918EA6CB500D2FC98 /* Sticker.m */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		2A56128E18EB056A00A3BAF0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2A56128F18EB057300A3BAF0 /* Sticker Table View Controller */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2A56128F18EB057300A3BAF0 /* Sticker Table View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A56129718EB0E5D00A3BAF0 /* Sticker Cell */,
+				2A56128918EB055400A3BAF0 /* StickerTableViewController.h */,
+				2A56128A18EB055400A3BAF0 /* StickerTableViewController.m */,
+				2A56128B18EB055400A3BAF0 /* StickerTableViewController.xib */,
+			);
+			name = "Sticker Table View Controller";
+			sourceTree = "<group>";
+		};
+		2A56129718EB0E5D00A3BAF0 /* Sticker Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2A56129218EB0E5900A3BAF0 /* StickerCell.h */,
+				2A56129318EB0E5900A3BAF0 /* StickerCell.m */,
+				2A56129418EB0E5900A3BAF0 /* StickerCell.xib */,
+			);
+			name = "Sticker Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,9 +290,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A56129A18EB181600A3BAF0 /* Delete.png in Resources */,
 				2A106DCD18EA55BE00D2FC98 /* InfoPlist.strings in Resources */,
+				2A56129618EB0E5900A3BAF0 /* StickerCell.xib in Resources */,
 				2A106DD818EA55BE00D2FC98 /* Images.xcassets in Resources */,
 				2A106E3818EA686800D2FC98 /* stickers.json in Resources */,
+				2A56129B18EB181600A3BAF0 /* Check.png in Resources */,
+				2A56128D18EB055400A3BAF0 /* StickerTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +315,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A56128C18EB055400A3BAF0 /* StickerTableViewController.m in Sources */,
+				2A56129518EB0E5900A3BAF0 /* StickerCell.m in Sources */,
 				2A106E4A18EA6CB500D2FC98 /* Sticker.m in Sources */,
 				2A106DD618EA55BE00D2FC98 /* AlbumDaCopa.xcdatamodeld in Sources */,
 				2A106DD318EA55BE00D2FC98 /* AppDelegate.m in Sources */,
@@ -382,6 +442,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AlbumDaCopa/AlbumDaCopa-Prefix.pch";
 				INFOPLIST_FILE = "AlbumDaCopa/AlbumDaCopa-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -395,6 +456,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AlbumDaCopa/AlbumDaCopa-Prefix.pch";
 				INFOPLIST_FILE = "AlbumDaCopa/AlbumDaCopa-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -459,6 +521,7 @@
 				2A106DF118EA55BE00D2FC98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A106DF218EA55BE00D2FC98 /* Build configuration list for PBXNativeTarget "AlbumDaCopaTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +530,7 @@
 				2A106DF418EA55BE00D2FC98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

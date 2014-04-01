@@ -11,11 +11,12 @@
 
 @implementation Sticker
 
-@dynamic userHasIt;
+@dynamic onAlbum;
 @dynamic name;
 @dynamic section;
 @dynamic type;
 @dynamic index;
+@dynamic leftovers;
 
 #pragma mark - BUILD
 -(void)createStickerFromDictionary:(NSDictionary *)stickerDict {
@@ -23,7 +24,8 @@
     self.section = stickerDict[@"section"];
     self.index = @([stickerDict[@"index"] intValue]);
     self.type = [stickerDict[@"type"] isEqualToString:@"-"]? @"Normal" : stickerDict[@"type"];
-    self.userHasIt = 0;
+    self.onAlbum = @0;
+    self.leftovers = @0;
 }
 +(Sticker *)buildStickerFromDictionary:(NSDictionary *)stickerDict {
     NSManagedObjectContext *context = [AppDelegate staticManagedObjectContext];
@@ -33,11 +35,25 @@
 }
 
 #pragma mark - STATIC METHODS
-+(NSArray *)allStickers {
++(NSMutableDictionary *)allStickers {
+    NSMutableDictionary *returnDict = [[NSMutableDictionary alloc] init];
     NSManagedObjectContext *context = [AppDelegate staticManagedObjectContext];
     NSFetchRequest *fetchR = [[NSFetchRequest alloc] init];
     [fetchR setEntity:[NSEntityDescription entityForName:@"Sticker" inManagedObjectContext:context]];
-    return [context executeFetchRequest:fetchR error:nil];
+    //ORGANIZE INTO SECTIONS
+    for (Sticker *sticker in [context executeFetchRequest:fetchR error:nil]) {
+        if (returnDict[sticker.section]) {
+            NSMutableArray *oldStickerArray = returnDict[sticker.section];
+            [oldStickerArray addObject:sticker];
+            
+        } else {
+            NSMutableArray *newStickerArray = [[NSMutableArray alloc] init];
+            [newStickerArray addObject:sticker];
+            [returnDict setObject:newStickerArray forKey:sticker.section];
+        }
+    }
+    
+    return returnDict;
 }
 
 #pragma mark - FIRST TIME SAVE ALL

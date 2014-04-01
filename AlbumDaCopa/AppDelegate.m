@@ -19,20 +19,20 @@
 
 
 #pragma mark - LAUCHING OPTIONS
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+-(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     if ([[NSUserDefaults standardUserDefaults] objectForKey:NOTFIRSTTIME]) {
         NSLog(@"NOT FIRST TIME");
     } else {
         [Sticker createAllStickersToDatabase];
-
     }
     
     
-    
+    StickerTableViewController *stickerTableView = [[StickerTableViewController alloc] init];
+    UINavigationController *navControl = [[UINavigationController alloc] initWithRootViewController:stickerTableView];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = navControl;
     [self.window makeKeyAndVisible];
     return YES;
 }
