@@ -30,6 +30,7 @@
 		2A56129618EB0E5900A3BAF0 /* StickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A56129418EB0E5900A3BAF0 /* StickerCell.xib */; };
 		2A56129A18EB181600A3BAF0 /* Delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A56129818EB181600A3BAF0 /* Delete.png */; };
 		2A56129B18EB181600A3BAF0 /* Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A56129918EB181600A3BAF0 /* Check.png */; };
+		2AA474A518EB52480052EF14 /* StickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA474A418EB52480052EF14 /* StickerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		2A56129418EB0E5900A3BAF0 /* StickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StickerCell.xib; sourceTree = "<group>"; };
 		2A56129818EB181600A3BAF0 /* Delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Delete.png; sourceTree = "<group>"; };
 		2A56129918EB181600A3BAF0 /* Check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Check.png; sourceTree = "<group>"; };
+		2AA474A318EB52480052EF14 /* StickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerController.h; sourceTree = "<group>"; };
+		2AA474A418EB52480052EF14 /* StickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +185,8 @@
 			children = (
 				2A106E4818EA6CB500D2FC98 /* Sticker.h */,
 				2A106E4918EA6CB500D2FC98 /* Sticker.m */,
+				2AA474A318EB52480052EF14 /* StickerController.h */,
+				2AA474A418EB52480052EF14 /* StickerController.m */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A56128C18EB055400A3BAF0 /* StickerTableViewController.m in Sources */,
+				2AA474A518EB52480052EF14 /* StickerController.m in Sources */,
 				2A56129518EB0E5900A3BAF0 /* StickerCell.m in Sources */,
 				2A106E4A18EA6CB500D2FC98 /* Sticker.m in Sources */,
 				2A106DD618EA55BE00D2FC98 /* AlbumDaCopa.xcdatamodeld in Sources */,

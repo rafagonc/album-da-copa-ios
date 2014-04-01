@@ -7,14 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface StickerCell : UITableViewCell
+#import "Sticker.h"
+@interface StickerCell : UITableViewCell <UITextFieldDelegate>
 
 #pragma mark - PROPERTIES
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *indexLabel;
-@property (weak, nonatomic) IBOutlet UIButton *leftoversButton;
+@property (weak, nonatomic) IBOutlet UITextField *leftoversButton;
 @property (weak, nonatomic) IBOutlet UIButton *checkButton;
 @property (weak, nonatomic) IBOutlet UIImageView *countryImage;
+@property (weak, nonatomic ) IBOutlet UILabel *typeLabel;
+
+@property (nonatomic) BOOL hasIt;
+@property (nonatomic,strong) Sticker *sticker;
 
 @end

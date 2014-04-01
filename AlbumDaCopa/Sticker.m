@@ -34,41 +34,6 @@
     return s;
 }
 
-#pragma mark - STATIC METHODS
-+(NSMutableDictionary *)allStickers {
-    NSMutableDictionary *returnDict = [[NSMutableDictionary alloc] init];
-    NSManagedObjectContext *context = [AppDelegate staticManagedObjectContext];
-    NSFetchRequest *fetchR = [[NSFetchRequest alloc] init];
-    [fetchR setEntity:[NSEntityDescription entityForName:@"Sticker" inManagedObjectContext:context]];
-    //ORGANIZE INTO SECTIONS
-    for (Sticker *sticker in [context executeFetchRequest:fetchR error:nil]) {
-        if (returnDict[sticker.section]) {
-            NSMutableArray *oldStickerArray = returnDict[sticker.section];
-            [oldStickerArray addObject:sticker];
-            
-        } else {
-            NSMutableArray *newStickerArray = [[NSMutableArray alloc] init];
-            [newStickerArray addObject:sticker];
-            [returnDict setObject:newStickerArray forKey:sticker.section];
-        }
-    }
-    
-    return returnDict;
-}
 
-#pragma mark - FIRST TIME SAVE ALL
-+(void)createAllStickersToDatabase {
-    NSManagedObjectContext *context = [AppDelegate staticManagedObjectContext];
-    NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"stickers" ofType:@"json"]];
-    NSMutableArray *sticekrs = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-    for (NSDictionary *stickerDict in sticekrs) {
-        [Sticker buildStickerFromDictionary:stickerDict];
-    }
-    if ([context save:nil]) {
-        [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:NOTFIRSTTIME];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    } else {
-        NSAssert(0,@"Error On Saving Stickers JSON");
-    }
-}
+
 @end

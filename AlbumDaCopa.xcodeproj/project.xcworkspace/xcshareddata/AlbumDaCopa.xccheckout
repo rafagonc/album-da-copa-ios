@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A5DB948C-441F-42D2-8172-0D6E8AECD8B2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AlbumDaCopa</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6914A003-280C-43EB-8273-F735622C68FB</key>
+		<string>https://github.com/rafagonc/AlbumDaCopa.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AlbumDaCopa.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6914A003-280C-43EB-8273-F735622C68FB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rafagonc/AlbumDaCopa.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6914A003-280C-43EB-8273-F735622C68FB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6914A003-280C-43EB-8273-F735622C68FB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AlbumDaCopa</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,200 +1,200 @@
 [
   {
     "section" : "Introduction",
-    "name" : "Panini special sticker",
-    "type" : "metal",
+    "name" : "Panini Special Sticker",
+    "type" : "Metal",
     "index" : "00"
   },
   {
     "section" : "Introduction",
-    "name" : "FIFA - My game is fair play",
-    "type" : "metal",
+    "name" : "FIFA - My Game is Fair Play",
+    "type" : "Metal",
     "index" : "1"
   },
   {
     "section" : "Introduction",
-    "name" : "Official Emblem (puzzle 1)",
-    "type" : "metal",
+    "name" : "Official Emblem Pt.1",
+    "type" : "Metal",
     "index" : "2"
   },
   {
     "section" : "Introduction",
-    "name" : "Official Emblem (puzzle 2)",
-    "type" : "metal",
+    "name" : "Official Emblem Pt.2",
+    "type" : "Metal",
     "index" : "3"
   },
   {
     "section" : "Introduction",
-    "name" : "Official Mascot (puzzle 2)",
-    "type" : "metal",
+    "name" : "Official Mascot Pt.1",
+    "type" : "Metal",
     "index" : "4"
   },
   {
     "section" : "Introduction",
-    "name" : "Official Mascot (puzzle 1)",
-    "type" : "metal",
+    "name" : "Official Mascot Pt.2",
+    "type" : "Metal",
     "index" : "5"
   },
   {
     "section" : "Introduction",
     "name" : "FIFA World Cup Trophy",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "6"
   },
   {
     "section" : "Introduction",
     "name" : "Brazuca - Official Ball",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "7"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Mineirão - Belo Horizonte (puzzle 1)",
+    "name" : "Estádio Mineirão - Belo Horizonte Pt.1",
     "type" : "-",
     "index" : "8"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Mineirão - Belo Horizonte (puzzle 2)",
+    "name" : "Estádio Mineirão - Belo Horizonte Pt.2",
     "type" : "-",
     "index" : "9"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Nacional - Brasília (puzzle 1)",
+    "name" : "Estádio Nacional - Brasília Pt.1",
     "type" : "-",
     "index" : "10"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Nacional - Brasília (puzzle 2)",
+    "name" : "Estádio Nacional - Brasília Pt.2",
     "type" : "-",
     "index" : "11"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Pantanal - Cuiabá (puzzle 1)",
+    "name" : "Arena Pantanal - Cuiabá Pt.1",
     "type" : "-",
     "index" : "12"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Pantanal - Cuiabá (puzzle 2)",
+    "name" : "Arena Pantanal - Cuiabá Pt.2",
     "type" : "-",
     "index" : "13"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena da Baixada - Curitiba (puzzle 1)",
+    "name" : "Arena da Baixada - Curitiba Pt.1",
     "type" : "-",
     "index" : "14"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena da Baixada - Curitiba (puzzle 2)",
+    "name" : "Arena da Baixada - Curitiba Pt.2",
     "type" : "-",
     "index" : "15"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Castelão - Fortaleza (puzzle 1)",
+    "name" : "Estádio Castelão - Fortaleza Pt.1",
     "type" : "-",
     "index" : "16"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Castelão - Fortaleza (puzzle 2)",
+    "name" : "Estádio Castelão - Fortaleza Pt.2",
     "type" : "-",
     "index" : "17"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Amazônia - Manaus (puzzle 1)",
+    "name" : "Arena Amazônia - Manaus Pt.1",
     "type" : "-",
     "index" : "18"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Amazônia - Manaus (puzzle 2)",
+    "name" : "Arena Amazônia - Manaus Pt.2",
     "type" : "-",
     "index" : "19"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio das Dunas - Natal (puzzle 1)",
+    "name" : "Estádio das Dunas - Natal Pt.1",
     "type" : "-",
     "index" : "20"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio das Dunas - Natal (puzzle 2)",
+    "name" : "Estádio das Dunas - Natal Pt.2",
     "type" : "-",
     "index" : "21"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Beira-Rio - Porto Alegre (puzzle 1)",
+    "name" : "Estádio Beira-Rio - Porto Alegre Pt.1",
     "type" : "-",
     "index" : "22"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Beira-Rio - Porto Alegre (puzzle 2)",
+    "name" : "Estádio Beira-Rio - Porto Alegre Pt.2",
     "type" : "-",
     "index" : "23"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Pernambuco - Recife (puzzle 1)",
+    "name" : "Arena Pernambuco - Recife Pt.1",
     "type" : "-",
     "index" : "24"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Pernambuco - Recife (puzzle 2)",
+    "name" : "Arena Pernambuco - Recife Pt.2",
     "type" : "-",
     "index" : "25"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Maracanã - Rio de Janeiro (puzzle 1)",
+    "name" : "Estádio Maracanã - Rio de Janeiro Pt.1",
     "type" : "-",
     "index" : "26"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Maracanã - Rio de Janeiro (puzzle 2)",
+    "name" : "Estádio Maracanã - Rio de Janeiro Pt.2",
     "type" : "-",
     "index" : "27"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Fonte Nova - Salvador (puzzle 1)",
+    "name" : "Arena Fonte Nova - Salvador Pt.1",
     "type" : "-",
     "index" : "28"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Fonte Nova - Salvador (puzzle 2)",
+    "name" : "Arena Fonte Nova - Salvador Pt.2",
     "type" : "-",
     "index" : "29"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Corinthians - São Paolo (puzzle 1)",
+    "name" : "Arena Corinthians - São Paulo Pt.1",
     "type" : "-",
     "index" : "30"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Corinthians - São Paolo (puzzle 2)",
+    "name" : "Arena Corinthians - São Paulo Pt.2",
     "type" : "-",
     "index" : "31"
   },
   {
     "section" : "Brasil",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "32"
   },
   {
@@ -308,7 +308,7 @@
   {
     "section" : "Croatia",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "51"
   },
   {
@@ -422,7 +422,7 @@
   {
     "section" : "México",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "70"
   },
   {
@@ -536,7 +536,7 @@
   {
     "section" : "Cameroon",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "89"
   },
   {
@@ -650,7 +650,7 @@
   {
     "section" : "Spain",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "108"
   },
   {
@@ -764,7 +764,7 @@
   {
     "section" : "Netherlands",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "127"
   },
   {
@@ -878,7 +878,7 @@
   {
     "section" : "Chile",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "146"
   },
   {
@@ -992,7 +992,7 @@
   {
     "section" : "Australia",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "165"
   },
   {
@@ -1106,7 +1106,7 @@
   {
     "section" : "Colombia",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "184"
   },
   {
@@ -1220,7 +1220,7 @@
   {
     "section" : "Greece",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "203"
   },
   {
@@ -1334,7 +1334,7 @@
   {
     "section" : "Ivory Coast",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "222"
   },
   {
@@ -1448,7 +1448,7 @@
   {
     "section" : "Japan",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "241"
   },
   {
@@ -1562,7 +1562,7 @@
   {
     "section" : "Uruguay",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "260"
   },
   {
@@ -1676,7 +1676,7 @@
   {
     "section" : "Costa Rica",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "279"
   },
   {
@@ -1790,7 +1790,7 @@
   {
     "section" : "England",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "298"
   },
   {
@@ -1904,7 +1904,7 @@
   {
     "section" : "Italia",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "317"
   },
   {
@@ -2018,7 +2018,7 @@
   {
     "section" : "Switzerland",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "336"
   },
   {
@@ -2132,7 +2132,7 @@
   {
     "section" : "Equator",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "355"
   },
   {
@@ -2246,7 +2246,7 @@
   {
     "section" : "France",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "374"
   },
   {
@@ -2360,7 +2360,7 @@
   {
     "section" : "Honduras",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "393"
   },
   {
@@ -2474,7 +2474,7 @@
   {
     "section" : "Argentina",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "412"
   },
   {
@@ -2588,7 +2588,7 @@
   {
     "section" : "Bosnia and Herzegovina",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "431"
   },
   {
@@ -2702,7 +2702,7 @@
   {
     "section" : "Iran",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "450"
   },
   {
@@ -2816,7 +2816,7 @@
   {
     "section" : "Nigeria",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "469"
   },
   {
@@ -2930,7 +2930,7 @@
   {
     "section" : "Germany",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "488"
   },
   {
@@ -3044,7 +3044,7 @@
   {
     "section" : "Portugal",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "507"
   },
   {
@@ -3158,7 +3158,7 @@
   {
     "section" : "Ghana",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "526"
   },
   {
@@ -3272,7 +3272,7 @@
   {
     "section" : "USA",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "545"
   },
   {
@@ -3386,7 +3386,7 @@
   {
     "section" : "Belgium",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "564"
   },
   {
@@ -3500,7 +3500,7 @@
   {
     "section" : "Algeria",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "583"
   },
   {
@@ -3614,7 +3614,7 @@
   {
     "section" : "Russia",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "602"
   },
   {
@@ -3728,7 +3728,7 @@
   {
     "section" : "Korea Republic",
     "name" : "Badge",
-    "type" : "metal",
+    "type" : "Metal",
     "index" : "621"
   },
   {

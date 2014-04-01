@@ -23,8 +23,5 @@
 
 
 #pragma mark - METHODS
-
-#pragma mark - STATIC
-+(void)createAllStickersToDatabase ;
-+(NSMutableDictionary *)allStickers;
++(Sticker *)buildStickerFromDictionary:(NSDictionary *)stickerDict;
 @end

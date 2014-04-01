@@ -23,35 +23,34 @@
     if ([[NSUserDefaults standardUserDefaults] objectForKey:NOTFIRSTTIME]) {
         NSLog(@"NOT FIRST TIME");
     } else {
-        [Sticker createAllStickersToDatabase];
+        [StickerController createAllStickersToDatabase];
     }
+    
     
     
     StickerTableViewController *stickerTableView = [[StickerTableViewController alloc] init];
     UINavigationController *navControl = [[UINavigationController alloc] initWithRootViewController:stickerTableView];
+    navControl.navigationBar.translucent = NO;
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = navControl;
     [self.window makeKeyAndVisible];
     return YES;
 }
 
 #pragma mark - APPLCATION
-- (void)applicationWillResignActive:(UIApplication *)application {
-
+-(void)applicationWillResignActive:(UIApplication *)application {
 }
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-
+-(void)applicationDidEnterBackground:(UIApplication *)application {
 }
-- (void)applicationWillEnterForeground:(UIApplication *)application {
+-(void)applicationWillEnterForeground:(UIApplication *)application {
 }
-- (void)applicationDidBecomeActive:(UIApplication *)application {
+-(void)applicationDidBecomeActive:(UIApplication *)application {
 }
-- (void)applicationWillTerminate:(UIApplication *)application {
+-(void)applicationWillTerminate:(UIApplication *)application {
     [self saveContext];
 }
-- (void)saveContext {
+-(void)saveContext {
     NSError *error = nil;
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
@@ -69,7 +68,7 @@
     AppDelegate *del = (AppDelegate *)[UIApplication sharedApplication].delegate;
     return [del managedObjectContext];
 }
-- (NSManagedObjectContext *)managedObjectContext {
+-(NSManagedObjectContext *)managedObjectContext {
     if (_managedObjectContext != nil) {
         return _managedObjectContext;
     }
@@ -81,7 +80,7 @@
     }
     return _managedObjectContext;
 }
-- (NSManagedObjectModel *)managedObjectModel{
+-(NSManagedObjectModel *)managedObjectModel{
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
@@ -89,7 +88,7 @@
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
+-(NSPersistentStoreCoordinator *)persistentStoreCoordinator {
     if (_persistentStoreCoordinator != nil) {
         return _persistentStoreCoordinator;
     }
@@ -128,7 +127,7 @@
     
     return _persistentStoreCoordinator;
 }
-- (NSURL *)applicationDocumentsDirectory {
+-(NSURL *)applicationDocumentsDirectory {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
