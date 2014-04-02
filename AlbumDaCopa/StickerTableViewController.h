@@ -10,10 +10,11 @@
 #import "Sticker.h"
 #import "StickerCell.h"
 #import "StickerController.h"
+#import "CameraViewController.h"
 
 #define ChangedStatsNotification @"changedStats"
 
-@interface StickerTableViewController : UIViewController <UISearchBarDelegate,UITableViewDelegate, UITableViewDataSource>
+@interface StickerTableViewController : UIViewController <UISearchBarDelegate,UITableViewDelegate, UITableViewDataSource,UIScrollViewDelegate>
 
 #pragma mark - PROPERTIES
 @property (nonatomic,strong) NSArray *stickers;
@@ -24,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *numberOfStickersToBeCompletedLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *statusBarCover;
+@property (weak, nonatomic) IBOutlet UIView *sliderHandlerView;
 
 #pragma mark - METHODS
 -(id)init;

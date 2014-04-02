@@ -19,6 +19,8 @@
 @property (weak, nonatomic ) IBOutlet UILabel *typeLabel;
 
 @property (nonatomic) BOOL hasIt;
+@property (nonatomic) BOOL stickerHasChanges;
+
 @property (nonatomic,strong) Sticker *sticker;
 
 @end

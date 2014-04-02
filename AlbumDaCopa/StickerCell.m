@@ -14,6 +14,7 @@
 -(void)awakeFromNib {
     [super awakeFromNib];
     self.leftoversButton.delegate = self;
+    self.nameLabel.font = [UIFont fontWithName:@"Rambla" size:14.0f];
 }
 -(void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
@@ -41,12 +42,21 @@
     self.indexLabel.text = [NSString stringWithFormat:@"%d",sticker.index.intValue];
     self.typeLabel.text = sticker.type;
     self.leftoversButton.text = [NSString stringWithFormat:sticker.leftovers.intValue? @"+%d" : @"+", sticker.leftovers.intValue];
+    self.stickerHasChanges = NO;
+}
+-(void)setStickerHasChanges:(BOOL)stickerHasChanges {
+    if (stickerHasChanges) {
+        [[AppDelegate staticManagedObjectContext] save:nil];
+    }
+    _stickerHasChanges = NO;
 }
 
 #pragma mark - CHECK ACTION
 - (IBAction)checkAction:(id)sender {
     self.hasIt = !self.hasIt;
     [[NSNotificationCenter defaultCenter] postNotificationName:ChangedStatsNotification object:nil];
+    self.stickerHasChanges = YES;
+
 }
 
 #pragma mark - METHODS
@@ -78,6 +88,6 @@
 -(void)textFieldDidEndEditing:(UITextField *)textField {
     NSInteger leftovers = [[self.leftoversButton.text stringByReplacingOccurrencesOfString:@"+" withString:@""] integerValue];
     self.sticker.leftovers = @(leftovers);
-    [[AppDelegate staticManagedObjectContext] save:nil];
+    self.stickerHasChanges = YES;
 }
 @end

@@ -23,6 +23,15 @@
     }
     return self;
 }
+-(void)viewWillAppear:(BOOL)animated {
+    UIBarButtonItem *cameraItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(cameraAction:)];
+    [cameraItem setTintColor:[UIColor whiteColor]];
+    [self.navigationItem setLeftBarButtonItem:cameraItem];
+    
+    UIBarButtonItem *externalItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(externalAction:)];
+    [externalItem setTintColor:[UIColor whiteColor]];
+    [self.navigationItem setRightBarButtonItem:externalItem];
+}
 -(void)viewDidLoad {
     [super viewDidLoad];
     
@@ -37,27 +46,31 @@
 
 }
 -(void)decorator {
-    self.numberOfStickersToBeCompletedLabel.backgroundColor = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];
-    self.percentCompletedLabel.backgroundColor = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];
+    UIColor *flatBlue = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];
+    self.numberOfStickersToBeCompletedLabel.backgroundColor = [UIColor colorWithRed:(40/255.0) green:(89/255.0) blue:(127/255.0) alpha:1];
+    self.percentCompletedLabel.backgroundColor = [UIColor colorWithRed:(40/255.0) green:(89/255.0) blue:(127/255.0) alpha:1];;
     self.percentCompletedLabel.layer.masksToBounds = YES;
     self.percentCompletedLabel.layer.cornerRadius = 9;
     self.numberOfStickersToBeCompletedLabel.layer.masksToBounds = YES;
     self.numberOfStickersToBeCompletedLabel.layer.cornerRadius = 9;
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:(66/255.0) green:(114/255.0) blue:(155/255.0) alpha:1]];
-    self.tableView.tableHeaderView.backgroundColor = [UIColor colorWithRed:(66/255.0) green:(114/255.0) blue:(155/255.0) alpha:1];
-    self.statusBarCover.backgroundColor = [UIColor colorWithRed:(66/255.0) green:(114/255.0) blue:(155/255.0) alpha:1];
-
+    
+    [[UINavigationBar appearance] setBarTintColor:flatBlue];
+    [[UINavigationBar appearance] setBarTintColor:flatBlue];
+    self.tableView.tableHeaderView.backgroundColor = flatBlue;
+    self.statusBarCover.backgroundColor = flatBlue;
+    self.sliderHandlerView.backgroundColor = flatBlue;
+    
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     self.navigationController.navigationBar.layer.masksToBounds = YES;
-    self.title = @"My Album";
     self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:15.0f], NSForegroundColorAttributeName : [UIColor whiteColor]};
+    self.title = @"2014 World Cup Album";
 }
 -(void)assignValueToViews {
     NSArray *values = [StickerController statsForTheAlbum];
     self.percentCompletedLabel.text = [[NSString stringWithFormat:@"%.2f",[values[0] doubleValue]] stringByAppendingString:@"%"];
     self.numberOfStickersToBeCompletedLabel.text = [NSString stringWithFormat:@"%d/640",[values[1] intValue]];
-}
 
+}
 
 #pragma mark - TABLE VIEW DELEGATE
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -80,6 +93,11 @@
     
     return cell;
 }
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (scrollView.contentOffset.y > 0) return;
+    self.sliderHandlerView.frame = CGRectMake(self.sliderHandlerView.frame.origin.x, self.sliderHandlerView.frame.origin.y, self.sliderHandlerView.frame.size.width, -scrollView.contentOffset.y);
+}
+
 #pragma mark - SEARCH BAR DELEGATE
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     if (searchBar.text.length == 0) {
@@ -93,6 +111,15 @@
     
     self.stickers = [[StickerController allStickers] filteredArrayUsingPredicate:compoundPredicate];
     [self.tableView reloadData];
+}
+
+#pragma mark - ACTIONS
+-(void)cameraAction:(UIBarButtonItem *)sender {
+    CameraViewController *cam = [[CameraViewController alloc] init];
+    [self presentViewController:cam animated:YES completion:nil];
+}
+-(void)externalAction:(UIBarButtonItem *)sender {
+    
 }
 
 #pragma mark - DEALLOC
