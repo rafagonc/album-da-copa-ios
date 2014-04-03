@@ -42,7 +42,75 @@
 		2A56140918EBA7E300A3BAF0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A56140818EBA7E300A3BAF0 /* CoreMedia.framework */; };
 		2A56140C18EBA7FF00A3BAF0 /* AVCaptureSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A56140B18EBA7FF00A3BAF0 /* AVCaptureSessionManager.m */; };
 		2A56140E18EBB56B00A3BAF0 /* Rambla-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A56140D18EBB56B00A3BAF0 /* Rambla-Bold.ttf */; };
+		2A80449218EC844F00BBAA7E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A80449118EC844F00BBAA7E /* CoreVideo.framework */; };
+		2A80449418EC847200BBAA7E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A80449318EC847200BBAA7E /* Accelerate.framework */; };
+		2A80449618ECA9D400BBAA7E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A80449518ECA9D400BBAA7E /* iAd.framework */; };
 		2AA474A518EB52480052EF14 /* StickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA474A418EB52480052EF14 /* StickerController.m */; };
+		2AC514DD18EDBEDC00F51DDC /* alemanha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5149D18EDBEDC00F51DDC /* alemanha.jpg */; };
+		2AC514DE18EDBEDC00F51DDC /* argelia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5149E18EDBEDC00F51DDC /* argelia.jpg */; };
+		2AC514DF18EDBEDC00F51DDC /* argentina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5149F18EDBEDC00F51DDC /* argentina.jpg */; };
+		2AC514E018EDBEDC00F51DDC /* australia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514A018EDBEDC00F51DDC /* australia.jpg */; };
+		2AC514E118EDBEDC00F51DDC /* belgica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514A118EDBEDC00F51DDC /* belgica.jpg */; };
+		2AC514E218EDBEDC00F51DDC /* bosnia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514A218EDBEDC00F51DDC /* bosnia.jpg */; };
+		2AC514E318EDBEDC00F51DDC /* brasil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514A318EDBEDC00F51DDC /* brasil.jpg */; };
+		2AC514E418EDBEDC00F51DDC /* camaroes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514A418EDBEDC00F51DDC /* camaroes.jpg */; };
+		2AC514E518EDBEDC00F51DDC /* chile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514A518EDBEDC00F51DDC /* chile.jpg */; };
+		2AC514E618EDBEDC00F51DDC /* colombia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514A618EDBEDC00F51DDC /* colombia.jpg */; };
+		2AC514E718EDBEDC00F51DDC /* costadomarfim.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514A718EDBEDC00F51DDC /* costadomarfim.jpg */; };
+		2AC514E818EDBEDC00F51DDC /* costarica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514A818EDBEDC00F51DDC /* costarica.jpg */; };
+		2AC514E918EDBEDC00F51DDC /* croacia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514A918EDBEDC00F51DDC /* croacia.jpg */; };
+		2AC514EA18EDBEDC00F51DDC /* equador.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514AA18EDBEDC00F51DDC /* equador.jpg */; };
+		2AC514EB18EDBEDC00F51DDC /* escudo-alemanha.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514AB18EDBEDC00F51DDC /* escudo-alemanha.gif */; };
+		2AC514EC18EDBEDC00F51DDC /* escudo-argelia.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514AC18EDBEDC00F51DDC /* escudo-argelia.gif */; };
+		2AC514ED18EDBEDC00F51DDC /* escudo-argentina.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514AD18EDBEDC00F51DDC /* escudo-argentina.gif */; };
+		2AC514EE18EDBEDC00F51DDC /* escudo-australia.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514AE18EDBEDC00F51DDC /* escudo-australia.gif */; };
+		2AC514EF18EDBEDC00F51DDC /* escudo-belgica.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514AF18EDBEDC00F51DDC /* escudo-belgica.gif */; };
+		2AC514F018EDBEDC00F51DDC /* escudo-bosnia.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514B018EDBEDC00F51DDC /* escudo-bosnia.gif */; };
+		2AC514F118EDBEDC00F51DDC /* escudo-brasil.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514B118EDBEDC00F51DDC /* escudo-brasil.gif */; };
+		2AC514F218EDBEDC00F51DDC /* escudo-camaroes.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514B218EDBEDC00F51DDC /* escudo-camaroes.gif */; };
+		2AC514F318EDBEDC00F51DDC /* escudo-chile.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514B318EDBEDC00F51DDC /* escudo-chile.gif */; };
+		2AC514F418EDBEDC00F51DDC /* escudo-colombia.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514B418EDBEDC00F51DDC /* escudo-colombia.gif */; };
+		2AC514F518EDBEDC00F51DDC /* escudo-coreia.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514B518EDBEDC00F51DDC /* escudo-coreia.gif */; };
+		2AC514F618EDBEDC00F51DDC /* escudo-costa-do-marfim.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514B618EDBEDC00F51DDC /* escudo-costa-do-marfim.gif */; };
+		2AC514F718EDBEDC00F51DDC /* escudo-costarica.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514B718EDBEDC00F51DDC /* escudo-costarica.gif */; };
+		2AC514F818EDBEDC00F51DDC /* escudo-croacia.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514B818EDBEDC00F51DDC /* escudo-croacia.gif */; };
+		2AC514F918EDBEDC00F51DDC /* escudo-equador.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514B918EDBEDC00F51DDC /* escudo-equador.gif */; };
+		2AC514FA18EDBEDC00F51DDC /* escudo-espanha.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514BA18EDBEDC00F51DDC /* escudo-espanha.gif */; };
+		2AC514FB18EDBEDC00F51DDC /* escudo-eua.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514BB18EDBEDC00F51DDC /* escudo-eua.gif */; };
+		2AC514FC18EDBEDC00F51DDC /* escudo-franca.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514BC18EDBEDC00F51DDC /* escudo-franca.gif */; };
+		2AC514FD18EDBEDC00F51DDC /* escudo-gana.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514BD18EDBEDC00F51DDC /* escudo-gana.gif */; };
+		2AC514FE18EDBEDC00F51DDC /* escudo-grecia.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514BE18EDBEDC00F51DDC /* escudo-grecia.gif */; };
+		2AC514FF18EDBEDC00F51DDC /* escudo-holanda.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514BF18EDBEDC00F51DDC /* escudo-holanda.gif */; };
+		2AC5150018EDBEDC00F51DDC /* escudo-honduras.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514C018EDBEDC00F51DDC /* escudo-honduras.gif */; };
+		2AC5150118EDBEDC00F51DDC /* escudo-ira.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514C118EDBEDC00F51DDC /* escudo-ira.gif */; };
+		2AC5150218EDBEDC00F51DDC /* escudo-italia.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514C218EDBEDC00F51DDC /* escudo-italia.gif */; };
+		2AC5150318EDBEDC00F51DDC /* escudo-japao.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514C318EDBEDC00F51DDC /* escudo-japao.gif */; };
+		2AC5150418EDBEDC00F51DDC /* escudo-mexico.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514C418EDBEDC00F51DDC /* escudo-mexico.gif */; };
+		2AC5150518EDBEDC00F51DDC /* escudo-nigeria.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514C518EDBEDC00F51DDC /* escudo-nigeria.gif */; };
+		2AC5150618EDBEDC00F51DDC /* escudo-portugal.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514C618EDBEDC00F51DDC /* escudo-portugal.gif */; };
+		2AC5150718EDBEDC00F51DDC /* escudo-russia.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514C718EDBEDC00F51DDC /* escudo-russia.gif */; };
+		2AC5150818EDBEDC00F51DDC /* escudo-suica.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514C818EDBEDC00F51DDC /* escudo-suica.gif */; };
+		2AC5150918EDBEDC00F51DDC /* escudo-uk.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514C918EDBEDC00F51DDC /* escudo-uk.gif */; };
+		2AC5150A18EDBEDC00F51DDC /* escudo-uruguai.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514CA18EDBEDC00F51DDC /* escudo-uruguai.gif */; };
+		2AC5150B18EDBEDC00F51DDC /* espanha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514CB18EDBEDC00F51DDC /* espanha.jpg */; };
+		2AC5150C18EDBEDC00F51DDC /* estadosunidos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514CC18EDBEDC00F51DDC /* estadosunidos.jpg */; };
+		2AC5150D18EDBEDC00F51DDC /* franca.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514CD18EDBEDC00F51DDC /* franca.jpg */; };
+		2AC5150E18EDBEDC00F51DDC /* gana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514CE18EDBEDC00F51DDC /* gana.jpg */; };
+		2AC5150F18EDBEDC00F51DDC /* grecia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514CF18EDBEDC00F51DDC /* grecia.jpg */; };
+		2AC5151018EDBEDC00F51DDC /* holanda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514D018EDBEDC00F51DDC /* holanda.jpg */; };
+		2AC5151118EDBEDC00F51DDC /* honduras.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514D118EDBEDC00F51DDC /* honduras.jpg */; };
+		2AC5151218EDBEDC00F51DDC /* inglaterra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514D218EDBEDC00F51DDC /* inglaterra.jpg */; };
+		2AC5151318EDBEDC00F51DDC /* ira.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514D318EDBEDC00F51DDC /* ira.jpg */; };
+		2AC5151418EDBEDC00F51DDC /* italia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514D418EDBEDC00F51DDC /* italia.jpg */; };
+		2AC5151518EDBEDC00F51DDC /* japao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514D518EDBEDC00F51DDC /* japao.jpg */; };
+		2AC5151618EDBEDC00F51DDC /* koreia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514D618EDBEDC00F51DDC /* koreia.jpg */; };
+		2AC5151718EDBEDC00F51DDC /* mexico.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514D718EDBEDC00F51DDC /* mexico.jpg */; };
+		2AC5151818EDBEDC00F51DDC /* nigeria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514D818EDBEDC00F51DDC /* nigeria.jpg */; };
+		2AC5151918EDBEDC00F51DDC /* portugal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514D918EDBEDC00F51DDC /* portugal.jpg */; };
+		2AC5151A18EDBEDC00F51DDC /* russia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514DA18EDBEDC00F51DDC /* russia.jpg */; };
+		2AC5151B18EDBEDC00F51DDC /* suica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514DB18EDBEDC00F51DDC /* suica.jpg */; };
+		2AC5151C18EDBEDC00F51DDC /* uruguai.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC514DC18EDBEDC00F51DDC /* uruguai.jpg */; };
+		2AC5151E18EDBEE800F51DDC /* photos.json in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5151D18EDBEE800F51DDC /* photos.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -243,8 +311,76 @@
 		2A56140A18EBA7FF00A3BAF0 /* AVCaptureSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCaptureSessionManager.h; sourceTree = "<group>"; };
 		2A56140B18EBA7FF00A3BAF0 /* AVCaptureSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCaptureSessionManager.m; sourceTree = "<group>"; };
 		2A56140D18EBB56B00A3BAF0 /* Rambla-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rambla-Bold.ttf"; sourceTree = "<group>"; };
+		2A80449118EC844F00BBAA7E /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		2A80449318EC847200BBAA7E /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		2A80449518ECA9D400BBAA7E /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		2AA474A318EB52480052EF14 /* StickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerController.h; sourceTree = "<group>"; };
 		2AA474A418EB52480052EF14 /* StickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerController.m; sourceTree = "<group>"; };
+		2AC5149D18EDBEDC00F51DDC /* alemanha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alemanha.jpg; sourceTree = "<group>"; };
+		2AC5149E18EDBEDC00F51DDC /* argelia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = argelia.jpg; sourceTree = "<group>"; };
+		2AC5149F18EDBEDC00F51DDC /* argentina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = argentina.jpg; sourceTree = "<group>"; };
+		2AC514A018EDBEDC00F51DDC /* australia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = australia.jpg; sourceTree = "<group>"; };
+		2AC514A118EDBEDC00F51DDC /* belgica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = belgica.jpg; sourceTree = "<group>"; };
+		2AC514A218EDBEDC00F51DDC /* bosnia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bosnia.jpg; sourceTree = "<group>"; };
+		2AC514A318EDBEDC00F51DDC /* brasil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brasil.jpg; sourceTree = "<group>"; };
+		2AC514A418EDBEDC00F51DDC /* camaroes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = camaroes.jpg; sourceTree = "<group>"; };
+		2AC514A518EDBEDC00F51DDC /* chile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chile.jpg; sourceTree = "<group>"; };
+		2AC514A618EDBEDC00F51DDC /* colombia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = colombia.jpg; sourceTree = "<group>"; };
+		2AC514A718EDBEDC00F51DDC /* costadomarfim.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = costadomarfim.jpg; sourceTree = "<group>"; };
+		2AC514A818EDBEDC00F51DDC /* costarica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = costarica.jpg; sourceTree = "<group>"; };
+		2AC514A918EDBEDC00F51DDC /* croacia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = croacia.jpg; sourceTree = "<group>"; };
+		2AC514AA18EDBEDC00F51DDC /* equador.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = equador.jpg; sourceTree = "<group>"; };
+		2AC514AB18EDBEDC00F51DDC /* escudo-alemanha.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-alemanha.gif"; sourceTree = "<group>"; };
+		2AC514AC18EDBEDC00F51DDC /* escudo-argelia.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-argelia.gif"; sourceTree = "<group>"; };
+		2AC514AD18EDBEDC00F51DDC /* escudo-argentina.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-argentina.gif"; sourceTree = "<group>"; };
+		2AC514AE18EDBEDC00F51DDC /* escudo-australia.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-australia.gif"; sourceTree = "<group>"; };
+		2AC514AF18EDBEDC00F51DDC /* escudo-belgica.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-belgica.gif"; sourceTree = "<group>"; };
+		2AC514B018EDBEDC00F51DDC /* escudo-bosnia.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-bosnia.gif"; sourceTree = "<group>"; };
+		2AC514B118EDBEDC00F51DDC /* escudo-brasil.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-brasil.gif"; sourceTree = "<group>"; };
+		2AC514B218EDBEDC00F51DDC /* escudo-camaroes.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-camaroes.gif"; sourceTree = "<group>"; };
+		2AC514B318EDBEDC00F51DDC /* escudo-chile.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-chile.gif"; sourceTree = "<group>"; };
+		2AC514B418EDBEDC00F51DDC /* escudo-colombia.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-colombia.gif"; sourceTree = "<group>"; };
+		2AC514B518EDBEDC00F51DDC /* escudo-coreia.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-coreia.gif"; sourceTree = "<group>"; };
+		2AC514B618EDBEDC00F51DDC /* escudo-costa-do-marfim.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-costa-do-marfim.gif"; sourceTree = "<group>"; };
+		2AC514B718EDBEDC00F51DDC /* escudo-costarica.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-costarica.gif"; sourceTree = "<group>"; };
+		2AC514B818EDBEDC00F51DDC /* escudo-croacia.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-croacia.gif"; sourceTree = "<group>"; };
+		2AC514B918EDBEDC00F51DDC /* escudo-equador.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-equador.gif"; sourceTree = "<group>"; };
+		2AC514BA18EDBEDC00F51DDC /* escudo-espanha.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-espanha.gif"; sourceTree = "<group>"; };
+		2AC514BB18EDBEDC00F51DDC /* escudo-eua.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-eua.gif"; sourceTree = "<group>"; };
+		2AC514BC18EDBEDC00F51DDC /* escudo-franca.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-franca.gif"; sourceTree = "<group>"; };
+		2AC514BD18EDBEDC00F51DDC /* escudo-gana.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-gana.gif"; sourceTree = "<group>"; };
+		2AC514BE18EDBEDC00F51DDC /* escudo-grecia.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-grecia.gif"; sourceTree = "<group>"; };
+		2AC514BF18EDBEDC00F51DDC /* escudo-holanda.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-holanda.gif"; sourceTree = "<group>"; };
+		2AC514C018EDBEDC00F51DDC /* escudo-honduras.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-honduras.gif"; sourceTree = "<group>"; };
+		2AC514C118EDBEDC00F51DDC /* escudo-ira.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-ira.gif"; sourceTree = "<group>"; };
+		2AC514C218EDBEDC00F51DDC /* escudo-italia.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-italia.gif"; sourceTree = "<group>"; };
+		2AC514C318EDBEDC00F51DDC /* escudo-japao.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-japao.gif"; sourceTree = "<group>"; };
+		2AC514C418EDBEDC00F51DDC /* escudo-mexico.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-mexico.gif"; sourceTree = "<group>"; };
+		2AC514C518EDBEDC00F51DDC /* escudo-nigeria.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-nigeria.gif"; sourceTree = "<group>"; };
+		2AC514C618EDBEDC00F51DDC /* escudo-portugal.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-portugal.gif"; sourceTree = "<group>"; };
+		2AC514C718EDBEDC00F51DDC /* escudo-russia.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-russia.gif"; sourceTree = "<group>"; };
+		2AC514C818EDBEDC00F51DDC /* escudo-suica.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-suica.gif"; sourceTree = "<group>"; };
+		2AC514C918EDBEDC00F51DDC /* escudo-uk.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-uk.gif"; sourceTree = "<group>"; };
+		2AC514CA18EDBEDC00F51DDC /* escudo-uruguai.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "escudo-uruguai.gif"; sourceTree = "<group>"; };
+		2AC514CB18EDBEDC00F51DDC /* espanha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = espanha.jpg; sourceTree = "<group>"; };
+		2AC514CC18EDBEDC00F51DDC /* estadosunidos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = estadosunidos.jpg; sourceTree = "<group>"; };
+		2AC514CD18EDBEDC00F51DDC /* franca.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = franca.jpg; sourceTree = "<group>"; };
+		2AC514CE18EDBEDC00F51DDC /* gana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gana.jpg; sourceTree = "<group>"; };
+		2AC514CF18EDBEDC00F51DDC /* grecia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grecia.jpg; sourceTree = "<group>"; };
+		2AC514D018EDBEDC00F51DDC /* holanda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = holanda.jpg; sourceTree = "<group>"; };
+		2AC514D118EDBEDC00F51DDC /* honduras.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = honduras.jpg; sourceTree = "<group>"; };
+		2AC514D218EDBEDC00F51DDC /* inglaterra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = inglaterra.jpg; sourceTree = "<group>"; };
+		2AC514D318EDBEDC00F51DDC /* ira.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ira.jpg; sourceTree = "<group>"; };
+		2AC514D418EDBEDC00F51DDC /* italia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = italia.jpg; sourceTree = "<group>"; };
+		2AC514D518EDBEDC00F51DDC /* japao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = japao.jpg; sourceTree = "<group>"; };
+		2AC514D618EDBEDC00F51DDC /* koreia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = koreia.jpg; sourceTree = "<group>"; };
+		2AC514D718EDBEDC00F51DDC /* mexico.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mexico.jpg; sourceTree = "<group>"; };
+		2AC514D818EDBEDC00F51DDC /* nigeria.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nigeria.jpg; sourceTree = "<group>"; };
+		2AC514D918EDBEDC00F51DDC /* portugal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portugal.jpg; sourceTree = "<group>"; };
+		2AC514DA18EDBEDC00F51DDC /* russia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = russia.jpg; sourceTree = "<group>"; };
+		2AC514DB18EDBEDC00F51DDC /* suica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = suica.jpg; sourceTree = "<group>"; };
+		2AC514DC18EDBEDC00F51DDC /* uruguai.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = uruguai.jpg; sourceTree = "<group>"; };
+		2AC5151D18EDBEE800F51DDC /* photos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = photos.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +388,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A80449618ECA9D400BBAA7E /* iAd.framework in Frameworks */,
+				2A80449418EC847200BBAA7E /* Accelerate.framework in Frameworks */,
+				2A80449218EC844F00BBAA7E /* CoreVideo.framework in Frameworks */,
 				2A56140918EBA7E300A3BAF0 /* CoreMedia.framework in Frameworks */,
 				2A5613FF18EB8B8500A3BAF0 /* AVFoundation.framework in Frameworks */,
 				2A5613FB18EB8B4200A3BAF0 /* liblept.a in Frameworks */,
@@ -281,6 +420,8 @@
 			isa = PBXGroup;
 			children = (
 				2A106E3718EA686800D2FC98 /* stickers.json */,
+				2AC5151D18EDBEE800F51DDC /* photos.json */,
+				2AC5149C18EDBEDC00F51DDC /* Selecoes */,
 				2A106DC818EA55BE00D2FC98 /* AlbumDaCopa */,
 				2A106DE518EA55BE00D2FC98 /* AlbumDaCopaTests */,
 				2A106DBF18EA55BE00D2FC98 /* Frameworks */,
@@ -300,6 +441,9 @@
 		2A106DBF18EA55BE00D2FC98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A80449518ECA9D400BBAA7E /* iAd.framework */,
+				2A80449318EC847200BBAA7E /* Accelerate.framework */,
+				2A80449118EC844F00BBAA7E /* CoreVideo.framework */,
 				2A56140818EBA7E300A3BAF0 /* CoreMedia.framework */,
 				2A5613FE18EB8B8500A3BAF0 /* AVFoundation.framework */,
 				2A56136218EB8B4200A3BAF0 /* tesseract-ios-lib */,
@@ -616,6 +760,77 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		2AC5149C18EDBEDC00F51DDC /* Selecoes */ = {
+			isa = PBXGroup;
+			children = (
+				2AC5149D18EDBEDC00F51DDC /* alemanha.jpg */,
+				2AC5149E18EDBEDC00F51DDC /* argelia.jpg */,
+				2AC5149F18EDBEDC00F51DDC /* argentina.jpg */,
+				2AC514A018EDBEDC00F51DDC /* australia.jpg */,
+				2AC514A118EDBEDC00F51DDC /* belgica.jpg */,
+				2AC514A218EDBEDC00F51DDC /* bosnia.jpg */,
+				2AC514A318EDBEDC00F51DDC /* brasil.jpg */,
+				2AC514A418EDBEDC00F51DDC /* camaroes.jpg */,
+				2AC514A518EDBEDC00F51DDC /* chile.jpg */,
+				2AC514A618EDBEDC00F51DDC /* colombia.jpg */,
+				2AC514A718EDBEDC00F51DDC /* costadomarfim.jpg */,
+				2AC514A818EDBEDC00F51DDC /* costarica.jpg */,
+				2AC514A918EDBEDC00F51DDC /* croacia.jpg */,
+				2AC514AA18EDBEDC00F51DDC /* equador.jpg */,
+				2AC514AB18EDBEDC00F51DDC /* escudo-alemanha.gif */,
+				2AC514AC18EDBEDC00F51DDC /* escudo-argelia.gif */,
+				2AC514AD18EDBEDC00F51DDC /* escudo-argentina.gif */,
+				2AC514AE18EDBEDC00F51DDC /* escudo-australia.gif */,
+				2AC514AF18EDBEDC00F51DDC /* escudo-belgica.gif */,
+				2AC514B018EDBEDC00F51DDC /* escudo-bosnia.gif */,
+				2AC514B118EDBEDC00F51DDC /* escudo-brasil.gif */,
+				2AC514B218EDBEDC00F51DDC /* escudo-camaroes.gif */,
+				2AC514B318EDBEDC00F51DDC /* escudo-chile.gif */,
+				2AC514B418EDBEDC00F51DDC /* escudo-colombia.gif */,
+				2AC514B518EDBEDC00F51DDC /* escudo-coreia.gif */,
+				2AC514B618EDBEDC00F51DDC /* escudo-costa-do-marfim.gif */,
+				2AC514B718EDBEDC00F51DDC /* escudo-costarica.gif */,
+				2AC514B818EDBEDC00F51DDC /* escudo-croacia.gif */,
+				2AC514B918EDBEDC00F51DDC /* escudo-equador.gif */,
+				2AC514BA18EDBEDC00F51DDC /* escudo-espanha.gif */,
+				2AC514BB18EDBEDC00F51DDC /* escudo-eua.gif */,
+				2AC514BC18EDBEDC00F51DDC /* escudo-franca.gif */,
+				2AC514BD18EDBEDC00F51DDC /* escudo-gana.gif */,
+				2AC514BE18EDBEDC00F51DDC /* escudo-grecia.gif */,
+				2AC514BF18EDBEDC00F51DDC /* escudo-holanda.gif */,
+				2AC514C018EDBEDC00F51DDC /* escudo-honduras.gif */,
+				2AC514C118EDBEDC00F51DDC /* escudo-ira.gif */,
+				2AC514C218EDBEDC00F51DDC /* escudo-italia.gif */,
+				2AC514C318EDBEDC00F51DDC /* escudo-japao.gif */,
+				2AC514C418EDBEDC00F51DDC /* escudo-mexico.gif */,
+				2AC514C518EDBEDC00F51DDC /* escudo-nigeria.gif */,
+				2AC514C618EDBEDC00F51DDC /* escudo-portugal.gif */,
+				2AC514C718EDBEDC00F51DDC /* escudo-russia.gif */,
+				2AC514C818EDBEDC00F51DDC /* escudo-suica.gif */,
+				2AC514C918EDBEDC00F51DDC /* escudo-uk.gif */,
+				2AC514CA18EDBEDC00F51DDC /* escudo-uruguai.gif */,
+				2AC514CB18EDBEDC00F51DDC /* espanha.jpg */,
+				2AC514CC18EDBEDC00F51DDC /* estadosunidos.jpg */,
+				2AC514CD18EDBEDC00F51DDC /* franca.jpg */,
+				2AC514CE18EDBEDC00F51DDC /* gana.jpg */,
+				2AC514CF18EDBEDC00F51DDC /* grecia.jpg */,
+				2AC514D018EDBEDC00F51DDC /* holanda.jpg */,
+				2AC514D118EDBEDC00F51DDC /* honduras.jpg */,
+				2AC514D218EDBEDC00F51DDC /* inglaterra.jpg */,
+				2AC514D318EDBEDC00F51DDC /* ira.jpg */,
+				2AC514D418EDBEDC00F51DDC /* italia.jpg */,
+				2AC514D518EDBEDC00F51DDC /* japao.jpg */,
+				2AC514D618EDBEDC00F51DDC /* koreia.jpg */,
+				2AC514D718EDBEDC00F51DDC /* mexico.jpg */,
+				2AC514D818EDBEDC00F51DDC /* nigeria.jpg */,
+				2AC514D918EDBEDC00F51DDC /* portugal.jpg */,
+				2AC514DA18EDBEDC00F51DDC /* russia.jpg */,
+				2AC514DB18EDBEDC00F51DDC /* suica.jpg */,
+				2AC514DC18EDBEDC00F51DDC /* uruguai.jpg */,
+			);
+			path = Selecoes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -691,18 +906,83 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AC5151218EDBEDC00F51DDC /* inglaterra.jpg in Resources */,
+				2AC514F518EDBEDC00F51DDC /* escudo-coreia.gif in Resources */,
+				2AC5150C18EDBEDC00F51DDC /* estadosunidos.jpg in Resources */,
+				2AC514E518EDBEDC00F51DDC /* chile.jpg in Resources */,
+				2AC5151918EDBEDC00F51DDC /* portugal.jpg in Resources */,
+				2AC514F018EDBEDC00F51DDC /* escudo-bosnia.gif in Resources */,
 				2A56129A18EB181600A3BAF0 /* Delete.png in Resources */,
+				2AC5150118EDBEDC00F51DDC /* escudo-ira.gif in Resources */,
+				2AC5151318EDBEDC00F51DDC /* ira.jpg in Resources */,
 				2A56136118EB89CB00A3BAF0 /* tessdata in Resources */,
+				2AC5151E18EDBEE800F51DDC /* photos.json in Resources */,
+				2AC514E718EDBEDC00F51DDC /* costadomarfim.jpg in Resources */,
+				2AC5150218EDBEDC00F51DDC /* escudo-italia.gif in Resources */,
+				2AC514FF18EDBEDC00F51DDC /* escudo-holanda.gif in Resources */,
+				2AC514E018EDBEDC00F51DDC /* australia.jpg in Resources */,
+				2AC514EA18EDBEDC00F51DDC /* equador.jpg in Resources */,
+				2AC514EB18EDBEDC00F51DDC /* escudo-alemanha.gif in Resources */,
+				2AC514F118EDBEDC00F51DDC /* escudo-brasil.gif in Resources */,
+				2AC5150018EDBEDC00F51DDC /* escudo-honduras.gif in Resources */,
+				2AC514FD18EDBEDC00F51DDC /* escudo-gana.gif in Resources */,
+				2AC514F418EDBEDC00F51DDC /* escudo-colombia.gif in Resources */,
+				2AC5151018EDBEDC00F51DDC /* holanda.jpg in Resources */,
+				2AC514EC18EDBEDC00F51DDC /* escudo-argelia.gif in Resources */,
+				2AC5151418EDBEDC00F51DDC /* italia.jpg in Resources */,
 				2A5613FD18EB8B4200A3BAF0 /* README.md in Resources */,
 				2A106DCD18EA55BE00D2FC98 /* InfoPlist.strings in Resources */,
 				2A56140E18EBB56B00A3BAF0 /* Rambla-Bold.ttf in Resources */,
 				2A56129618EB0E5900A3BAF0 /* StickerCell.xib in Resources */,
+				2AC5150D18EDBEDC00F51DDC /* franca.jpg in Resources */,
+				2AC5151518EDBEDC00F51DDC /* japao.jpg in Resources */,
+				2AC514F818EDBEDC00F51DDC /* escudo-croacia.gif in Resources */,
+				2AC514DD18EDBEDC00F51DDC /* alemanha.jpg in Resources */,
+				2AC514DF18EDBEDC00F51DDC /* argentina.jpg in Resources */,
+				2AC5151C18EDBEDC00F51DDC /* uruguai.jpg in Resources */,
+				2AC5150318EDBEDC00F51DDC /* escudo-japao.gif in Resources */,
+				2AC5151618EDBEDC00F51DDC /* koreia.jpg in Resources */,
+				2AC5150818EDBEDC00F51DDC /* escudo-suica.gif in Resources */,
+				2AC5150A18EDBEDC00F51DDC /* escudo-uruguai.gif in Resources */,
+				2AC514FE18EDBEDC00F51DDC /* escudo-grecia.gif in Resources */,
 				2A56140418EB9AF500A3BAF0 /* CameraViewController.xib in Resources */,
+				2AC514E418EDBEDC00F51DDC /* camaroes.jpg in Resources */,
+				2AC5150E18EDBEDC00F51DDC /* gana.jpg in Resources */,
+				2AC514E118EDBEDC00F51DDC /* belgica.jpg in Resources */,
 				2A106DD818EA55BE00D2FC98 /* Images.xcassets in Resources */,
+				2AC514FB18EDBEDC00F51DDC /* escudo-eua.gif in Resources */,
 				2A106E3818EA686800D2FC98 /* stickers.json in Resources */,
+				2AC5150918EDBEDC00F51DDC /* escudo-uk.gif in Resources */,
+				2AC514E618EDBEDC00F51DDC /* colombia.jpg in Resources */,
+				2AC514F318EDBEDC00F51DDC /* escudo-chile.gif in Resources */,
+				2AC5150418EDBEDC00F51DDC /* escudo-mexico.gif in Resources */,
+				2AC5150B18EDBEDC00F51DDC /* espanha.jpg in Resources */,
+				2AC514F618EDBEDC00F51DDC /* escudo-costa-do-marfim.gif in Resources */,
+				2AC514EF18EDBEDC00F51DDC /* escudo-belgica.gif in Resources */,
 				2A56129B18EB181600A3BAF0 /* Check.png in Resources */,
 				2A5613FA18EB8B4200A3BAF0 /* .gitignore in Resources */,
+				2AC514E218EDBEDC00F51DDC /* bosnia.jpg in Resources */,
+				2AC514FC18EDBEDC00F51DDC /* escudo-franca.gif in Resources */,
+				2AC5151B18EDBEDC00F51DDC /* suica.jpg in Resources */,
+				2AC514F918EDBEDC00F51DDC /* escudo-equador.gif in Resources */,
 				2A56128D18EB055400A3BAF0 /* StickerTableViewController.xib in Resources */,
+				2AC514E918EDBEDC00F51DDC /* croacia.jpg in Resources */,
+				2AC5150718EDBEDC00F51DDC /* escudo-russia.gif in Resources */,
+				2AC514ED18EDBEDC00F51DDC /* escudo-argentina.gif in Resources */,
+				2AC5151718EDBEDC00F51DDC /* mexico.jpg in Resources */,
+				2AC514E818EDBEDC00F51DDC /* costarica.jpg in Resources */,
+				2AC514FA18EDBEDC00F51DDC /* escudo-espanha.gif in Resources */,
+				2AC514F718EDBEDC00F51DDC /* escudo-costarica.gif in Resources */,
+				2AC514F218EDBEDC00F51DDC /* escudo-camaroes.gif in Resources */,
+				2AC5150518EDBEDC00F51DDC /* escudo-nigeria.gif in Resources */,
+				2AC5151818EDBEDC00F51DDC /* nigeria.jpg in Resources */,
+				2AC514DE18EDBEDC00F51DDC /* argelia.jpg in Resources */,
+				2AC5150618EDBEDC00F51DDC /* escudo-portugal.gif in Resources */,
+				2AC514EE18EDBEDC00F51DDC /* escudo-australia.gif in Resources */,
+				2AC5151A18EDBEDC00F51DDC /* russia.jpg in Resources */,
+				2AC5150F18EDBEDC00F51DDC /* grecia.jpg in Resources */,
+				2AC514E318EDBEDC00F51DDC /* brasil.jpg in Resources */,
+				2AC5151118EDBEDC00F51DDC /* honduras.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

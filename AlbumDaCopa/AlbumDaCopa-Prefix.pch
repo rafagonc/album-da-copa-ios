@@ -16,4 +16,5 @@
     #import <CoreData/CoreData.h>
 #import "AppDelegate.h"
 #import <AVFoundation/AVFoundation.h>
+#import <iAd/iAd.h>
 #endif

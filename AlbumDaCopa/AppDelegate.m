@@ -20,6 +20,7 @@
 
 #pragma mark - LAUCHING OPTIONS
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [UIViewController prepareInterstitialAds];
     if ([[NSUserDefaults standardUserDefaults] objectForKey:NOTFIRSTTIME]) {
         NSLog(@"NOT FIRST TIME");
     } else {
@@ -46,6 +47,11 @@
 -(void)applicationWillEnterForeground:(UIApplication *)application {
 }
 -(void)applicationDidBecomeActive:(UIApplication *)application {
+    [self performSelector:@selector(sendNotificationToFullscrennAd) withObject:nil afterDelay:1];
+    
+}
+-(void)sendNotificationToFullscrennAd {
+    [[NSNotificationCenter defaultCenter] postNotificationName:FullscreenAdNotification object:nil];
 }
 -(void)applicationWillTerminate:(UIApplication *)application {
     [self saveContext];

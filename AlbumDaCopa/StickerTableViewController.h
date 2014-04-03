@@ -11,6 +11,7 @@
 #import "StickerCell.h"
 #import "StickerController.h"
 #import "CameraViewController.h"
+#import <iAd/iAd.h>
 
 #define ChangedStatsNotification @"changedStats"
 
@@ -26,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *statusBarCover;
 @property (weak, nonatomic) IBOutlet UIView *sliderHandlerView;
+@property (weak, nonatomic) IBOutlet ADBannerView *adBannerView;
 
 #pragma mark - METHODS
 -(id)init;

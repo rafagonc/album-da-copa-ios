@@ -1,0 +1,91 @@
+{
+	"Germany" : {
+		"flag" : "alemanha.jpg",
+		"badge" : "escudo-alemanha.gif"
+	},
+	"Argelia" : {
+		"flag" : "argelia.jpg",
+		"badge" : "escudo-argelia.gif"
+	},
+	"Argentina" : {
+		"flag" : "argentina.jpg",
+		"badge" : "escudo-argentina.gif"
+	},
+	"Australia" : {
+		"flag" : "australia.jpg",
+		"badge" : "escudo-australia.gif"
+	},"Belgium" : {
+		"flag" : "belgica.jpg",
+		"badge" : "escudo-belgica.gif"
+	},
+	"Bosnia and Herzegovina" : {
+		"flag" : "bosnia.jpg",
+		"badge" : "escudo-bosnia.gif"
+	},
+	"Brazil" : {
+		"flag" : "australia.jpg",
+		"badge" : "escudo-australia.gif"
+	},
+	"Cameroon" : {
+		"flag" : "camaroes.jpg",
+		"badge" : "escudo-camaroes.gif"
+	},
+	"Chile" : {
+		"flag" : "chile.jpg",
+		"badge" : "escudo-chile.gif"
+	},
+	"Colombia" : {
+		"flag" : "colombia.jpg",
+		"badge" : "escudo-colombia.gif"
+	},
+	"Ivory Coast" : {
+		"flag" : "costadomarfim.jpg",
+		"badge" : "escudo-costa-do-marfim.gif"
+	},
+	"Croatia" : {
+		"flag" : "croacia.jpg",
+		"badge" : "escudo-croacia.gif"
+	},
+	"Costa Rica" : {
+		"flag" : "costarica.jpg",
+		"badge" : "escudo-costarica.gif"
+	},
+	"Equator" : {
+		"flag" : "equador.jpg",
+		"badge" : "escudo-equador.gif"
+	},
+	"Spain" : {
+		"flag" : "espanha.jpg",
+		"badge" : "escudo-espanha.gif"
+	},
+	"Korea Republic" : {
+		"flag" : "koreia.jpg",
+		"badge" : "escudo-coreia.gif"
+	},
+	"US" : {
+		"flag" : "estadosunidos.jpg",
+		"badge" : "escudo-estadosunidos.gif"
+	},
+	"France" : {
+		"flag" : "franca.jpg",
+		"badge" : "escudo-franca.gif"
+	},
+	"Ghana" : {
+		"flag" : "gana.jpg",
+		"badge" : "escudo-gana.gif"
+	},
+	"Greece" : {
+		"flag" : "grecia.jpg",
+		"badge" : "escudo-frecia.gif"
+	},
+	"Netherlands" : {
+		"flag" : "holanda.jpg",
+		"badge" : "escudo-holanda.gif"
+	},
+	"Honduras" : {
+		"flag" : "honduras.jpg",
+		"badge" : "escudo-honduras.gif"
+	},
+
+
+}

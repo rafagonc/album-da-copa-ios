@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StickerTableViewController">
             <connections>
+                <outlet property="adBannerView" destination="bZs-0e-3l8" id="gPh-1R-Wdm"/>
                 <outlet property="numberOfStickersToBeCompletedLabel" destination="ApN-gR-2Oj" id="gsA-4e-PP5"/>
                 <outlet property="percentCompletedLabel" destination="6rA-eq-9Ww" id="db5-oD-3fX"/>
                 <outlet property="searchBar" destination="N0L-0Q-uah" id="Sr6-ey-DgV"/>
@@ -26,7 +27,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <inset key="separatorInset" minX="49" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <view key="tableHeaderView" contentMode="scaleToFill" id="TBW-2v-59x">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="151"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" text="" placeholder="Search Player or Team" translatesAutoresizingMaskIntoConstraints="NO" id="N0L-0Q-uah">
@@ -52,6 +53,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZs-0e-3l8">
+                                <rect key="frame" x="0.0" y="101" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

@@ -13,25 +13,25 @@
   },
   {
     "section" : "Introduction",
-    "name" : "Official Emblem Pt.1",
+    "name" : "Official Emblem One",
     "type" : "Metal",
     "index" : "2"
   },
   {
     "section" : "Introduction",
-    "name" : "Official Emblem Pt.2",
+    "name" : "Official Emblem Two",
     "type" : "Metal",
     "index" : "3"
   },
   {
     "section" : "Introduction",
-    "name" : "Official Mascot Pt.1",
+    "name" : "Official Mascot One",
     "type" : "Metal",
     "index" : "4"
   },
   {
     "section" : "Introduction",
-    "name" : "Official Mascot Pt.2",
+    "name" : "Official Mascot Two",
     "type" : "Metal",
     "index" : "5"
   },
@@ -49,258 +49,258 @@
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Mineirão - Belo Horizonte Pt.1",
+    "name" : "Estádio Mineirão - Belo Horizonte One",
     "type" : "-",
     "index" : "8"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Mineirão - Belo Horizonte Pt.2",
+    "name" : "Estádio Mineirão - Belo Horizonte Two",
     "type" : "-",
     "index" : "9"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Nacional - Brasília Pt.1",
+    "name" : "Estádio Nacional - Brasília One",
     "type" : "-",
     "index" : "10"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Nacional - Brasília Pt.2",
+    "name" : "Estádio Nacional - Brasília Two",
     "type" : "-",
     "index" : "11"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Pantanal - Cuiabá Pt.1",
+    "name" : "Arena Pantanal - Cuiabá One",
     "type" : "-",
     "index" : "12"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Pantanal - Cuiabá Pt.2",
+    "name" : "Arena Pantanal - Cuiabá Two",
     "type" : "-",
     "index" : "13"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena da Baixada - Curitiba Pt.1",
+    "name" : "Arena da Baixada - Curitiba One",
     "type" : "-",
     "index" : "14"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena da Baixada - Curitiba Pt.2",
+    "name" : "Arena da Baixada - Curitiba Two",
     "type" : "-",
     "index" : "15"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Castelão - Fortaleza Pt.1",
+    "name" : "Estádio Castelão - Fortaleza One",
     "type" : "-",
     "index" : "16"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Castelão - Fortaleza Pt.2",
+    "name" : "Estádio Castelão - Fortaleza Two",
     "type" : "-",
     "index" : "17"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Amazônia - Manaus Pt.1",
+    "name" : "Arena Amazônia - Manaus One",
     "type" : "-",
     "index" : "18"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Amazônia - Manaus Pt.2",
+    "name" : "Arena Amazônia - Manaus Two",
     "type" : "-",
     "index" : "19"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio das Dunas - Natal Pt.1",
+    "name" : "Estádio das Dunas - Natal One",
     "type" : "-",
     "index" : "20"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio das Dunas - Natal Pt.2",
+    "name" : "Estádio das Dunas - Natal Two",
     "type" : "-",
     "index" : "21"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Beira-Rio - Porto Alegre Pt.1",
+    "name" : "Estádio Beira-Rio - Porto Alegre One",
     "type" : "-",
     "index" : "22"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Beira-Rio - Porto Alegre Pt.2",
+    "name" : "Estádio Beira-Rio - Porto Alegre Two",
     "type" : "-",
     "index" : "23"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Pernambuco - Recife Pt.1",
+    "name" : "Arena Pernambuco - Recife One",
     "type" : "-",
     "index" : "24"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Pernambuco - Recife Pt.2",
+    "name" : "Arena Pernambuco - Recife Two",
     "type" : "-",
     "index" : "25"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Maracanã - Rio de Janeiro Pt.1",
+    "name" : "Estádio Maracanã - Rio de Janeiro One",
     "type" : "-",
     "index" : "26"
   },
   {
     "section" : "Stadiums",
-    "name" : "Estádio Maracanã - Rio de Janeiro Pt.2",
+    "name" : "Estádio Maracanã - Rio de Janeiro Two",
     "type" : "-",
     "index" : "27"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Fonte Nova - Salvador Pt.1",
+    "name" : "Arena Fonte Nova - Salvador One",
     "type" : "-",
     "index" : "28"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Fonte Nova - Salvador Pt.2",
+    "name" : "Arena Fonte Nova - Salvador Two",
     "type" : "-",
     "index" : "29"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Corinthians - São Paulo Pt.1",
+    "name" : "Arena Corinthians - São Paulo One",
     "type" : "-",
     "index" : "30"
   },
   {
     "section" : "Stadiums",
-    "name" : "Arena Corinthians - São Paulo Pt.2",
+    "name" : "Arena Corinthians - São Paulo Two",
     "type" : "-",
     "index" : "31"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "Badge",
     "type" : "Metal",
     "index" : "32"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "Team",
     "type" : "-",
     "index" : "33"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "Júlio César",
     "type" : "-",
     "index" : "34"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "Thiago Silva",
     "type" : "-",
     "index" : "35"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "David Luiz",
     "type" : "-",
     "index" : "36"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "Dani Alves",
     "type" : "-",
     "index" : "37"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "Marcelo",
     "type" : "-",
     "index" : "38"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "Dante",
     "type" : "-",
     "index" : "39"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "Ramires",
     "type" : "-",
     "index" : "40"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "Paulinho",
     "type" : "-",
     "index" : "41"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "Luiz Gustavo",
     "type" : "-",
     "index" : "42"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "Hernanes",
     "type" : "-",
     "index" : "43"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "Oscar",
     "type" : "-",
     "index" : "44"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "Bernard",
     "type" : "-",
     "index" : "45"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "Willian",
     "type" : "-",
     "index" : "46"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "Robinho",
     "type" : "-",
     "index" : "47"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "Neymar Jr.",
     "type" : "-",
     "index" : "48"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "Hulk",
     "type" : "-",
     "index" : "49"
   },
   {
-    "section" : "Brasil",
+    "section" : "Brazil",
     "name" : "Fred",
     "type" : "-",
     "index" : "50"

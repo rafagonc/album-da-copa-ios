@@ -9,9 +9,18 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "AVCaptureSessionManager.h"
-@interface CameraViewController : UIViewController
+#import <CoreMedia/CoreMedia.h>
+#import <CoreVideo/CoreVideo.h>
+#import <Accelerate/Accelerate.h>
+@interface CameraViewController : UIViewController <AVCaptureVideoDataOutputSampleBufferDelegate> {
+    int countPhotos;
+    UIImageView *imageView;
+}
 
 #pragma mark - PROPERTIES
 @property (nonatomic,strong) AVCaptureSessionManager *captureManager;
+@property (nonatomic,strong) AVCaptureVideoDataOutput *dataOutput;
+@property (nonatomic) BOOL finishedFocusing;
+@property (nonatomic,strong) UIImage *currentImage;
 
 @end

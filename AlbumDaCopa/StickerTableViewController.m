@@ -8,7 +8,8 @@
 
 #import "StickerTableViewController.h"
 
-@interface StickerTableViewController ()
+@interface StickerTableViewController () {
+}
 
 @end
 
@@ -65,12 +66,6 @@
     self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:15.0f], NSForegroundColorAttributeName : [UIColor whiteColor]};
     self.title = @"2014 World Cup Album";
 }
--(void)assignValueToViews {
-    NSArray *values = [StickerController statsForTheAlbum];
-    self.percentCompletedLabel.text = [[NSString stringWithFormat:@"%.2f",[values[0] doubleValue]] stringByAppendingString:@"%"];
-    self.numberOfStickersToBeCompletedLabel.text = [NSString stringWithFormat:@"%d/640",[values[1] intValue]];
-
-}
 
 #pragma mark - TABLE VIEW DELEGATE
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -107,7 +102,9 @@
     }
     NSPredicate *namePredicate = [NSPredicate predicateWithFormat:@"self.name contains[cd]%@",searchBar.text];
     NSPredicate *sectionPredicate = [NSPredicate predicateWithFormat:@"self.section contains[cd]%@",searchBar.text];
-    NSPredicate *compoundPredicate = [NSCompoundPredicate orPredicateWithSubpredicates:@[namePredicate,sectionPredicate]];
+    NSPredicate *indexPredicate = [NSPredicate predicateWithFormat:@"self.index.intValue == %d",searchBar.text.integerValue];
+
+    NSPredicate *compoundPredicate = [NSCompoundPredicate orPredicateWithSubpredicates:@[namePredicate,sectionPredicate, indexPredicate]];
     
     self.stickers = [[StickerController allStickers] filteredArrayUsingPredicate:compoundPredicate];
     [self.tableView reloadData];
@@ -119,6 +116,14 @@
     [self presentViewController:cam animated:YES completion:nil];
 }
 -(void)externalAction:(UIBarButtonItem *)sender {
+    
+}
+
+#pragma mark - NOTIFICATIONS
+-(void)assignValueToViews {
+    NSArray *values = [StickerController statsForTheAlbum];
+    self.percentCompletedLabel.text = [[NSString stringWithFormat:@"%.2f",[values[0] doubleValue]] stringByAppendingString:@"%"];
+    self.numberOfStickersToBeCompletedLabel.text = [NSString stringWithFormat:@"%d/640",[values[1] intValue]];
     
 }
 

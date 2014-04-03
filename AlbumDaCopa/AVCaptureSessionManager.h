@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AVCaptureSessionManager : NSObject
+@interface AVCaptureSessionManager : NSObject {
+    UIImage *currentImage;
+}
 @property (retain) AVCaptureVideoPreviewLayer *previewLayer;
 @property (retain) AVCaptureSession *captureSession;
+@property AVCaptureDeviceInput *videoIn;
 - (void)addVideoPreviewLayer;
 - (void)addVideoInput;
 @end
