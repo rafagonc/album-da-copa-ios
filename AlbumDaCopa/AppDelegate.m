@@ -29,7 +29,7 @@
     
     [self addObserver:stickerTableView forKeyPath:@"isFirstTime" options:NSKeyValueObservingOptionNew context:nil];
     
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:NOTFIRSTTIME]) {
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:EmailUserDefaultString]) {
         self.isFirstTime = NO;
     } else {
         [StickerController createAllStickersToDatabase];

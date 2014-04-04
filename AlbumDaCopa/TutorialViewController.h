@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TradeSystemTutorialViewController.h"
 @interface TutorialViewController : UIViewController
 
 @end

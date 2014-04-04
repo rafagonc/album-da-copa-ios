@@ -20,7 +20,8 @@
 -(id)init {
     self = [super initWithNibName:@"StickerTableViewController" bundle:nil];
     if (self) {
-        self.stickers = [StickerController allStickers];
+        User *me = [User me];
+        self.stickers = me.stickers;
     }
     return self;
 }
@@ -38,10 +39,6 @@
     [self setupNavigationBar];
     [self decorator];
 
-
-    
-
-
 }
 
 #pragma mark - LAYOUT SETUP
@@ -50,7 +47,7 @@
     doneOrTradeButton.backgroundColor = [UIColor colorWithRed:(40/255.0) green:(89/255.0) blue:(127/255.0) alpha:1];
     [doneOrTradeButton setTitle:self.shouldBeginIntroduction? @"Done" : @"Trade" forState:UIControlStateNormal];
     [doneOrTradeButton.layer setCornerRadius:10];
-    [doneOrTradeButton addTarget:self action:@selector(introductionFinished:) forControlEvents:UIControlEventTouchUpInside];
+    [doneOrTradeButton addTarget:self action:@selector(buttonFinishedAction:) forControlEvents:UIControlEventTouchUpInside];
     [doneOrTradeButton.layer setMasksToBounds:YES];
     doneOrTradeButton.titleLabel.font = [UIFont boldSystemFontOfSize:15.0];
     doneOrTradeButton.titleLabel.textColor = [UIColor whiteColor];
@@ -59,7 +56,7 @@
 }
 -(void)setupIntroductionViews {
     IntroductionTableViewHeader *introView = [[IntroductionTableViewHeader alloc] init];
-    [introView addTitleLabel:@"Check the stickers that you already have on the album. You can set leftovers too, in case you want to use the trade system" andSearchBarWithDelegate:self];
+    [introView addTitleLabel:@"Marque as figurinhas que você ja tem no álbum. Coloque também as repetidas para poder usar o sistema de trocas." andSearchBarWithDelegate:self];
     introView.backgroundColor = [UIColor colorWithRed:(246/255.0) green:(246/255.0) blue:(246/255.0) alpha:1];
     [self.tableView setTableHeaderView:introView];
 }
@@ -109,8 +106,8 @@
     StickerCell *cell = (StickerCell *)[tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
         cell = [[NSBundle mainBundle] loadNibNamed:@"StickerCell" owner:self options:nil][0];
-        cell.leftoversButton.layer.masksToBounds = YES;
-        cell.leftoversButton.layer.cornerRadius = 19;
+        cell.leftoversTextField.layer.masksToBounds = YES;
+        cell.leftoversTextField.layer.cornerRadius = 19;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
@@ -136,18 +133,29 @@
     NSPredicate *namePredicate = [NSPredicate predicateWithFormat:@"self.name contains[cd]%@",searchBar.text];
     NSPredicate *sectionPredicate = [NSPredicate predicateWithFormat:@"self.section contains[cd]%@",searchBar.text];
     NSPredicate *indexPredicate = [NSPredicate predicateWithFormat:@"self.index.intValue == %d",searchBar.text.integerValue];
-
-    NSPredicate *compoundPredicate = [NSCompoundPredicate orPredicateWithSubpredicates:@[namePredicate,sectionPredicate, indexPredicate]];
+    
+    NSPredicate *compoundPredicate = [NSCompoundPredicate orPredicateWithSubpredicates:[self isNumber:searchBar.text]?@[indexPredicate] : @[namePredicate,sectionPredicate]];
     
     self.stickers = [[StickerController allStickers] filteredArrayUsingPredicate:compoundPredicate];
     [self.tableView reloadData];
 }
+-(BOOL)isNumber:(NSString *)text {
+    NSCharacterSet* notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+    return [text rangeOfCharacterFromSet:notDigits].location == NSNotFound;
+}
 
 #pragma mark - ACTIONS
--(void)introductionFinished:(id)sender {
-    [self setupNormalHeader];
-    [self assignValueToViews];
-    [doneOrTradeButton setTitle:@"Trade" forState:UIControlStateNormal];
+-(void)buttonFinishedAction:(id)sender {
+    if (self.shouldBeginIntroduction) {
+        [self setupNormalHeader];
+        [self assignValueToViews];
+        [doneOrTradeButton setTitle:@"Trade" forState:UIControlStateNormal];
+        self.shouldBeginIntroduction = NO;
+    } else {
+        
+        
+    }
+    
 
 }
 -(void)presentTutorial {

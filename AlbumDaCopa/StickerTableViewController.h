@@ -14,7 +14,7 @@
 #import "IntroductionTableViewHeader.h"
 #import "TutorialViewController.h"
 #import "StatusAndSearchTableViewHeader.h"
-
+#import "User.h"
 #define ChangedStatsNotification @"changedStats"
 
 @interface StickerTableViewController : UIViewController <UISearchBarDelegate,UITableViewDelegate, UITableViewDataSource,UIScrollViewDelegate> {

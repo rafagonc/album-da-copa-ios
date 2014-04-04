@@ -13,7 +13,7 @@
 #pragma mark - AWAKE
 -(void)awakeFromNib {
     [super awakeFromNib];
-    self.leftoversButton.delegate = self;
+    self.leftoversTextField.delegate = self;
     self.nameLabel.font = [UIFont boldSystemFontOfSize:15.0];
 }
 -(void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -30,7 +30,7 @@
         [self.checkButton setBackgroundImage:[UIImage imageNamed:@"Check.png"] forState:UIControlStateNormal];
     } else {
         self.sticker.onAlbum = @NO;
-        self.leftoversButton.text = @"+";
+        self.leftoversTextField.text = @"+";
         [self.checkButton setBackgroundImage:[UIImage imageNamed:@"Delete.png"] forState:UIControlStateNormal];
     }
     [[AppDelegate staticManagedObjectContext] save:nil];
@@ -41,7 +41,7 @@
     self.nameLabel.text = [self fixStickerString:sticker.name andSticker:sticker];
     self.indexLabel.text = [NSString stringWithFormat:@"%d",sticker.index.intValue];
     self.typeLabel.text = sticker.type;
-    self.leftoversButton.text = [NSString stringWithFormat:sticker.leftovers.intValue? @"+%d" : @"+", sticker.leftovers.intValue];
+    self.leftoversTextField.text = [NSString stringWithFormat:sticker.leftovers.intValue? @"+%d" : @"+", sticker.leftovers.intValue];
     self.stickerHasChanges = NO;
 }
 -(void)setStickerHasChanges:(BOOL)stickerHasChanges {
@@ -72,12 +72,18 @@
         return [NSString stringWithFormat:@"%@ Squad", team];
     } else return s;
 }
+-(BOOL)isNumber:(NSString *)text {
+    NSCharacterSet* notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+    return [text rangeOfCharacterFromSet:notDigits].location == NSNotFound;
+}
 
 #pragma mark - DELEGATE
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    NSLog(@"%@",string);
-    self.leftoversButton.text = [NSString stringWithFormat:@"+%@",string];
-    return NO;
+    if (![self isNumber:string]) {
+        [[[UIAlertView alloc] initWithTitle:@"Insire Somente Números" message:@"Coloque nesse campo as figurinhas que você tem de sobra caso queria usar o sistema de troca." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] show];
+        return NO;
+    }
+    return  textField.text.length < 3 /*clear*/ || [string isEqualToString:@""]; //delete;;
 }
 -(void)textFieldDidBeginEditing:(UITextField *)textField {
     if (!self.hasIt) {
@@ -86,7 +92,9 @@
     }
 }
 -(void)textFieldDidEndEditing:(UITextField *)textField {
-    NSInteger leftovers = [[self.leftoversButton.text stringByReplacingOccurrencesOfString:@"+" withString:@""] integerValue];
+    if (textField.text.length == 0) textField.text = @"+";
+    
+    NSInteger leftovers = [[self.leftoversTextField.text stringByReplacingOccurrencesOfString:@"+" withString:@""] integerValue];
     self.sticker.leftovers = @(leftovers);
     self.stickerHasChanges = YES;
 }
