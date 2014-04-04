@@ -14,7 +14,7 @@
 -(void)awakeFromNib {
     [super awakeFromNib];
     self.leftoversButton.delegate = self;
-    self.nameLabel.font = [UIFont fontWithName:@"Rambla" size:14.0f];
+    self.nameLabel.font = [UIFont boldSystemFontOfSize:15.0];
 }
 -(void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

@@ -10,24 +10,28 @@
 #import "Sticker.h"
 #import "StickerCell.h"
 #import "StickerController.h"
-#import "CameraViewController.h"
 #import <iAd/iAd.h>
+#import "IntroductionTableViewHeader.h"
+#import "TutorialViewController.h"
+#import "StatusAndSearchTableViewHeader.h"
 
 #define ChangedStatsNotification @"changedStats"
 
-@interface StickerTableViewController : UIViewController <UISearchBarDelegate,UITableViewDelegate, UITableViewDataSource,UIScrollViewDelegate>
+@interface StickerTableViewController : UIViewController <UISearchBarDelegate,UITableViewDelegate, UITableViewDataSource,UIScrollViewDelegate> {
+    UIButton *doneOrTradeButton;
+}
 
 #pragma mark - PROPERTIES
 @property (nonatomic,strong) NSArray *stickers;
+@property (nonatomic) BOOL shouldBeginIntroduction;
 
 #pragma mark - OUTLETS
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
-@property (weak, nonatomic) IBOutlet UILabel *percentCompletedLabel;
-@property (weak, nonatomic) IBOutlet UILabel *numberOfStickersToBeCompletedLabel;
+
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *statusBarCover;
 @property (weak, nonatomic) IBOutlet UIView *sliderHandlerView;
-@property (weak, nonatomic) IBOutlet ADBannerView *adBannerView;
+@property (strong, nonatomic) StatusAndSearchTableViewHeader *normalHeader;
 
 #pragma mark - METHODS
 -(id)init;

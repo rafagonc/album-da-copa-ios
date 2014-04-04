@@ -22,5 +22,6 @@
 -(void)saveContext;
 -(NSURL *)applicationDocumentsDirectory;
 +(NSManagedObjectContext *)staticManagedObjectContext;
+@property (nonatomic) BOOL isFirstTime;
 
 @end

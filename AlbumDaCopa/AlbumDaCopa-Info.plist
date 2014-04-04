@@ -37,6 +37,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Quicksand-Regular.otf</string>
 		<string>Rambla-Bold.ttf</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>

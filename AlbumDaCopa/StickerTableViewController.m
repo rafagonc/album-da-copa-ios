@@ -24,47 +24,80 @@
     }
     return self;
 }
--(void)viewWillAppear:(BOOL)animated {
-    UIBarButtonItem *cameraItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(cameraAction:)];
-    [cameraItem setTintColor:[UIColor whiteColor]];
-    [self.navigationItem setLeftBarButtonItem:cameraItem];
-    
-    UIBarButtonItem *externalItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(externalAction:)];
-    [externalItem setTintColor:[UIColor whiteColor]];
-    [self.navigationItem setRightBarButtonItem:externalItem];
-}
 -(void)viewDidLoad {
     [super viewDidLoad];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.searchBar.delegate = self;
-    
-    [self decorator];
-    [self assignValueToViews];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(assignValueToViews) name:ChangedStatsNotification object:nil];
+    
+    if (self.shouldBeginIntroduction) [self setupIntroductionViews]; else [self setupNormalHeader];
+    
+    [self assignValueToViews];
+    [self setupNavigationBar];
+    [self decorator];
+
+
+    
+
+
+}
+
+#pragma mark - LAYOUT SETUP
+-(void)setupNavigationBar {
+    doneOrTradeButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 2, 70, 26)];
+    doneOrTradeButton.backgroundColor = [UIColor colorWithRed:(40/255.0) green:(89/255.0) blue:(127/255.0) alpha:1];
+    [doneOrTradeButton setTitle:self.shouldBeginIntroduction? @"Done" : @"Trade" forState:UIControlStateNormal];
+    [doneOrTradeButton.layer setCornerRadius:10];
+    [doneOrTradeButton addTarget:self action:@selector(introductionFinished:) forControlEvents:UIControlEventTouchUpInside];
+    [doneOrTradeButton.layer setMasksToBounds:YES];
+    doneOrTradeButton.titleLabel.font = [UIFont boldSystemFontOfSize:15.0];
+    doneOrTradeButton.titleLabel.textColor = [UIColor whiteColor];
+    
+    [self.navigationItem setTitleView:doneOrTradeButton];
+}
+-(void)setupIntroductionViews {
+    IntroductionTableViewHeader *introView = [[IntroductionTableViewHeader alloc] init];
+    [introView addTitleLabel:@"Check the stickers that you already have on the album. You can set leftovers too, in case you want to use the trade system" andSearchBarWithDelegate:self];
+    introView.backgroundColor = [UIColor colorWithRed:(246/255.0) green:(246/255.0) blue:(246/255.0) alpha:1];
+    [self.tableView setTableHeaderView:introView];
+}
+-(void)setupNormalHeader {
+    self.normalHeader = [[StatusAndSearchTableViewHeader alloc] init];
+    [self.normalHeader addViewsWithSearchBarDelegate:self];
+    [self.tableView setTableHeaderView:self.normalHeader];
 
 }
 -(void)decorator {
     UIColor *flatBlue = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];
-    self.numberOfStickersToBeCompletedLabel.backgroundColor = [UIColor colorWithRed:(40/255.0) green:(89/255.0) blue:(127/255.0) alpha:1];
-    self.percentCompletedLabel.backgroundColor = [UIColor colorWithRed:(40/255.0) green:(89/255.0) blue:(127/255.0) alpha:1];;
-    self.percentCompletedLabel.layer.masksToBounds = YES;
-    self.percentCompletedLabel.layer.cornerRadius = 9;
-    self.numberOfStickersToBeCompletedLabel.layer.masksToBounds = YES;
-    self.numberOfStickersToBeCompletedLabel.layer.cornerRadius = 9;
     
     [[UINavigationBar appearance] setBarTintColor:flatBlue];
     [[UINavigationBar appearance] setBarTintColor:flatBlue];
-    self.tableView.tableHeaderView.backgroundColor = flatBlue;
     self.statusBarCover.backgroundColor = flatBlue;
     self.sliderHandlerView.backgroundColor = flatBlue;
     
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
-    self.navigationController.navigationBar.layer.masksToBounds = YES;
-    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:15.0f], NSForegroundColorAttributeName : [UIColor whiteColor]};
-    self.title = @"2014 World Cup Album";
+    self.navigationController.navigationBar.clipsToBounds = YES;
+
+}
+
+#pragma mark - GENERAL METHODS
+
+
+#pragma mark - KVO
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    BOOL isFirstTime = [change[@"new"] boolValue];
+    self.shouldBeginIntroduction = isFirstTime;
+    if (!isFirstTime) {
+        return;
+    }
+    [self performSelector:@selector(presentTutorial) withObject:nil afterDelay:1];
+    self.stickers = [StickerController allStickers];
+    [self.tableView reloadData];
+    [self setupIntroductionViews];
+
+
 }
 
 #pragma mark - TABLE VIEW DELEGATE
@@ -111,19 +144,22 @@
 }
 
 #pragma mark - ACTIONS
--(void)cameraAction:(UIBarButtonItem *)sender {
-    CameraViewController *cam = [[CameraViewController alloc] init];
-    [self presentViewController:cam animated:YES completion:nil];
+-(void)introductionFinished:(id)sender {
+    [self setupNormalHeader];
+    [self assignValueToViews];
+    [doneOrTradeButton setTitle:@"Trade" forState:UIControlStateNormal];
+
 }
--(void)externalAction:(UIBarButtonItem *)sender {
-    
+-(void)presentTutorial {
+    TutorialViewController *tut = [[TutorialViewController alloc] init];
+    [self presentViewController:tut animated:YES completion:nil];
 }
 
 #pragma mark - NOTIFICATIONS
 -(void)assignValueToViews {
     NSArray *values = [StickerController statsForTheAlbum];
-    self.percentCompletedLabel.text = [[NSString stringWithFormat:@"%.2f",[values[0] doubleValue]] stringByAppendingString:@"%"];
-    self.numberOfStickersToBeCompletedLabel.text = [NSString stringWithFormat:@"%d/640",[values[1] intValue]];
+    self.normalHeader.percentComplete.text = [[NSString stringWithFormat:@"%.2f",[values[0] doubleValue]] stringByAppendingString:@"%"];
+    self.normalHeader.remainToCompleteLabel.text = [NSString stringWithFormat:@"%d/640",[values[1] intValue]];
     
 }
 

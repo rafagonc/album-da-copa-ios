@@ -6,10 +6,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StickerTableViewController">
             <connections>
-                <outlet property="adBannerView" destination="bZs-0e-3l8" id="gPh-1R-Wdm"/>
-                <outlet property="numberOfStickersToBeCompletedLabel" destination="ApN-gR-2Oj" id="gsA-4e-PP5"/>
-                <outlet property="percentCompletedLabel" destination="6rA-eq-9Ww" id="db5-oD-3fX"/>
-                <outlet property="searchBar" destination="N0L-0Q-uah" id="Sr6-ey-DgV"/>
                 <outlet property="sliderHandlerView" destination="lu9-zh-Xfg" id="gTF-Wd-LqZ"/>
                 <outlet property="statusBarCover" destination="9gx-98-ufX" id="ROC-eg-wQN"/>
                 <outlet property="tableView" destination="K69-p1-vaX" id="QL6-WR-71z"/>
@@ -26,40 +22,6 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <inset key="separatorInset" minX="49" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <view key="tableHeaderView" contentMode="scaleToFill" id="TBW-2v-59x">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="151"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" text="" placeholder="Search Player or Team" translatesAutoresizingMaskIntoConstraints="NO" id="N0L-0Q-uah">
-                                <rect key="frame" x="0.0" y="56" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="barTintColor" red="0.40574542120000001" green="0.2587830351" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rA-eq-9Ww">
-                                <rect key="frame" x="20" y="14" width="133" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.28044708820000003" green="0.41313257720000002" blue="0.77717391300000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApN-gR-2Oj">
-                                <rect key="frame" x="172" y="14" width="128" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.28044708820000003" green="0.41313257720000002" blue="0.77717391300000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZs-0e-3l8">
-                                <rect key="frame" x="0.0" y="101" width="320" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </adBannerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
                 </tableView>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9gx-98-ufX">
                     <rect key="frame" x="0.0" y="-111" width="321" height="103"/>

@@ -20,18 +20,22 @@
 
 #pragma mark - LAUCHING OPTIONS
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [UIViewController prepareInterstitialAds];
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:NOTFIRSTTIME]) {
-        NSLog(@"NOT FIRST TIME");
-    } else {
-        [StickerController createAllStickersToDatabase];
-    }
     
-    
+    [Parse setApplicationId:@"6ebKwAp10lhi98DnWAuWefQYGXijOwf09VOVKyNe" clientKey:@"g8Vd5jpXWPYmeCa7EDYG3VOEbFUmrDdh9drbQk1Z"];
     
     StickerTableViewController *stickerTableView = [[StickerTableViewController alloc] init];
     UINavigationController *navControl = [[UINavigationController alloc] initWithRootViewController:stickerTableView];
     navControl.navigationBar.translucent = NO;
+    
+    [self addObserver:stickerTableView forKeyPath:@"isFirstTime" options:NSKeyValueObservingOptionNew context:nil];
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:NOTFIRSTTIME]) {
+        self.isFirstTime = NO;
+    } else {
+        [StickerController createAllStickersToDatabase];
+        self.isFirstTime = YES;
+    }
+    
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = navControl;
