@@ -18,7 +18,7 @@
     return self;
 }
 -(void)addViewsWithSearchBarDelegate:(UIViewController<UISearchBarDelegate> *)viewController {
-    UISearchBar *searchBar = [[NSBundle mainBundle] loadNibNamed:@"SearchBar" owner:self options:kNilOptions][0];
+    UISearchBar *searchBar = [[NSBundle mainBundle] loadNibNamed:@"SearchBar" owner:self options:nil][0];
     searchBar.placeholder = @"Search for Teams, Players or Numbers";
     searchBar.delegate = viewController;
     searchBar.backgroundColor = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];

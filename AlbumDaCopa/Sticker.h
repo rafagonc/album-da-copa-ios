@@ -10,7 +10,6 @@
 #import <CoreData/CoreData.h>
 #import "Sticker.h"
 ;
-#define NOTFIRSTTIME @"first"
 
 @interface Sticker : NSManagedObject
 

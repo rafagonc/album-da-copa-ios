@@ -23,12 +23,15 @@
 }
 -(void)viewDidLoad{
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(finish) name:FinishTutorialNotification object:nil];
 }
 
 #pragma mark - ACTIONS
 -(IBAction)next:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self presentViewController:[[TradeSystemTutorialViewController alloc] init] animated:NO completion:nil];
+}
+-(void)finish {
+    [self dismissViewControllerAnimated:1 completion:nil];
 }
 
 #pragma mark - DEALLOC

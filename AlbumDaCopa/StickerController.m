@@ -30,10 +30,7 @@
     for (NSDictionary *stickerDict in sticekrs) {
         [Sticker buildStickerFromDictionary:stickerDict];
     }
-    if ([context save:nil]) {
-        [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:NOTFIRSTTIME];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    } else {
+    if (![context save:nil]) {
         NSAssert(0,@"Error On Saving Stickers JSON");
     }
 }
