@@ -38,7 +38,8 @@
     
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = navControl;
+    self.window.backgroundColor = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];
+    self.window.rootViewController = stickerTableView;
     [self.window makeKeyAndVisible];
     return YES;
 }
