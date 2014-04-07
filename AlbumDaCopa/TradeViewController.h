@@ -7,8 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreBluetooth/CoreBluetooth.h>
+#import "DeviceCell.h"
+#import "RGViewTableFollower.h"
 
-@interface TradeViewController : UIViewController
+@interface TradeViewController : UIViewController <CBCentralManagerDelegate,CBPeripheralManagerDelegate,UITableViewDelegate, UITableViewDataSource> {
+    
+}
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activity;
 @property (weak, nonatomic) IBOutlet UITableView *tradeTableView;
+
+#pragma mark - BLUETOOTH
+@property (nonatomic,strong) CBCentralManager *centralManager;
+@property (nonatomic,strong) CBPeripheralManager *peripheralManager;
+@property (nonatomic,strong) NSMutableArray *devices;
+
 
 @end

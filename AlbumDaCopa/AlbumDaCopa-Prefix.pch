@@ -16,5 +16,4 @@
     #import <CoreData/CoreData.h>
 #import "AppDelegate.h"
 #import <iAd/iAd.h>
-#import <Parse/Parse.h>
 #endif
