@@ -13,24 +13,36 @@
 
 @dynamic onAlbum;
 @dynamic name;
+@dynamic bagdeImageName;
+@dynamic countryImageName;
 @dynamic section;
 @dynamic type;
 @dynamic index;
 @dynamic leftovers;
 
 #pragma mark - BUILD
--(void)createStickerFromDictionary:(NSDictionary *)stickerDict {
+-(void)createStickerFromDictionary:(NSDictionary *)stickerDict andPhotos:(NSDictionary *)photosDict {
     self.name = stickerDict[@"name"];
     self.section = stickerDict[@"section"];
     self.index = @([stickerDict[@"index"] intValue]);
     self.type = [stickerDict[@"type"] isEqualToString:@"-"]? @"Normal" : stickerDict[@"type"];
     self.onAlbum = @0;
     self.leftovers = @0;
+    self.bagdeImageName = photosDict[stickerDict[@"section"]][@"bagde"];
+    self.countryImageName = photosDict[stickerDict[@"section"]][@"flag"];
+    
+    if (!photosDict[stickerDict[@"section"]] ) {
+        if ([stickerDict[@"section"] isEqualToString:@"Introdução"] || [stickerDict[@"section"] isEqualToString:@"Estádios"]) return;
+        NSAssert(0,@"Arruma Photos JSON - %@", stickerDict[@"section"]);
+    }
+ 
+    
+    
 }
-+(Sticker *)buildStickerFromDictionary:(NSDictionary *)stickerDict {
++(Sticker *)buildStickerFromDictionary:(NSDictionary *)stickerDict andPhotos:(NSDictionary *)photosDict {
     NSManagedObjectContext *context = [AppDelegate staticManagedObjectContext];
     Sticker *s = [[Sticker alloc] initWithEntity:[NSEntityDescription entityForName:@"Sticker" inManagedObjectContext:context] insertIntoManagedObjectContext:context];
-    [s createStickerFromDictionary:stickerDict];
+    [s createStickerFromDictionary:stickerDict andPhotos:photosDict];
     return s;
 }
 

@@ -29,6 +29,7 @@
 #pragma mark - ACTIONS
 -(IBAction)next:(id)sender {
     [self presentViewController:[[TradeSystemTutorialViewController alloc] init] animated:NO completion:nil];
+
 }
 -(void)finish {
     [self dismissViewControllerAnimated:1 completion:nil];

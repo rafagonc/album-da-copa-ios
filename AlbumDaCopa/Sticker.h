@@ -19,8 +19,11 @@
 @property (nonatomic, retain) NSString * type;
 @property (nonatomic, retain) NSNumber * index;
 @property (nonatomic, retain) NSNumber * leftovers;
+@property (nonatomic, retain) NSString *bagdeImageName;
+@property (nonatomic, retain) NSString *countryImageName;
+
 
 
 #pragma mark - METHODS
-+(Sticker *)buildStickerFromDictionary:(NSDictionary *)stickerDict;
++(Sticker *)buildStickerFromDictionary:(NSDictionary *)stickerDict andPhotos:(NSDictionary *)photosDict;
 @end

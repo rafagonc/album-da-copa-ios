@@ -1,9 +1,9 @@
 {
-	"Germany" : {
+	"Alemanha" : {
 		"flag" : "alemanha.jpg",
 		"badge" : "escudo-alemanha.gif"
 	},
-	"Argelia" : {
+	"Argélia" : {
 		"flag" : "argelia.jpg",
 		"badge" : "escudo-argelia.gif"
 	},
@@ -14,19 +14,19 @@
 	"Australia" : {
 		"flag" : "australia.jpg",
 		"badge" : "escudo-australia.gif"
-	},"Belgium" : {
+	},"Bélgica" : {
 		"flag" : "belgica.jpg",
 		"badge" : "escudo-belgica.gif"
 	},
-	"Bosnia and Herzegovina" : {
+	"Bosnia e Herzegovina" : {
 		"flag" : "bosnia.jpg",
 		"badge" : "escudo-bosnia.gif"
 	},
-	"Brazil" : {
-		"flag" : "australia.jpg",
-		"badge" : "escudo-australia.gif"
+	"Brasil" : {
+		"flag" : "brasil.jpg",
+		"badge" : "escudo-brasil.gif"
 	},
-	"Cameroon" : {
+	"Camarões" : {
 		"flag" : "camaroes.jpg",
 		"badge" : "escudo-camaroes.gif"
 	},
@@ -38,11 +38,11 @@
 		"flag" : "colombia.jpg",
 		"badge" : "escudo-colombia.gif"
 	},
-	"Ivory Coast" : {
+	"Costa do Marfim" : {
 		"flag" : "costadomarfim.jpg",
 		"badge" : "escudo-costa-do-marfim.gif"
 	},
-	"Croatia" : {
+	"Croacia" : {
 		"flag" : "croacia.jpg",
 		"badge" : "escudo-croacia.gif"
 	},
@@ -50,35 +50,35 @@
 		"flag" : "costarica.jpg",
 		"badge" : "escudo-costarica.gif"
 	},
-	"Equator" : {
+	"Equador" : {
 		"flag" : "equador.jpg",
 		"badge" : "escudo-equador.gif"
 	},
-	"Spain" : {
+	"Espanha" : {
 		"flag" : "espanha.jpg",
 		"badge" : "escudo-espanha.gif"
 	},
-	"Korea Republic" : {
+	"Korea" : {
 		"flag" : "koreia.jpg",
 		"badge" : "escudo-coreia.gif"
 	},
-	"US" : {
+	"USA" : {
 		"flag" : "estadosunidos.jpg",
 		"badge" : "escudo-estadosunidos.gif"
 	},
-	"France" : {
+	"França" : {
 		"flag" : "franca.jpg",
 		"badge" : "escudo-franca.gif"
 	},
-	"Ghana" : {
+	"Gana" : {
 		"flag" : "gana.jpg",
 		"badge" : "escudo-gana.gif"
 	},
-	"Greece" : {
+	"Grécia" : {
 		"flag" : "grecia.jpg",
-		"badge" : "escudo-frecia.gif"
+		"badge" : "escudo-grecia.gif"
 	},
-	"Netherlands" : {
+	"Holanda" : {
 		"flag" : "holanda.jpg",
 		"badge" : "escudo-holanda.gif"
 	},
@@ -86,6 +86,47 @@
 		"flag" : "honduras.jpg",
 		"badge" : "escudo-honduras.gif"
 	},
+    "México" : {
+        "flag" : "mexico.jpg",
+		"badge" : "escudo-mexico.gif"
+    },
+    "Japão" : {
+        "flag" : "japao.jpg",
+		"badge" : "escudo-japao.gif"
+    },
+    "Uruguai" : {
+        "flag" : "uruguai.jpg",
+		"badge" : "escudo-uruguai.gif"
+    },
+    "Russia" : {
+        "flag" : "russia.jpg",
+		"badge" : "escudo-russia.gif"
+    },
+    "Suiça" : {
+        "flag" : "suica.jpg",
+		"badge" : "escudo-suica.gif"
+    },
+    "Nigeria" : {
+        "flag" : "nigeria.jpg",
+		"badge" : "escudo-nigeria.gif"
+    },
+    "Inglaterra" : {
+        "flag" : "inglaterra.jpg",
+		"badge" : "escudo-uk.gif"
+    },
+    "Portugal" : {
+        "flag" : "portugal.jpg",
+		"badge" : "escudo-porgutal.gif"
+    },
+    "Itália" : {
+        "flag" : "italia.jpg",
+		"badge" : "escudo-italia.gif"
+    },
+    "Irã" : {
+        "flag" : "ira.jpg",
+		"badge" : "escudo-ira.gif"
+    }
+    
 
 
 }

@@ -30,4 +30,9 @@
     });
     return me;
 }
+
+#pragma mark - PARSE
+-(void)saveWithCallback:(void (^)(void))callback {
+    
+}
 @end

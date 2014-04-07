@@ -33,33 +33,34 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(assignValueToViews) name:ChangedStatsNotification object:nil];
     
-    if (self.shouldBeginIntroduction) [self setupIntroductionViews]; else [self setupNormalHeader];
     
+    [self setupNormalHeader];
     [self assignValueToViews];
-    [self setupNavigationBar];
     [self decorator];
 
 }
 
-#pragma mark - LAYOUT SETUP
--(void)setupNavigationBar {
-    doneOrTradeButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 2, 70, 26)];
-    doneOrTradeButton.backgroundColor = [UIColor colorWithRed:(40/255.0) green:(89/255.0) blue:(127/255.0) alpha:1];
-    [doneOrTradeButton setTitle:self.shouldBeginIntroduction? @"Done" : @"Trade" forState:UIControlStateNormal];
-    [doneOrTradeButton.layer setCornerRadius:10];
-    [doneOrTradeButton addTarget:self action:@selector(buttonFinishedAction:) forControlEvents:UIControlEventTouchUpInside];
-    [doneOrTradeButton.layer setMasksToBounds:YES];
-    doneOrTradeButton.titleLabel.font = [UIFont boldSystemFontOfSize:15.0];
-    doneOrTradeButton.titleLabel.textColor = [UIColor whiteColor];
-    
-    [self.navigationItem setTitleView:doneOrTradeButton];
-}
--(void)setupIntroductionViews {
-    IntroductionTableViewHeader *introView = [[IntroductionTableViewHeader alloc] init];
-    [introView addTitleLabel:@"Marque as figurinhas que você ja tem no álbum. Coloque também as repetidas para poder usar o sistema de trocas." andSearchBarWithDelegate:self];
-    introView.backgroundColor = [UIColor colorWithRed:(246/255.0) green:(246/255.0) blue:(246/255.0) alpha:1];
-    [self.tableView setTableHeaderView:introView];
-}
+#pragma mark - PSSIBLE UPDATE
+//-(void)setupNavigationBar {
+//    doneOrTradeButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 2, 70, 26)];
+//    doneOrTradeButton.backgroundColor = [UIColor colorWithRed:(40/255.0) green:(89/255.0) blue:(127/255.0) alpha:1];
+//    [doneOrTradeButton setTitle:self.shouldBeginIntroduction? @"Done" : @"Trade" forState:UIControlStateNormal];
+//    [doneOrTradeButton.layer setCornerRadius:10];
+//    [doneOrTradeButton addTarget:self action:@selector(buttonFinishedAction:) forControlEvents:UIControlEventTouchUpInside];
+//    [doneOrTradeButton.layer setMasksToBounds:YES];
+//    doneOrTradeButton.titleLabel.font = [UIFont boldSystemFontOfSize:15.0];
+//    doneOrTradeButton.titleLabel.textColor = [UIColor whiteColor];
+//    
+//    [self.navigationItem setTitleView:doneOrTradeButton];
+//}
+//-(void)setupIntroductionViews {
+//    IntroductionTableViewHeader *introView = [[IntroductionTableViewHeader alloc] init];
+//    [introView addTitleLabel:@"Marque as figurinhas que você ja tem no álbum. Coloque também as repetidas para poder usar o sistema de trocas." andSearchBarWithDelegate:self];
+//    introView.backgroundColor = [UIColor colorWithRed:(246/255.0) green:(246/255.0) blue:(246/255.0) alpha:1];
+//    [self.tableView setTableHeaderView:introView];
+//}
+
+#pragma mark LAYOUT
 -(void)setupNormalHeader {
     self.normalHeader = [[StatusAndSearchTableViewHeader alloc] init];
     [self.normalHeader addViewsWithSearchBarDelegate:self];
@@ -73,6 +74,7 @@
     [[UINavigationBar appearance] setBarTintColor:flatBlue];
     self.statusBarCover.backgroundColor = flatBlue;
     self.sliderHandlerView.backgroundColor = flatBlue;
+    self.view.backgroundColor = flatBlue;
     
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     self.navigationController.navigationBar.clipsToBounds = YES;
@@ -92,7 +94,6 @@
     [self performSelector:@selector(presentTutorial) withObject:nil afterDelay:1];
     self.stickers = [StickerController allStickers];
     [self.tableView reloadData];
-    [self setupIntroductionViews];
 
 
 }

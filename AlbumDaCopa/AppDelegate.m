@@ -8,6 +8,13 @@
 
 #import "AppDelegate.h"
 #import "Sticker.h"
+#import <AdColony/AdColony.h>
+
+#define ADCOLONY__APPID @"app7c272267bce04bcfbd"
+#define ADCOLONY__ZONE @"vz5be979460cde4b7c8f"
+
+#define PARSE__APPID @"6ebKwAp10lhi98DnWAuWefQYGXijOwf09VOVKyNe"
+#define PARSE__CLIENTKEY @"g8Vd5jpXWPYmeCa7EDYG3VOEbFUmrDdh9drbQk1Z"
 
 
 @implementation AppDelegate
@@ -21,27 +28,32 @@
 #pragma mark - LAUCHING OPTIONS
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [Parse setApplicationId:@"6ebKwAp10lhi98DnWAuWefQYGXijOwf09VOVKyNe" clientKey:@"g8Vd5jpXWPYmeCa7EDYG3VOEbFUmrDdh9drbQk1Z"];
+    [Parse setApplicationId:PARSE__APPID clientKey:PARSE__CLIENTKEY];
+    [AdColony configureWithAppID:ADCOLONY__APPID zoneIDs:@[ADCOLONY__ZONE] delegate:nil logging:YES];
     
     StickerTableViewController *stickerTableView = [[StickerTableViewController alloc] init];
-    UINavigationController *navControl = [[UINavigationController alloc] initWithRootViewController:stickerTableView];
-    navControl.navigationBar.translucent = NO;
+    TradeViewController *tradeViewController = [[TradeViewController alloc] init];
+    UITabBarController *tabBar = [[UITabBarController alloc] init];
+    tabBar.viewControllers = @[stickerTableView, tradeViewController];
     
-    [self addObserver:stickerTableView forKeyPath:@"isFirstTime" options:NSKeyValueObservingOptionNew context:nil];
+    [self checkIfFirstTimeForTableViewObserver:stickerTableView];
+    [AdColony playVideoAdForZone:ADCOLONY__ZONE withDelegate:nil];
     
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:EmailUserDefaultString]) {
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];
+    self.window.rootViewController = tabBar;
+    [self.window makeKeyAndVisible];
+    return YES;
+}
+-(void)checkIfFirstTimeForTableViewObserver:(UIViewController *)view {
+    [self addObserver:view forKeyPath:@"isFirstTime" options:NSKeyValueObservingOptionNew context:nil];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:NotFirstTime]) {
         self.isFirstTime = NO;
     } else {
         [StickerController createAllStickersToDatabase];
         self.isFirstTime = YES;
     }
-    
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];
-    self.window.rootViewController = stickerTableView;
-    [self.window makeKeyAndVisible];
-    return YES;
 }
 
 #pragma mark - APPLCATION
@@ -52,12 +64,9 @@
 -(void)applicationWillEnterForeground:(UIApplication *)application {
 }
 -(void)applicationDidBecomeActive:(UIApplication *)application {
-    [self performSelector:@selector(sendNotificationToFullscrennAd) withObject:nil afterDelay:1];
     
 }
--(void)sendNotificationToFullscrennAd {
-    [[NSNotificationCenter defaultCenter] postNotificationName:FullscreenAdNotification object:nil];
-}
+
 -(void)applicationWillTerminate:(UIApplication *)application {
     [self saveContext];
 }

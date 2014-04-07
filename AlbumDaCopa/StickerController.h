@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#define NotFirstTime @"NotFirstTime"
 @interface StickerController : NSObject
 +(NSArray *)allStickers;
 +(void)createAllStickersToDatabase;

@@ -42,6 +42,7 @@
     self.indexLabel.text = [NSString stringWithFormat:@"%d",sticker.index.intValue];
     self.typeLabel.text = sticker.type;
     self.leftoversTextField.text = [NSString stringWithFormat:sticker.leftovers.intValue? @"+%d" : @"+", sticker.leftovers.intValue];
+    self.countryImage.image = [UIImage imageNamed:sticker.countryImageName];
     self.stickerHasChanges = NO;
 }
 -(void)setStickerHasChanges:(BOOL)stickerHasChanges {
@@ -64,12 +65,12 @@
     if ([s isEqualToString:@"Badge"]) {
         NSString *firstLetter = [[sticker.section substringWithRange:NSMakeRange(0, 1)] uppercaseString];
         NSString *team = [sticker.section stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:firstLetter];
-        return [NSString stringWithFormat:@"%@ %@", team, s];
+        return [NSString stringWithFormat:@"%@ - Símbolo", team];
         
     } else if ([s isEqualToString:@"Team"]) {
         NSString *firstLetter = [[sticker.section substringWithRange:NSMakeRange(0, 1)] uppercaseString];
         NSString *team = [sticker.section stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:firstLetter];
-        return [NSString stringWithFormat:@"%@ Squad", team];
+        return [NSString stringWithFormat:@"%@ - Time", team];
     } else return s;
 }
 -(BOOL)isNumber:(NSString *)text {
@@ -87,7 +88,7 @@
 }
 -(void)textFieldDidBeginEditing:(UITextField *)textField {
     if (!self.hasIt) {
-        [[[UIAlertView alloc] initWithTitle:@"Wait!" message:@"First, confirm that you have the sticker on the album, then you can have left overs" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] show];
+        [[[UIAlertView alloc] initWithTitle:@"Calma ai, Garotão!" message:@"Primeiro coloque que a figurinha está no album, depois adicione as repetidas!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] show];
         [textField resignFirstResponder];
     }
 }
