@@ -10,8 +10,9 @@
 
 @interface TradeViewController ()
 @property (nonatomic,strong) CBUUID *uuid;
-@property (nonatomic,strong) CBMutableCharacteristic *serviceCharacteristic;
+@property (nonatomic,strong) CBPeripheral *connectedPeripheral;
 @property (nonatomic,strong) CBMutableService *service;
+@property (nonatomic,strong) CBMutableCharacteristic *serviceCharacteristic;
 @end
 
 @implementation TradeViewController
@@ -27,57 +28,42 @@
 #pragma mark - VIEW
 -(void)viewDidLoad {
     [super viewDidLoad];
-    [self setupBluetooth];
     [self setupTableView];
+    [self setupBluetooth];
     [self decorator];
     
-    RGViewTableFollower *follow = [[RGViewTableFollower alloc] init]
+}
+-(void)viewDidDisappear:(BOOL)animated {
 }
 -(void)setupTableView {
     self.tradeTableView.delegate = self;
     self.tradeTableView.dataSource = self;
 }
 -(void)setupBluetooth {
-    self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:@{CBCentralManagerScanOptionAllowDuplicatesKey: @YES}];
-    self.peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil options:nil];
-    
-    
-    self.uuid = [CBUUID UUIDWithString:@"2BF1F041-EE1D-4C0E-9242-BC6AE7C45E9E"];
-    self.serviceCharacteristic = [[CBMutableCharacteristic alloc] initWithType:self.uuid properties:CBCharacteristicPropertyRead value:[NSData data] permissions:CBAttributePermissionsReadable];
-    self.service = [[CBMutableService alloc] initWithType:self.uuid primary:YES];
-    self.service.characteristics = @[self.serviceCharacteristic];
-    [self.peripheralManager addService:self.service];
-    self.devices = [[NSMutableArray alloc] init];
-    [self.centralManager performSelector:@selector(stopScan) withObject:nil afterDelay:60];
+    [self.activity startAnimating];
+    self.uuid = [CBUUID UUIDWithString:UUID_BLUETOOTH];
+    [[LGCentralManager sharedInstance] scanForPeripheralsByInterval:20  completion:^(NSArray *peripherals) {
+         if (peripherals.count) {
+             [self.devices addObjectsFromArray:peripherals];
+             [self.tradeTableView reloadData];
+         }
+     }];
 }
 -(void)decorator {
     UIColor *flatBlue = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];
     self.tradeTableView.tableHeaderView.backgroundColor = flatBlue;
-
+    self.followTable.backgroundColor = flatBlue;
 }
 
 
-#pragma mark - CENTRAL DELEGATE
--(void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI {
-    if ([RSSI floatValue]>=-45.f) {
-        [self.devices addObject:peripheral];
-        [self.tradeTableView reloadData];
-        [central stopScan];
-    }
-}
--(void)centralManagerDidUpdateState:(CBCentralManager *)central {
-    if(central.state==CBCentralManagerStatePoweredOn) {
-        [self.centralManager scanForPeripheralsWithServices:nil options:nil];
-        [self.activity startAnimating];
-    }
+#pragma mark BLUETOOTH
+-(void)activateBluetoothForDevice:(LGPeripheral *)peripheral {
+    [peripheral connectWithCompletion:^(NSError *error) {
+        [self.activity stopAnimating];
+        NSLog(@"connected");
+    }];
 }
 
-#pragma mark - PERIPHERAL DELEGATE
--(void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral {
-    if(peripheral.state == CBPeripheralManagerStatePoweredOn) {
-        [self.peripheralManager startAdvertising:@{ CBAdvertisementDataServiceUUIDsKey : @[self.service.UUID], CBAdvertisementDataLocalNameKey : [[UIDevice currentDevice] name]}];
-    }
-}
 
 #pragma mark - TABLE VIEW DELEGATE
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -90,11 +76,20 @@
         cell = [[NSBundle mainBundle] loadNibNamed:@"DeviceCell" owner:self options:nil][0];
     }
     
-    CBPeripheral *peri = self.devices[indexPath.row];
+    LGPeripheral *peri = self.devices[indexPath.row];
     cell.deviceName.text = peri.name;
     return cell;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    LGPeripheral *peri = self.devices[indexPath.row];
+    [self activateBluetoothForDevice:peri];
 
+}
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (scrollView.contentOffset.y > 0) return;
+    self.followTable.frame = CGRectMake(self.followTable.frame.origin.x, self.followTable.frame.origin.y, self.followTable.frame.size.width, -scrollView.contentOffset.y);
+}
 
 #pragma mark - DEALLOC
 -(void)didReceiveMemoryWarning {

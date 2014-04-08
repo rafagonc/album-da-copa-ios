@@ -20,8 +20,6 @@
 -(id)init {
     self = [super initWithNibName:@"StickerTableViewController" bundle:nil];
     if (self) {
-        User *me = [User me];
-        self.stickers = me.stickers;
     }
     return self;
 }
@@ -88,10 +86,9 @@
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     BOOL isFirstTime = [change[@"new"] boolValue];
     self.shouldBeginIntroduction = isFirstTime;
-    if (!isFirstTime) {
-        return;
+    if (isFirstTime) {
+        [self performSelector:@selector(presentTutorial) withObject:nil afterDelay:1];
     }
-    [self performSelector:@selector(presentTutorial) withObject:nil afterDelay:1];
     self.stickers = [StickerController allStickers];
     [self.tableView reloadData];
 

@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		2A02131518F2FD1200092545 /* TradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A02131318F2FD1200092545 /* TradeViewController.m */; };
 		2A02131618F2FD1200092545 /* TradeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A02131418F2FD1200092545 /* TradeViewController.xib */; };
+		2A02131A18F3527300092545 /* arrow487.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A02131818F3527300092545 /* arrow487.png */; };
+		2A02131B18F3527300092545 /* plus32.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A02131918F3527300092545 /* plus32.png */; };
+		2A02131D18F352E500092545 /* chevron18.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A02131C18F352E500092545 /* chevron18.png */; };
+		2A03822018F3963300DB5A4A /* CBUUID+StringExtraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A03821418F3963300DB5A4A /* CBUUID+StringExtraction.m */; };
+		2A03822118F3963300DB5A4A /* LGCentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A03821718F3963300DB5A4A /* LGCentralManager.m */; };
+		2A03822218F3963300DB5A4A /* LGCharacteristic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A03821918F3963300DB5A4A /* LGCharacteristic.m */; };
+		2A03822318F3963300DB5A4A /* LGPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A03821B18F3963300DB5A4A /* LGPeripheral.m */; };
+		2A03822418F3963300DB5A4A /* LGService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A03821D18F3963300DB5A4A /* LGService.m */; };
+		2A03822518F3963300DB5A4A /* LGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A03821F18F3963300DB5A4A /* LGUtils.m */; };
 		2A062A1018EF3BB000A2CFA3 /* check26.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A062A0F18EF3BB000A2CFA3 /* check26.png */; };
 		2A062A1318EF441300A2CFA3 /* stickersEnglish.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A062A1218EF441300A2CFA3 /* stickersEnglish.json */; };
 		2A106DC118EA55BE00D2FC98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A106DC018EA55BE00D2FC98 /* Foundation.framework */; };
@@ -59,7 +68,6 @@
 		2AB8DF8718F316D600C1F641 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB8DF8618F316D600C1F641 /* CoreBluetooth.framework */; };
 		2AB8DFA218F3381100C1F641 /* DeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB8DFA118F3381100C1F641 /* DeviceCell.m */; };
 		2AB8DFA418F3383C00C1F641 /* DeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AB8DFA318F3383C00C1F641 /* DeviceCell.xib */; };
-		2AB8DFA718F33C5200C1F641 /* RGViewTableFollower.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB8DFA618F33C5200C1F641 /* RGViewTableFollower.m */; };
 		2AC514DD18EDBEDC00F51DDC /* alemanha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5149D18EDBEDC00F51DDC /* alemanha.jpg */; };
 		2AC514DE18EDBEDC00F51DDC /* argelia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5149E18EDBEDC00F51DDC /* argelia.jpg */; };
 		2AC514DF18EDBEDC00F51DDC /* argentina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5149F18EDBEDC00F51DDC /* argentina.jpg */; };
@@ -139,7 +147,6 @@
 		2ACCB7EC18F0BEA1006E6A94 /* iOS Simulator Screen shot Apr 5, 2014, 7.40.52 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ACCB7EB18F0BEA1006E6A94 /* iOS Simulator Screen shot Apr 5, 2014, 7.40.52 PM.png */; };
 		2AD55DAC18EE4B1B002588E6 /* SearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AD55DAB18EE4B1B002588E6 /* SearchBar.xib */; };
 		2AF6D36918EF2D8F00E008AB /* set of 8 stickers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AF6D36818EF2D8F00E008AB /* set of 8 stickers.jpg */; };
-		2AF6D36C18EF2FBE00E008AB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF6D36B18EF2FBE00E008AB /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +163,22 @@
 		2A02131218F2FD1200092545 /* TradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeViewController.h; sourceTree = "<group>"; };
 		2A02131318F2FD1200092545 /* TradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeViewController.m; sourceTree = "<group>"; };
 		2A02131418F2FD1200092545 /* TradeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TradeViewController.xib; sourceTree = "<group>"; };
+		2A02131818F3527300092545 /* arrow487.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow487.png; sourceTree = "<group>"; };
+		2A02131918F3527300092545 /* plus32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus32.png; sourceTree = "<group>"; };
+		2A02131C18F352E500092545 /* chevron18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chevron18.png; sourceTree = "<group>"; };
+		2A03821318F3963300DB5A4A /* CBUUID+StringExtraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBUUID+StringExtraction.h"; sourceTree = "<group>"; };
+		2A03821418F3963300DB5A4A /* CBUUID+StringExtraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBUUID+StringExtraction.m"; sourceTree = "<group>"; };
+		2A03821518F3963300DB5A4A /* LGBluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGBluetooth.h; sourceTree = "<group>"; };
+		2A03821618F3963300DB5A4A /* LGCentralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGCentralManager.h; sourceTree = "<group>"; };
+		2A03821718F3963300DB5A4A /* LGCentralManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGCentralManager.m; sourceTree = "<group>"; };
+		2A03821818F3963300DB5A4A /* LGCharacteristic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGCharacteristic.h; sourceTree = "<group>"; };
+		2A03821918F3963300DB5A4A /* LGCharacteristic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGCharacteristic.m; sourceTree = "<group>"; };
+		2A03821A18F3963300DB5A4A /* LGPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGPeripheral.h; sourceTree = "<group>"; };
+		2A03821B18F3963300DB5A4A /* LGPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGPeripheral.m; sourceTree = "<group>"; };
+		2A03821C18F3963300DB5A4A /* LGService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGService.h; sourceTree = "<group>"; };
+		2A03821D18F3963300DB5A4A /* LGService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGService.m; sourceTree = "<group>"; };
+		2A03821E18F3963300DB5A4A /* LGUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGUtils.h; sourceTree = "<group>"; };
+		2A03821F18F3963300DB5A4A /* LGUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGUtils.m; sourceTree = "<group>"; };
 		2A062A0F18EF3BB000A2CFA3 /* check26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check26.png; sourceTree = "<group>"; };
 		2A062A1218EF441300A2CFA3 /* stickersEnglish.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stickersEnglish.json; sourceTree = "<group>"; };
 		2A106DBD18EA55BE00D2FC98 /* AlbumDaCopa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbumDaCopa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,8 +242,6 @@
 		2AB8DFA018F3381100C1F641 /* DeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceCell.h; sourceTree = "<group>"; };
 		2AB8DFA118F3381100C1F641 /* DeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceCell.m; sourceTree = "<group>"; };
 		2AB8DFA318F3383C00C1F641 /* DeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceCell.xib; sourceTree = "<group>"; };
-		2AB8DFA518F33C5200C1F641 /* RGViewTableFollower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGViewTableFollower.h; sourceTree = "<group>"; };
-		2AB8DFA618F33C5200C1F641 /* RGViewTableFollower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGViewTableFollower.m; sourceTree = "<group>"; };
 		2AC5149D18EDBEDC00F51DDC /* alemanha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alemanha.jpg; sourceTree = "<group>"; };
 		2AC5149E18EDBEDC00F51DDC /* argelia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = argelia.jpg; sourceTree = "<group>"; };
 		2AC5149F18EDBEDC00F51DDC /* argentina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = argentina.jpg; sourceTree = "<group>"; };
@@ -303,8 +324,6 @@
 		2ACCB7EB18F0BEA1006E6A94 /* iOS Simulator Screen shot Apr 5, 2014, 7.40.52 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS Simulator Screen shot Apr 5, 2014, 7.40.52 PM.png"; sourceTree = "<group>"; };
 		2AD55DAB18EE4B1B002588E6 /* SearchBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBar.xib; sourceTree = "<group>"; };
 		2AF6D36818EF2D8F00E008AB /* set of 8 stickers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "set of 8 stickers.jpg"; sourceTree = "<group>"; };
-		2AF6D36A18EF2FBE00E008AB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		2AF6D36B18EF2FBE00E008AB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +381,34 @@
 				2A02131418F2FD1200092545 /* TradeViewController.xib */,
 			);
 			name = "Trade View Controller";
+			sourceTree = "<group>";
+		};
+		2A03821218F3963300DB5A4A /* LGBluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				2A03821318F3963300DB5A4A /* CBUUID+StringExtraction.h */,
+				2A03821418F3963300DB5A4A /* CBUUID+StringExtraction.m */,
+				2A03821518F3963300DB5A4A /* LGBluetooth.h */,
+				2A03821618F3963300DB5A4A /* LGCentralManager.h */,
+				2A03821718F3963300DB5A4A /* LGCentralManager.m */,
+				2A03821818F3963300DB5A4A /* LGCharacteristic.h */,
+				2A03821918F3963300DB5A4A /* LGCharacteristic.m */,
+				2A03821A18F3963300DB5A4A /* LGPeripheral.h */,
+				2A03821B18F3963300DB5A4A /* LGPeripheral.m */,
+				2A03821C18F3963300DB5A4A /* LGService.h */,
+				2A03821D18F3963300DB5A4A /* LGService.m */,
+				2A03821E18F3963300DB5A4A /* LGUtils.h */,
+				2A03821F18F3963300DB5A4A /* LGUtils.m */,
+			);
+			path = LGBluetooth;
+			sourceTree = "<group>";
+		};
+		2A03822618F3963600DB5A4A /* External */ = {
+			isa = PBXGroup;
+			children = (
+				2A03821218F3963300DB5A4A /* LGBluetooth */,
+			);
+			name = External;
 			sourceTree = "<group>";
 		};
 		2A062A1118EF429700A2CFA3 /* Sticker View Controller */ = {
@@ -435,6 +482,7 @@
 		2A106DC818EA55BE00D2FC98 /* AlbumDaCopa */ = {
 			isa = PBXGroup;
 			children = (
+				2A03822618F3963600DB5A4A /* External */,
 				2A106DD118EA55BE00D2FC98 /* AppDelegate.h */,
 				2A106DD218EA55BE00D2FC98 /* AppDelegate.m */,
 				2A106DC918EA55BE00D2FC98 /* Supporting Files */,
@@ -447,6 +495,9 @@
 		2A106DC918EA55BE00D2FC98 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2A02131818F3527300092545 /* arrow487.png */,
+				2A02131C18F352E500092545 /* chevron18.png */,
+				2A02131918F3527300092545 /* plus32.png */,
 				2A062A0F18EF3BB000A2CFA3 /* check26.png */,
 				2ACCB7DD18F06EE1006E6A94 /* up21.png */,
 				2AF6D36818EF2D8F00E008AB /* set of 8 stickers.jpg */,
@@ -509,10 +560,7 @@
 			isa = PBXGroup;
 			children = (
 				2AB8DF8218F312D600C1F641 /* Trade */,
-				2AB8DF8118F312C900C1F641 /* User */,
 				2AB8DF8018F312C400C1F641 /* Sticker */,
-				2AB8DFA518F33C5200C1F641 /* RGViewTableFollower.h */,
-				2AB8DFA618F33C5200C1F641 /* RGViewTableFollower.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -556,15 +604,6 @@
 				2AA474A418EB52480052EF14 /* StickerController.m */,
 			);
 			name = Sticker;
-			sourceTree = "<group>";
-		};
-		2AB8DF8118F312C900C1F641 /* User */ = {
-			isa = PBXGroup;
-			children = (
-				2AF6D36A18EF2FBE00E008AB /* User.h */,
-				2AF6D36B18EF2FBE00E008AB /* User.m */,
-			);
-			name = User;
 			sourceTree = "<group>";
 		};
 		2AB8DF8218F312D600C1F641 /* Trade */ = {
@@ -770,6 +809,7 @@
 				2AC5151318EDBEDC00F51DDC /* ira.jpg in Resources */,
 				2A598F0B18EE64D0003665D3 /* Quicksand-Regular.otf in Resources */,
 				2AC5151E18EDBEE800F51DDC /* photos.json in Resources */,
+				2A02131A18F3527300092545 /* arrow487.png in Resources */,
 				2A598F1218EE68CD003665D3 /* TutorialViewController.xib in Resources */,
 				2AC514E718EDBEDC00F51DDC /* costadomarfim.jpg in Resources */,
 				2AC5150218EDBEDC00F51DDC /* escudo-italia.gif in Resources */,
@@ -780,6 +820,7 @@
 				2AC514EB18EDBEDC00F51DDC /* escudo-alemanha.gif in Resources */,
 				2AC514F118EDBEDC00F51DDC /* escudo-brasil.gif in Resources */,
 				2AC5150018EDBEDC00F51DDC /* escudo-honduras.gif in Resources */,
+				2A02131D18F352E500092545 /* chevron18.png in Resources */,
 				2AC514FD18EDBEDC00F51DDC /* escudo-gana.gif in Resources */,
 				2AC514F418EDBEDC00F51DDC /* escudo-colombia.gif in Resources */,
 				2AC5151018EDBEDC00F51DDC /* holanda.jpg in Resources */,
@@ -841,6 +882,7 @@
 				2AC5151A18EDBEDC00F51DDC /* russia.jpg in Resources */,
 				2AC5150F18EDBEDC00F51DDC /* grecia.jpg in Resources */,
 				2AC514E318EDBEDC00F51DDC /* brasil.jpg in Resources */,
+				2A02131B18F3527300092545 /* plus32.png in Resources */,
 				2A46DBF018EF24D60039451C /* TradeSystemTutorialViewController.xib in Resources */,
 				2AC5151118EDBEDC00F51DDC /* honduras.jpg in Resources */,
 				2ACCB7DE18F06EE1006E6A94 /* up21.png in Resources */,
@@ -862,15 +904,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A03822318F3963300DB5A4A /* LGPeripheral.m in Sources */,
 				2AB8DF8518F312F000C1F641 /* TradeRequest.m in Sources */,
-				2AF6D36C18EF2FBE00E008AB /* User.m in Sources */,
 				2AC5153318EE19EC00F51DDC /* StatusAndSearchTableViewHeader.m in Sources */,
 				2A56128C18EB055400A3BAF0 /* StickerTableViewController.m in Sources */,
 				2AA474A518EB52480052EF14 /* StickerController.m in Sources */,
+				2A03822418F3963300DB5A4A /* LGService.m in Sources */,
+				2A03822118F3963300DB5A4A /* LGCentralManager.m in Sources */,
 				2AC5153718EE1A2100F51DDC /* IntroductionTableViewHeader.m in Sources */,
-				2AB8DFA718F33C5200C1F641 /* RGViewTableFollower.m in Sources */,
+				2A03822518F3963300DB5A4A /* LGUtils.m in Sources */,
 				2A598F1118EE68CD003665D3 /* TutorialViewController.m in Sources */,
+				2A03822018F3963300DB5A4A /* CBUUID+StringExtraction.m in Sources */,
 				2A56129518EB0E5900A3BAF0 /* StickerCell.m in Sources */,
+				2A03822218F3963300DB5A4A /* LGCharacteristic.m in Sources */,
 				2A106E4A18EA6CB500D2FC98 /* Sticker.m in Sources */,
 				2AB8DFA218F3381100C1F641 /* DeviceCell.m in Sources */,
 				2A106DD618EA55BE00D2FC98 /* AlbumDaCopa.xcdatamodeld in Sources */,

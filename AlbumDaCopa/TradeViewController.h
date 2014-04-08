@@ -9,14 +9,16 @@
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "DeviceCell.h"
-#import "RGViewTableFollower.h"
+#import "LGBluetooth.h"
+#define UUID_BLUETOOTH @"2BF1F041-EE1D-4C0E-9242-BC6AE7C45E9E"
 
-@interface TradeViewController : UIViewController <CBCentralManagerDelegate,CBPeripheralManagerDelegate,UITableViewDelegate, UITableViewDataSource> {
+@interface TradeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     
 }
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activity;
 @property (weak, nonatomic) IBOutlet UITableView *tradeTableView;
+@property (weak, nonatomic) IBOutlet UIView *followTable;
 
 #pragma mark - BLUETOOTH
 @property (nonatomic,strong) CBCentralManager *centralManager;

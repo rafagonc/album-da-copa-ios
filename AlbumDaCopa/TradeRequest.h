@@ -12,6 +12,5 @@
 
 #pragma mark - PROPERTIES
 @property (nonatomic,strong) NSString *receivingUserEmail;
-@property (nonatomic,strong) User *requestingUser;
 
 @end

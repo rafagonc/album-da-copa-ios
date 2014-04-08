@@ -11,7 +11,7 @@
 #import "Sticker.h"
 ;
 
-@interface Sticker : NSManagedObject
+@interface Sticker : NSManagedObject <NSCoding>
 
 @property (nonatomic, retain) NSNumber * onAlbum;
 @property (nonatomic, retain) NSString * name;

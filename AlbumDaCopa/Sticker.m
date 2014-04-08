@@ -20,6 +20,31 @@
 @dynamic index;
 @dynamic leftovers;
 
+#pragma mark - CODING
+-(id)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super init]) {
+        self.onAlbum = [aDecoder decodeObjectForKey:@"onAlbum"];
+        self.name = [aDecoder decodeObjectForKey:@"name"];
+        self.section = [aDecoder decodeObjectForKey:@"section"];
+        self.leftovers = [aDecoder decodeObjectForKey:@"leftovers"];
+        self.index = [aDecoder decodeObjectForKey:@"index"];
+        self.type = [aDecoder decodeObjectForKey:@"type"];
+        self.countryImageName = [aDecoder decodeObjectForKey:@"countryImageName"];
+        self.bagdeImageName = [aDecoder decodeObjectForKey:@"bagdeImageName"];
+    } return self;
+    
+}
+-(void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:self.onAlbum forKey:@"onAlbum"];
+    [aCoder encodeObject:self.name forKey:@"name"];
+    [aCoder encodeObject:self.leftovers forKey:@"leftovers"];
+    [aCoder encodeObject:self.index forKey:@"index"];
+    [aCoder encodeObject:self.type forKey:@"type"];
+    [aCoder encodeObject:self.countryImageName forKey:@"countryImageName"];
+    [aCoder encodeObject:self.bagdeImageName forKey:@"bagdeImageName"];
+    [aCoder encodeObject:self.section forKey:@"section"];
+}
+
 #pragma mark - BUILD
 -(void)createStickerFromDictionary:(NSDictionary *)stickerDict andPhotos:(NSDictionary *)photosDict {
     self.name = stickerDict[@"name"];
