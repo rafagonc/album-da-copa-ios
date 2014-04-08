@@ -42,12 +42,8 @@
 -(void)setupBluetooth {
     [self.activity startAnimating];
     self.uuid = [CBUUID UUIDWithString:UUID_BLUETOOTH];
-    [[LGCentralManager sharedInstance] scanForPeripheralsByInterval:20  completion:^(NSArray *peripherals) {
-         if (peripherals.count) {
-             [self.devices addObjectsFromArray:peripherals];
-             [self.tradeTableView reloadData];
-         }
-     }];
+    self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:nil];
+
 }
 -(void)decorator {
     UIColor *flatBlue = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];
@@ -56,13 +52,7 @@
 }
 
 
-#pragma mark BLUETOOTH
--(void)activateBluetoothForDevice:(LGPeripheral *)peripheral {
-    [peripheral connectWithCompletion:^(NSError *error) {
-        [self.activity stopAnimating];
-        NSLog(@"connected");
-    }];
-}
+
 
 
 #pragma mark - TABLE VIEW DELEGATE
@@ -76,14 +66,13 @@
         cell = [[NSBundle mainBundle] loadNibNamed:@"DeviceCell" owner:self options:nil][0];
     }
     
-    LGPeripheral *peri = self.devices[indexPath.row];
+    CBPeripheral *peri = self.devices[indexPath.row];
     cell.deviceName.text = peri.name;
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    LGPeripheral *peri = self.devices[indexPath.row];
-    [self activateBluetoothForDevice:peri];
+    CBPeripheral *peri = self.devices[indexPath.row];
 
 }
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {

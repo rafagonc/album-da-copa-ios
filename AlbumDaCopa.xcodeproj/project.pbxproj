@@ -12,12 +12,6 @@
 		2A02131A18F3527300092545 /* arrow487.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A02131818F3527300092545 /* arrow487.png */; };
 		2A02131B18F3527300092545 /* plus32.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A02131918F3527300092545 /* plus32.png */; };
 		2A02131D18F352E500092545 /* chevron18.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A02131C18F352E500092545 /* chevron18.png */; };
-		2A03822018F3963300DB5A4A /* CBUUID+StringExtraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A03821418F3963300DB5A4A /* CBUUID+StringExtraction.m */; };
-		2A03822118F3963300DB5A4A /* LGCentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A03821718F3963300DB5A4A /* LGCentralManager.m */; };
-		2A03822218F3963300DB5A4A /* LGCharacteristic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A03821918F3963300DB5A4A /* LGCharacteristic.m */; };
-		2A03822318F3963300DB5A4A /* LGPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A03821B18F3963300DB5A4A /* LGPeripheral.m */; };
-		2A03822418F3963300DB5A4A /* LGService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A03821D18F3963300DB5A4A /* LGService.m */; };
-		2A03822518F3963300DB5A4A /* LGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A03821F18F3963300DB5A4A /* LGUtils.m */; };
 		2A062A1018EF3BB000A2CFA3 /* check26.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A062A0F18EF3BB000A2CFA3 /* check26.png */; };
 		2A062A1318EF441300A2CFA3 /* stickersEnglish.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A062A1218EF441300A2CFA3 /* stickersEnglish.json */; };
 		2A106DC118EA55BE00D2FC98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A106DC018EA55BE00D2FC98 /* Foundation.framework */; };
@@ -68,6 +62,7 @@
 		2AB8DF8718F316D600C1F641 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB8DF8618F316D600C1F641 /* CoreBluetooth.framework */; };
 		2AB8DFA218F3381100C1F641 /* DeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB8DFA118F3381100C1F641 /* DeviceCell.m */; };
 		2AB8DFA418F3383C00C1F641 /* DeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AB8DFA318F3383C00C1F641 /* DeviceCell.xib */; };
+		2AC1708218F45161008CDA57 /* RGBluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC1708118F45161008CDA57 /* RGBluetooth.m */; };
 		2AC514DD18EDBEDC00F51DDC /* alemanha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5149D18EDBEDC00F51DDC /* alemanha.jpg */; };
 		2AC514DE18EDBEDC00F51DDC /* argelia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5149E18EDBEDC00F51DDC /* argelia.jpg */; };
 		2AC514DF18EDBEDC00F51DDC /* argentina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5149F18EDBEDC00F51DDC /* argentina.jpg */; };
@@ -166,19 +161,6 @@
 		2A02131818F3527300092545 /* arrow487.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow487.png; sourceTree = "<group>"; };
 		2A02131918F3527300092545 /* plus32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus32.png; sourceTree = "<group>"; };
 		2A02131C18F352E500092545 /* chevron18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chevron18.png; sourceTree = "<group>"; };
-		2A03821318F3963300DB5A4A /* CBUUID+StringExtraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBUUID+StringExtraction.h"; sourceTree = "<group>"; };
-		2A03821418F3963300DB5A4A /* CBUUID+StringExtraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBUUID+StringExtraction.m"; sourceTree = "<group>"; };
-		2A03821518F3963300DB5A4A /* LGBluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGBluetooth.h; sourceTree = "<group>"; };
-		2A03821618F3963300DB5A4A /* LGCentralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGCentralManager.h; sourceTree = "<group>"; };
-		2A03821718F3963300DB5A4A /* LGCentralManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGCentralManager.m; sourceTree = "<group>"; };
-		2A03821818F3963300DB5A4A /* LGCharacteristic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGCharacteristic.h; sourceTree = "<group>"; };
-		2A03821918F3963300DB5A4A /* LGCharacteristic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGCharacteristic.m; sourceTree = "<group>"; };
-		2A03821A18F3963300DB5A4A /* LGPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGPeripheral.h; sourceTree = "<group>"; };
-		2A03821B18F3963300DB5A4A /* LGPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGPeripheral.m; sourceTree = "<group>"; };
-		2A03821C18F3963300DB5A4A /* LGService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGService.h; sourceTree = "<group>"; };
-		2A03821D18F3963300DB5A4A /* LGService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGService.m; sourceTree = "<group>"; };
-		2A03821E18F3963300DB5A4A /* LGUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGUtils.h; sourceTree = "<group>"; };
-		2A03821F18F3963300DB5A4A /* LGUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGUtils.m; sourceTree = "<group>"; };
 		2A062A0F18EF3BB000A2CFA3 /* check26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check26.png; sourceTree = "<group>"; };
 		2A062A1218EF441300A2CFA3 /* stickersEnglish.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stickersEnglish.json; sourceTree = "<group>"; };
 		2A106DBD18EA55BE00D2FC98 /* AlbumDaCopa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbumDaCopa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,6 +224,8 @@
 		2AB8DFA018F3381100C1F641 /* DeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceCell.h; sourceTree = "<group>"; };
 		2AB8DFA118F3381100C1F641 /* DeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceCell.m; sourceTree = "<group>"; };
 		2AB8DFA318F3383C00C1F641 /* DeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceCell.xib; sourceTree = "<group>"; };
+		2AC1708018F45161008CDA57 /* RGBluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGBluetooth.h; sourceTree = "<group>"; };
+		2AC1708118F45161008CDA57 /* RGBluetooth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGBluetooth.m; sourceTree = "<group>"; };
 		2AC5149D18EDBEDC00F51DDC /* alemanha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alemanha.jpg; sourceTree = "<group>"; };
 		2AC5149E18EDBEDC00F51DDC /* argelia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = argelia.jpg; sourceTree = "<group>"; };
 		2AC5149F18EDBEDC00F51DDC /* argentina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = argentina.jpg; sourceTree = "<group>"; };
@@ -383,30 +367,9 @@
 			name = "Trade View Controller";
 			sourceTree = "<group>";
 		};
-		2A03821218F3963300DB5A4A /* LGBluetooth */ = {
-			isa = PBXGroup;
-			children = (
-				2A03821318F3963300DB5A4A /* CBUUID+StringExtraction.h */,
-				2A03821418F3963300DB5A4A /* CBUUID+StringExtraction.m */,
-				2A03821518F3963300DB5A4A /* LGBluetooth.h */,
-				2A03821618F3963300DB5A4A /* LGCentralManager.h */,
-				2A03821718F3963300DB5A4A /* LGCentralManager.m */,
-				2A03821818F3963300DB5A4A /* LGCharacteristic.h */,
-				2A03821918F3963300DB5A4A /* LGCharacteristic.m */,
-				2A03821A18F3963300DB5A4A /* LGPeripheral.h */,
-				2A03821B18F3963300DB5A4A /* LGPeripheral.m */,
-				2A03821C18F3963300DB5A4A /* LGService.h */,
-				2A03821D18F3963300DB5A4A /* LGService.m */,
-				2A03821E18F3963300DB5A4A /* LGUtils.h */,
-				2A03821F18F3963300DB5A4A /* LGUtils.m */,
-			);
-			path = LGBluetooth;
-			sourceTree = "<group>";
-		};
 		2A03822618F3963600DB5A4A /* External */ = {
 			isa = PBXGroup;
 			children = (
-				2A03821218F3963300DB5A4A /* LGBluetooth */,
 			);
 			name = External;
 			sourceTree = "<group>";
@@ -561,6 +524,8 @@
 			children = (
 				2AB8DF8218F312D600C1F641 /* Trade */,
 				2AB8DF8018F312C400C1F641 /* Sticker */,
+				2AC1708018F45161008CDA57 /* RGBluetooth.h */,
+				2AC1708118F45161008CDA57 /* RGBluetooth.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -904,19 +869,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A03822318F3963300DB5A4A /* LGPeripheral.m in Sources */,
 				2AB8DF8518F312F000C1F641 /* TradeRequest.m in Sources */,
 				2AC5153318EE19EC00F51DDC /* StatusAndSearchTableViewHeader.m in Sources */,
 				2A56128C18EB055400A3BAF0 /* StickerTableViewController.m in Sources */,
 				2AA474A518EB52480052EF14 /* StickerController.m in Sources */,
-				2A03822418F3963300DB5A4A /* LGService.m in Sources */,
-				2A03822118F3963300DB5A4A /* LGCentralManager.m in Sources */,
 				2AC5153718EE1A2100F51DDC /* IntroductionTableViewHeader.m in Sources */,
-				2A03822518F3963300DB5A4A /* LGUtils.m in Sources */,
+				2AC1708218F45161008CDA57 /* RGBluetooth.m in Sources */,
 				2A598F1118EE68CD003665D3 /* TutorialViewController.m in Sources */,
-				2A03822018F3963300DB5A4A /* CBUUID+StringExtraction.m in Sources */,
 				2A56129518EB0E5900A3BAF0 /* StickerCell.m in Sources */,
-				2A03822218F3963300DB5A4A /* LGCharacteristic.m in Sources */,
 				2A106E4A18EA6CB500D2FC98 /* Sticker.m in Sources */,
 				2AB8DFA218F3381100C1F641 /* DeviceCell.m in Sources */,
 				2A106DD618EA55BE00D2FC98 /* AlbumDaCopa.xcdatamodeld in Sources */,
