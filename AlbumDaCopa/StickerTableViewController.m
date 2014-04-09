@@ -18,8 +18,9 @@
 
 #pragma mark - INIT
 -(id)init {
-    self = [super initWithNibName:@"StickerTableViewController" bundle:nil];
+    self = [super initWithNibName:UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? @"StickerTableViewController-iPad" : @"StickerTableViewController" bundle:nil];
     if (self) {
+        isPad = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
     }
     return self;
 }
@@ -103,10 +104,11 @@
     static NSString *cellID = @"Sticker";
     StickerCell *cell = (StickerCell *)[tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
-        cell = [[NSBundle mainBundle] loadNibNamed:@"StickerCell" owner:self options:nil][0];
+        cell = [[NSBundle mainBundle] loadNibNamed:isPad ? @"StickerCell-iPad" : @"StickerCell" owner:self options:nil][0];
         cell.leftoversTextField.layer.masksToBounds = YES;
         cell.leftoversTextField.layer.cornerRadius = 19;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        NSLog(@"Reused");
     }
     
     Sticker *sticker = self.stickers[indexPath.row];

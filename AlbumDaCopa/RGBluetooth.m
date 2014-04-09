@@ -9,22 +9,49 @@
 
 #import "RGBluetooth.h"
 
+@interface RGBluetooth ()
+@property (strong, nonatomic) NSData *dataToSend;
+@property (nonatomic, readwrite) NSInteger sendDataIndex;
+@property (nonatomic,strong) NSMutableData *receivedData;
+@end
+
 @implementation RGBluetooth
 
-@synthesize discoverBlock;
 @synthesize centralManager;
 @synthesize peripheralManager;
 
+#pragma mark - INIT
 -(id)init {
     if (self = [super init]) {
         self.uuid = [CBUUID UUIDWithString:UUID_BLUETOOTH];
+        self.centralManager  = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:@{CBCentralManagerScanOptionAllowDuplicatesKey: @YES}];
+        self.peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil options:nil];
+        self.dataToSend = [StickerController jsonFromAllStickers];
+        self.receivedData = [[NSMutableData alloc] init];
+        self.sendDataIndex = 0;
+        isPeripheral = NO;
+        
     }
     return self;
+}
++(RGBluetooth *)sharedManager {
+    static RGBluetooth *bluetooth;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        bluetooth = [[super alloc] init];
+    });
+    return bluetooth;
 }
 
 #pragma mark - SCANNING
 -(void)startScanning:(DiscoverDevicesBlock)callback {
+    devices = [[NSMutableArray alloc] init];
     self.discoverBlock = callback;
+}
+-(void)connectToDevice:(CBPeripheral *)peripheral WithCallback:(ConnectToDeviceBlock)callback {
+    if (isPeripheral) return;
+    [self.centralManager connectPeripheral:peripheral options:nil];
+    self.connectBlock = callback;
 }
 
 
@@ -34,22 +61,91 @@
     [central scanForPeripheralsWithServices:@[self.uuid] options:nil];
 }
 -(void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI {
-    self.discoverBlock(@[peripheral]);
+    if (![devices containsObject:peripheral]) {
+        [devices addObject:peripheral];
+        self.discoverBlock(devices);
+    }
 }
 -(void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
+    self.connectBlock(YES,YES);
+    [self.peripheralManager stopAdvertising];
+    [self.centralManager stopScan];
+    peripheral.delegate = self;
+    [peripheral discoverServices:@[self.uuid]];
+}
+-(void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
+    self.connectBlock(NO,YES);
 }
 
-#pragma mark - PERIPHERAL DELEGATE
 
+#pragma mark PERIPHERAL DELEGATE
+-(void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
+    for (CBService *svc in peripheral.services) {
+        [peripheral discoverCharacteristics:@[self.uuid] forService:svc];
+    }
+}
+-(void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
+    for (CBCharacteristic *charac in service.characteristics) {
+        [peripheral setNotifyValue:YES forCharacteristic:charac];
+    }
+}
+-(void)peripheral:(CBPeripheral *)peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
+    [peripheral writeValue:[self getNextChunkOfData] forCharacteristic:characteristic type:CBCharacteristicWriteWithResponse];
+}
+-(void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
+    NSString *s = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
+    if ([s isEqualToString:CONTINUE_SENDING_DATA]) {
+        [peripheral writeValue:[self getNextChunkOfData] forCharacteristic:characteristic type:CBCharacteristicWriteWithResponse];
+    }
 
+}
 
 #pragma mark - PERIPHERAL MANAGER DELEGATE
 -(void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral {
     if (peripheral.state != CBPeripheralManagerStatePoweredOn) return;
-    [peripheral startAdvertising:@{ CBAdvertisementDataServiceUUIDsKey : @[self.uuid]}];
+    
+    tradeService = [[CBMutableService alloc] initWithType:self.uuid primary:YES];
+    tradeCharacteristic = [[CBMutableCharacteristic alloc] initWithType:self.uuid properties:CBCharacteristicPropertyNotify|CBCharacteristicPropertyWrite value:nil permissions:CBAttributePermissionsWriteable];
+    tradeService.characteristics = @[tradeCharacteristic];
+    
+    [peripheral addService:tradeService];
+    [peripheral startAdvertising:@{ CBAdvertisementDataServiceUUIDsKey : @[self.uuid], CBAdvertisementDataLocalNameKey : [[UIDevice currentDevice] name]}];
 }
 -(void)peripheralManager:(CBPeripheralManager *)peripheral central:(CBCentral *)central didSubscribeToCharacteristic:(CBCharacteristic *)characteristic {
+    self.connectBlock(YES,NO);
+    [self.centralManager stopScan];
+    isPeripheral = YES;
     
 }
+-(void)peripheralManager:(CBPeripheralManager *)peripheral didReceiveWriteRequests:(NSArray *)requests {
+    CBATTRequest *request = requests[0];
+    NSString *s = [[NSString alloc] initWithData:request.value encoding:NSUTF8StringEncoding];
+    if (s && [s isEqualToString:NOT_CONTINUE_SENDING_DATA]) {
+        NSData *unzippedData = [self.receivedData gunzippedData];
+        NSString *s = [[NSString alloc] initWithData:unzippedData encoding:NSUTF8StringEncoding];
+        
+        NSLog(@"%@",s);
+        return;
+    }
+    [self.receivedData appendData:request.value];
+    [peripheral updateValue:[CONTINUE_SENDING_DATA dataUsingEncoding:NSUTF8StringEncoding] forCharacteristic:(CBMutableCharacteristic *)request.characteristic onSubscribedCentrals:nil];
+    [peripheral respondToRequest:request withResult:CBATTErrorSuccess];
+
+}
+
+#pragma mark - DATA
+-(NSData *)getNextChunkOfData {
+    if (self.sendDataIndex >= self.dataToSend.length) {
+        return [NOT_CONTINUE_SENDING_DATA dataUsingEncoding:NSUTF8StringEncoding];
+    }
+    NSData *chunk = [NSData dataWithBytes:self.dataToSend.bytes+self.sendDataIndex length:AMOUNT_OF_CHUNK];
+    self.sendDataIndex += AMOUNT_OF_CHUNK;
+    NSLog(@"%ld",(long)self.sendDataIndex);
+    return chunk;
+}
+
+
+
+
 
 @end

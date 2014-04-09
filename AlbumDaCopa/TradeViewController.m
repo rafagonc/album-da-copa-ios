@@ -19,8 +19,9 @@
 
 #pragma mark - INIT
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:@"TradeViewController" bundle:nil];
+    self = [super initWithNibName:UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? @"TradeViewController-iPad" : @"TradeViewController" bundle:nil];
     if (self) {
+        isPad = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad;
     }
     return self;
 }
@@ -33,8 +34,6 @@
     [self decorator];
     
 }
--(void)viewDidDisappear:(BOOL)animated {
-}
 -(void)setupTableView {
     self.tradeTableView.delegate = self;
     self.tradeTableView.dataSource = self;
@@ -42,7 +41,10 @@
 -(void)setupBluetooth {
     [self.activity startAnimating];
     self.uuid = [CBUUID UUIDWithString:UUID_BLUETOOTH];
-    self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:nil];
+    [[RGBluetooth sharedManager] startScanning:^(NSMutableArray *devices) {
+        self.devices = devices;
+        [self.tradeTableView reloadData];
+    }];
 
 }
 -(void)decorator {
@@ -50,10 +52,6 @@
     self.tradeTableView.tableHeaderView.backgroundColor = flatBlue;
     self.followTable.backgroundColor = flatBlue;
 }
-
-
-
-
 
 #pragma mark - TABLE VIEW DELEGATE
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -73,6 +71,11 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     CBPeripheral *peri = self.devices[indexPath.row];
+    [[RGBluetooth sharedManager] connectToDevice:peri WithCallback:^(BOOL success, BOOL isCentral) {
+        if (success) {
+            [self.activity stopAnimating];
+        }
+    }];
 
 }
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {

@@ -18,6 +18,7 @@
 
 @interface StickerTableViewController : UIViewController <UISearchBarDelegate,UITableViewDelegate, UITableViewDataSource,UIScrollViewDelegate> {
     UIButton *doneOrTradeButton;
+    BOOL isPad;
 }
 
 #pragma mark - PROPERTIES

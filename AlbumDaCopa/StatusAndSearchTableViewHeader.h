@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define SCREEN_WIDTH UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad? 768 : 320
+
 @interface StatusAndSearchTableViewHeader : UIView <ADBannerViewDelegate> {
     UIActivityIndicatorView *activity;
 }

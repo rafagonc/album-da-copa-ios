@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #define NotFirstTime @"NotFirstTime"
+#import "GZIP.h"
 @interface StickerController : NSObject
 +(NSArray *)allStickers;
 +(void)createAllStickersToDatabase;
++(NSData *)jsonFromAllStickers;
 +(NSArray *)statsForTheAlbum;
 @end

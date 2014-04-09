@@ -50,4 +50,20 @@
     return @[@(has/all.count*100), @(has)];
 }
 
+
+#pragma mark - TRANSFROM INTO JSON
++(NSData *)jsonFromAllStickers {
+    NSMutableArray *allStickers = [StickerController allStickers];
+    NSMutableArray *newStickersWithDictsInsteadOfObjects = [[NSMutableArray alloc] initWithCapacity:allStickers.count];
+    for (Sticker *s in allStickers) {
+        NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:s.index, @"index", s.leftovers, @"leftovers" , s.onAlbum , @"onAlbum", nil];
+        [newStickersWithDictsInsteadOfObjects addObject:dict];
+    }
+    
+    NSData *data = [NSJSONSerialization dataWithJSONObject:newStickersWithDictsInsteadOfObjects options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *s = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    s = [s stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    return [[s dataUsingEncoding:NSUTF8StringEncoding] gzippedDataWithCompressionLevel:1];
+}
+
 @end

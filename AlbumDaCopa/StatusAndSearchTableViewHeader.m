@@ -11,20 +11,21 @@
 @implementation StatusAndSearchTableViewHeader
 
 - (id)init {
-    self = [super initWithFrame:CGRectMake(0, 0, 320, 150)];
+    self = [super initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
     if (self) {
+        NSLog(@"%d",SCREEN_WIDTH);
         [self setBackgroundColor:[UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1]];
     }
     return self;
 }
 -(void)addViewsWithSearchBarDelegate:(UIViewController<UISearchBarDelegate> *)viewController {
-    UISearchBar *searchBar = [[NSBundle mainBundle] loadNibNamed:@"SearchBar" owner:self options:nil][0];
+    UISearchBar *searchBar = [[NSBundle mainBundle] loadNibNamed:UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad? @"SearchBar-iPad" : @"SearchBar" owner:self options:nil][0];
     searchBar.placeholder = @"Procure por Número, Time, ou Jogador";
     searchBar.delegate = viewController;
     searchBar.backgroundColor = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];
     [self addSubview:searchBar];
     
-    UIView *statusContainer = [[UIView alloc] initWithFrame:CGRectMake(0, searchBar.frame.size.height, 320, 50)];
+    UIView *statusContainer = [[UIView alloc] initWithFrame:CGRectMake(0, searchBar.frame.size.height, SCREEN_WIDTH, 50)];
     [self addSubview:statusContainer];
     
     

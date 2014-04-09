@@ -8,14 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^DiscoverDevicesBlock)(NSArray *devices);
+typedef void (^DiscoverDevicesBlock)(NSMutableArray *devices);
+typedef void (^ConnectToDeviceBlock)(BOOL success, BOOL isCentral);
 
+#define NOT_CONTINUE_SENDING_DATA @"N"
+#define CONTINUE_SENDING_DATA @"C"
+#define AMOUNT_OF_CHUNK 200
 
-@interface RGBluetooth : NSObject <CBCentralManagerDelegate, CBPeripheralDelegate, CBPeripheralManagerDelegate> {
+@interface RGBluetooth : NSObject <CBCentralManagerDelegate, CBPeripheralManagerDelegate, CBPeripheralDelegate> {
     CBCentralManager *centralManager;
     CBPeripheralManager *peripheralManager;
+    NSMutableArray *devices;
+    CBMutableCharacteristic *tradeCharacteristic;
+    CBMutableService *tradeService;
+    BOOL isPeripheral;
     
-    DiscoverDevicesBlock discoverBlock;
 }
 
 @property (nonatomic,strong) CBUUID *uuid;
@@ -24,5 +31,12 @@ typedef void (^DiscoverDevicesBlock)(NSArray *devices);
 
 
 #pragma mark - BLOCKS
-@property (nonatomic,strong) DiscoverDevicesBlock discoverBlock;
+@property (copy) DiscoverDevicesBlock discoverBlock;
+@property (copy) ConnectToDeviceBlock connectBlock;
+
+
+
++(RGBluetooth *)sharedManager;
+-(void)connectToDevice:(CBPeripheral *)peripheral WithCallback:(ConnectToDeviceBlock)callback;
+-(void)startScanning:(DiscoverDevicesBlock)callback;
 @end
