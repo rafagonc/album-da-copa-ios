@@ -10,10 +10,19 @@
 
 typedef void (^DiscoverDevicesBlock)(NSMutableArray *devices);
 typedef void (^ConnectToDeviceBlock)(BOOL success, BOOL isCentral);
+typedef void (^ProgressBlock)(double progress);
+
+@protocol RGBluetoothDelegate <NSObject>
+
+-(void)peripheralDidReceiveDataFromCentral:(NSData *)data;
+-(void)centralDidCompleteSendingDataToPeripheral:(BOOL)success;
+
+@end
+
 
 #define NOT_CONTINUE_SENDING_DATA @"N"
 #define CONTINUE_SENDING_DATA @"C"
-#define AMOUNT_OF_CHUNK 200
+#define AMOUNT_OF_CHUNK 20
 
 @interface RGBluetooth : NSObject <CBCentralManagerDelegate, CBPeripheralManagerDelegate, CBPeripheralDelegate> {
     CBCentralManager *centralManager;
@@ -21,7 +30,8 @@ typedef void (^ConnectToDeviceBlock)(BOOL success, BOOL isCentral);
     NSMutableArray *devices;
     CBMutableCharacteristic *tradeCharacteristic;
     CBMutableService *tradeService;
-    BOOL isPeripheral;
+    CBPeripheral *centralToPeripheral;
+    BOOL isPeripheral,isConnected, hasSendData;
     
 }
 
@@ -33,10 +43,15 @@ typedef void (^ConnectToDeviceBlock)(BOOL success, BOOL isCentral);
 #pragma mark - BLOCKS
 @property (copy) DiscoverDevicesBlock discoverBlock;
 @property (copy) ConnectToDeviceBlock connectBlock;
+@property (copy) ProgressBlock progressBlock;;
+
+#pragma mark - DELEGATE
+@property(nonatomic,strong) id<RGBluetoothDelegate> delegate;
 
 
-
-+(RGBluetooth *)sharedManager;
+#pragma mark - METHODS
+-(id)initWithDataToSent:(NSData *)toSent  andDelegate:(id<RGBluetoothDelegate>)delegate;
 -(void)connectToDevice:(CBPeripheral *)peripheral WithCallback:(ConnectToDeviceBlock)callback;
 -(void)startScanning:(DiscoverDevicesBlock)callback;
+-(void)centralSendDataToPeripheralWithProgress:(ProgressBlock)progress;
 @end

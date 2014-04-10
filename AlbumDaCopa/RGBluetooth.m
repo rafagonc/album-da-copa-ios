@@ -21,26 +21,19 @@
 @synthesize peripheralManager;
 
 #pragma mark - INIT
--(id)init {
+-(id)initWithDataToSent:(NSData *)toSent andDelegate:(id<RGBluetoothDelegate>)delegate {
     if (self = [super init]) {
+        self.delegate = delegate;
         self.uuid = [CBUUID UUIDWithString:UUID_BLUETOOTH];
         self.centralManager  = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:@{CBCentralManagerScanOptionAllowDuplicatesKey: @YES}];
         self.peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil options:nil];
-        self.dataToSend = [StickerController jsonFromAllStickers];
+        self.dataToSend = [toSent gzippedDataWithCompressionLevel:1];
         self.receivedData = [[NSMutableData alloc] init];
         self.sendDataIndex = 0;
         isPeripheral = NO;
-        
+        hasSendData = NO;
     }
     return self;
-}
-+(RGBluetooth *)sharedManager {
-    static RGBluetooth *bluetooth;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        bluetooth = [[super alloc] init];
-    });
-    return bluetooth;
 }
 
 #pragma mark - SCANNING
@@ -49,11 +42,15 @@
     self.discoverBlock = callback;
 }
 -(void)connectToDevice:(CBPeripheral *)peripheral WithCallback:(ConnectToDeviceBlock)callback {
-    if (isPeripheral) return;
     [self.centralManager connectPeripheral:peripheral options:nil];
     self.connectBlock = callback;
 }
-
+-(void)centralSendDataToPeripheralWithProgress:(ProgressBlock)progress {
+    if (!isConnected) return;
+    self.progressBlock = progress;
+    [centralToPeripheral discoverServices:@[self.uuid]];
+    [self performSelector:@selector(failToSendData) withObject:nil afterDelay:40];
+}
 
 #pragma mark - CENTRAL MANAGER DELEGATE
 -(void)centralManagerDidUpdateState:(CBCentralManager *)central {
@@ -67,16 +64,18 @@
     }
 }
 -(void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
-    self.connectBlock(YES,YES);
+    isConnected = YES;
     [self.peripheralManager stopAdvertising];
     [self.centralManager stopScan];
+    centralToPeripheral = peripheral;
     peripheral.delegate = self;
-    [peripheral discoverServices:@[self.uuid]];
+    self.connectBlock(YES,YES);
+
 }
 -(void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
+    isConnected = NO;
     self.connectBlock(NO,YES);
 }
-
 
 #pragma mark PERIPHERAL DELEGATE
 -(void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
@@ -96,6 +95,9 @@
     NSString *s = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
     if ([s isEqualToString:CONTINUE_SENDING_DATA]) {
         [peripheral writeValue:[self getNextChunkOfData] forCharacteristic:characteristic type:CBCharacteristicWriteWithResponse];
+    } else {
+        hasSendData = YES;
+        [self.delegate centralDidCompleteSendingDataToPeripheral:YES];
     }
 
 }
@@ -112,7 +114,6 @@
     [peripheral startAdvertising:@{ CBAdvertisementDataServiceUUIDsKey : @[self.uuid], CBAdvertisementDataLocalNameKey : [[UIDevice currentDevice] name]}];
 }
 -(void)peripheralManager:(CBPeripheralManager *)peripheral central:(CBCentral *)central didSubscribeToCharacteristic:(CBCharacteristic *)characteristic {
-    self.connectBlock(YES,NO);
     [self.centralManager stopScan];
     isPeripheral = YES;
     
@@ -122,9 +123,9 @@
     NSString *s = [[NSString alloc] initWithData:request.value encoding:NSUTF8StringEncoding];
     if (s && [s isEqualToString:NOT_CONTINUE_SENDING_DATA]) {
         NSData *unzippedData = [self.receivedData gunzippedData];
-        NSString *s = [[NSString alloc] initWithData:unzippedData encoding:NSUTF8StringEncoding];
-        
-        NSLog(@"%@",s);
+        NSLog(@"%@",unzippedData);
+        [self.delegate peripheralDidReceiveDataFromCentral:unzippedData];
+        [peripheral updateValue:[NOT_CONTINUE_SENDING_DATA dataUsingEncoding:NSUTF8StringEncoding] forCharacteristic:(CBMutableCharacteristic *)request.characteristic onSubscribedCentrals:nil];
         return;
     }
     [self.receivedData appendData:request.value];
@@ -140,9 +141,16 @@
     }
     NSData *chunk = [NSData dataWithBytes:self.dataToSend.bytes+self.sendDataIndex length:AMOUNT_OF_CHUNK];
     self.sendDataIndex += AMOUNT_OF_CHUNK;
-    NSLog(@"%ld",(long)self.sendDataIndex);
+    self.progressBlock((double)self.sendDataIndex/(double)self.dataToSend.length);
     return chunk;
 }
+-(void)failToSendData {
+    if (!hasSendData) {
+        [self.centralManager cancelPeripheralConnection:centralToPeripheral];
+        [self.delegate centralDidCompleteSendingDataToPeripheral:NO];
+    }
+}
+
 
 
 

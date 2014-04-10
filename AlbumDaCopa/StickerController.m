@@ -49,21 +49,31 @@
     }
     return @[@(has/all.count*100), @(has)];
 }
++(NSArray *)findLeftoversAvaliable {
+    NSManagedObjectContext *context = [AppDelegate staticManagedObjectContext];
+    NSFetchRequest *fetchR = [[NSFetchRequest alloc] init];
+    [fetchR setEntity:[NSEntityDescription entityForName:@"Sticker" inManagedObjectContext:context]];
+    [fetchR setPredicate:[NSPredicate predicateWithFormat:@"self.leftovers > 0"]];
+    NSArray *sortedArray = [[context executeFetchRequest:fetchR error:nil] sortedArrayWithOptions:NSSortStable usingComparator:^NSComparisonResult(Sticker *obj1, Sticker *obj2) {
+        return [obj1.index compare:obj2.index];
+    }];
+    return sortedArray;
+}
 
 
 #pragma mark - TRANSFROM INTO JSON
 +(NSData *)jsonFromAllStickers {
-    NSMutableArray *allStickers = [StickerController allStickers];
+    NSArray *allStickers = [StickerController allStickers];
     NSMutableArray *newStickersWithDictsInsteadOfObjects = [[NSMutableArray alloc] initWithCapacity:allStickers.count];
     for (Sticker *s in allStickers) {
-        NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:s.index, @"index", s.leftovers, @"leftovers" , s.onAlbum , @"onAlbum", nil];
+        NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:s.index, @"index", s.leftovers, @"leftovers" , s.onAlbum , @"onAlbum", s.type , @"type", nil];
         [newStickersWithDictsInsteadOfObjects addObject:dict];
     }
     
     NSData *data = [NSJSONSerialization dataWithJSONObject:newStickersWithDictsInsteadOfObjects options:NSJSONWritingPrettyPrinted error:nil];
     NSString *s = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     s = [s stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-    return [[s dataUsingEncoding:NSUTF8StringEncoding] gzippedDataWithCompressionLevel:1];
+    return [s dataUsingEncoding:NSUTF8StringEncoding];
 }
 
 @end

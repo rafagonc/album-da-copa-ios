@@ -13,5 +13,6 @@
 +(NSArray *)allStickers;
 +(void)createAllStickersToDatabase;
 +(NSData *)jsonFromAllStickers;
++(NSArray *)findLeftoversAvaliable;
 +(NSArray *)statsForTheAlbum;
 @end

@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AlbumDaCopa/RGBluetooth.m"
-            timestampString = "418749886.564114"
+            filePath = "AlbumDaCopa/TradeViewController.m"
+            timestampString = "418788292.047524"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "-peripheralManager:didReceiveWriteRequests:"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "-peripheralDidReceiveDataFromCentral:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

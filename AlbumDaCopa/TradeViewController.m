@@ -30,27 +30,47 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     [self setupTableView];
-    [self setupBluetooth];
     [self decorator];
     
+}
+-(void)viewDidAppear:(BOOL)animated {
+    [self setupBluetooth];
 }
 -(void)setupTableView {
     self.tradeTableView.delegate = self;
     self.tradeTableView.dataSource = self;
 }
 -(void)setupBluetooth {
+    self.devices = [[NSMutableArray alloc] init];
+    self.isSendingData = NO;
+    [self.tradeTableView reloadData];
+    bluetoothManager = [[RGBluetooth alloc] initWithDataToSent:[StickerController jsonFromAllStickers] andDelegate:self];
     [self.activity startAnimating];
     self.uuid = [CBUUID UUIDWithString:UUID_BLUETOOTH];
-    [[RGBluetooth sharedManager] startScanning:^(NSMutableArray *devices) {
+    [bluetoothManager startScanning:^(NSMutableArray *devices) {
         self.devices = devices;
         [self.tradeTableView reloadData];
     }];
 
 }
+-(void)startSendingData {
+    [bluetoothManager centralSendDataToPeripheralWithProgress:^(double progress) {
+        NSLog(@"%f",progress);
+    }];
+}
 -(void)decorator {
     UIColor *flatBlue = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];
     self.tradeTableView.tableHeaderView.backgroundColor = flatBlue;
     self.followTable.backgroundColor = flatBlue;
+}
+
+#pragma mark RGBLUETOOTH DELEGATE
+-(void)peripheralDidReceiveDataFromCentral:(NSData *)data {
+    TradeController *trade = [[TradeController alloc] initWithJSONData:data];
+    NSMutableArray *allExchanges = [trade startComparingStickersToFindPossibleExchanges];
+}
+-(void)centralDidCompleteSendingDataToPeripheral:(BOOL)success {
+    NSLog(@"%d",success);
 }
 
 #pragma mark - TABLE VIEW DELEGATE
@@ -71,9 +91,10 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     CBPeripheral *peri = self.devices[indexPath.row];
-    [[RGBluetooth sharedManager] connectToDevice:peri WithCallback:^(BOOL success, BOOL isCentral) {
+    [bluetoothManager connectToDevice:peri WithCallback:^(BOOL success, BOOL isCentral) {
         if (success) {
             [self.activity stopAnimating];
+            [self startSendingData];
         }
     }];
 
