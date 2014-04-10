@@ -146,6 +146,9 @@
 		2ACCB7EA18F0BD30006E6A94 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ACCB7E918F0BD30006E6A94 /* Default@2x.png */; };
 		2ACCB7EC18F0BEA1006E6A94 /* iOS Simulator Screen shot Apr 5, 2014, 7.40.52 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ACCB7EB18F0BEA1006E6A94 /* iOS Simulator Screen shot Apr 5, 2014, 7.40.52 PM.png */; };
 		2AD55DAC18EE4B1B002588E6 /* SearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AD55DAB18EE4B1B002588E6 /* SearchBar.xib */; };
+		2AE30EB218F730B0002C515B /* TradeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE30EB118F730B0002C515B /* TradeCell.m */; };
+		2AE30EB418F730BA002C515B /* TradeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE30EB318F730BA002C515B /* TradeCell.xib */; };
+		2AE30EB818F7354A002C515B /* TradeCell-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE30EB718F7354A002C515B /* TradeCell-iPad.xib */; };
 		2AF6D36918EF2D8F00E008AB /* set of 8 stickers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AF6D36818EF2D8F00E008AB /* set of 8 stickers.jpg */; };
 /* End PBXBuildFile section */
 
@@ -318,6 +321,10 @@
 		2ACCB7E918F0BD30006E6A94 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2ACCB7EB18F0BEA1006E6A94 /* iOS Simulator Screen shot Apr 5, 2014, 7.40.52 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS Simulator Screen shot Apr 5, 2014, 7.40.52 PM.png"; sourceTree = "<group>"; };
 		2AD55DAB18EE4B1B002588E6 /* SearchBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBar.xib; sourceTree = "<group>"; };
+		2AE30EB018F730B0002C515B /* TradeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeCell.h; sourceTree = "<group>"; };
+		2AE30EB118F730B0002C515B /* TradeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeCell.m; sourceTree = "<group>"; };
+		2AE30EB318F730BA002C515B /* TradeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TradeCell.xib; sourceTree = "<group>"; };
+		2AE30EB718F7354A002C515B /* TradeCell-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "TradeCell-iPad.xib"; sourceTree = "<group>"; };
 		2AF6D36818EF2D8F00E008AB /* set of 8 stickers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "set of 8 stickers.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -610,6 +617,10 @@
 				2AB8DFA018F3381100C1F641 /* DeviceCell.h */,
 				2AB8DFA118F3381100C1F641 /* DeviceCell.m */,
 				2AB8DFA318F3383C00C1F641 /* DeviceCell.xib */,
+				2AE30EB018F730B0002C515B /* TradeCell.h */,
+				2AE30EB118F730B0002C515B /* TradeCell.m */,
+				2AE30EB318F730BA002C515B /* TradeCell.xib */,
+				2AE30EB718F7354A002C515B /* TradeCell-iPad.xib */,
 			);
 			name = "Trade View Cells";
 			sourceTree = "<group>";
@@ -871,6 +882,7 @@
 				2A598F1418EE703D003665D3 /* ADBanner.xib in Resources */,
 				2AC5151818EDBEDC00F51DDC /* nigeria.jpg in Resources */,
 				2AC514DE18EDBEDC00F51DDC /* argelia.jpg in Resources */,
+				2AE30EB418F730BA002C515B /* TradeCell.xib in Resources */,
 				2AC5150618EDBEDC00F51DDC /* escudo-portugal.gif in Resources */,
 				2AC514EE18EDBEDC00F51DDC /* escudo-australia.gif in Resources */,
 				2AC5151A18EDBEDC00F51DDC /* russia.jpg in Resources */,
@@ -879,6 +891,7 @@
 				2A02131B18F3527300092545 /* plus32.png in Resources */,
 				2A46DBF018EF24D60039451C /* TradeSystemTutorialViewController.xib in Resources */,
 				2AC5151118EDBEDC00F51DDC /* honduras.jpg in Resources */,
+				2AE30EB818F7354A002C515B /* TradeCell-iPad.xib in Resources */,
 				2ACCB7DE18F06EE1006E6A94 /* up21.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -913,6 +926,7 @@
 				2A106DD318EA55BE00D2FC98 /* AppDelegate.m in Sources */,
 				2A02131518F2FD1200092545 /* TradeViewController.m in Sources */,
 				2A46DBEF18EF24D60039451C /* TradeSystemTutorialViewController.m in Sources */,
+				2AE30EB218F730B0002C515B /* TradeCell.m in Sources */,
 				2A106DCF18EA55BE00D2FC98 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1044,7 +1058,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AlbumDaCopa/AlbumDaCopa-Prefix.pch";
 				INFOPLIST_FILE = "AlbumDaCopa/AlbumDaCopa-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/tesseract-ios-lib/lib",
@@ -1075,7 +1089,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AlbumDaCopa/AlbumDaCopa-Prefix.pch";
 				INFOPLIST_FILE = "AlbumDaCopa/AlbumDaCopa-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/tesseract-ios-lib/lib",

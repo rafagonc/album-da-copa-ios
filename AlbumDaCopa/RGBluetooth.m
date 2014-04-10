@@ -123,7 +123,6 @@
     NSString *s = [[NSString alloc] initWithData:request.value encoding:NSUTF8StringEncoding];
     if (s && [s isEqualToString:NOT_CONTINUE_SENDING_DATA]) {
         NSData *unzippedData = [self.receivedData gunzippedData];
-        NSLog(@"%@",unzippedData);
         [self.delegate peripheralDidReceiveDataFromCentral:unzippedData];
         [peripheral updateValue:[NOT_CONTINUE_SENDING_DATA dataUsingEncoding:NSUTF8StringEncoding] forCharacteristic:(CBMutableCharacteristic *)request.characteristic onSubscribedCentrals:nil];
         return;
