@@ -73,7 +73,7 @@
     NSData *data = [NSJSONSerialization dataWithJSONObject:newStickersWithDictsInsteadOfObjects options:NSJSONWritingPrettyPrinted error:nil];
     NSString *s = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     s = [s stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-    return [s dataUsingEncoding:NSUTF8StringEncoding];
+    return [[s dataUsingEncoding:NSUTF8StringEncoding] gzippedDataWithCompressionLevel:1];
 }
 
 @end

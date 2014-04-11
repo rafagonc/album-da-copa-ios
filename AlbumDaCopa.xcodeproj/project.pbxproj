@@ -44,6 +44,7 @@
 		2A598F1118EE68CD003665D3 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A598F0F18EE68CD003665D3 /* TutorialViewController.m */; };
 		2A598F1218EE68CD003665D3 /* TutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A598F1018EE68CD003665D3 /* TutorialViewController.xib */; };
 		2A598F1418EE703D003665D3 /* ADBanner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A598F1318EE703D003665D3 /* ADBanner.xib */; };
+		2A70822E18F87BD30005EEC8 /* SessionDelegateContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A70822D18F87BD30005EEC8 /* SessionDelegateContainer.m */; };
 		2A80449618ECA9D400BBAA7E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A80449518ECA9D400BBAA7E /* iAd.framework */; };
 		2A87E1E518F4CF7A00359335 /* TradeViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A87E1E418F4CF7A00359335 /* TradeViewController-iPad.xib */; };
 		2A87E1E718F4D8C500359335 /* SearchBar-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A87E1E618F4D8C500359335 /* SearchBar-iPad.xib */; };
@@ -62,10 +63,9 @@
 		2AA961D918F0CDBF005891F5 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA961D818F0CDBF005891F5 /* libz.1.2.5.dylib */; };
 		2AA961DB18F0CDCD005891F5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA961DA18F0CDCD005891F5 /* AVFoundation.framework */; };
 		2AA961E718F1B972005891F5 /* Icon120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AA961E618F1B972005891F5 /* Icon120x120.png */; };
-		2AB8DF8718F316D600C1F641 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB8DF8618F316D600C1F641 /* CoreBluetooth.framework */; };
+		2AAE7A7418F85AB4003DF7EC /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAE7A7318F85AB4003DF7EC /* MultipeerConnectivity.framework */; };
 		2AB8DFA218F3381100C1F641 /* DeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB8DFA118F3381100C1F641 /* DeviceCell.m */; };
 		2AB8DFA418F3383C00C1F641 /* DeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AB8DFA318F3383C00C1F641 /* DeviceCell.xib */; };
-		2AC1708218F45161008CDA57 /* RGBluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC1708118F45161008CDA57 /* RGBluetooth.m */; };
 		2AC1708718F4C2AB008CDA57 /* StickerTableViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC1708618F4C2AB008CDA57 /* StickerTableViewController-iPad.xib */; };
 		2AC1708918F4C497008CDA57 /* StickerCell-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC1708818F4C497008CDA57 /* StickerCell-iPad.xib */; };
 		2AC514DD18EDBEDC00F51DDC /* alemanha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5149D18EDBEDC00F51DDC /* alemanha.jpg */; };
@@ -211,6 +211,8 @@
 		2A598F0F18EE68CD003665D3 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
 		2A598F1018EE68CD003665D3 /* TutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialViewController.xib; sourceTree = "<group>"; };
 		2A598F1318EE703D003665D3 /* ADBanner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADBanner.xib; sourceTree = "<group>"; };
+		2A70822C18F87BD30005EEC8 /* SessionDelegateContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionDelegateContainer.h; sourceTree = "<group>"; };
+		2A70822D18F87BD30005EEC8 /* SessionDelegateContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDelegateContainer.m; sourceTree = "<group>"; };
 		2A80449518ECA9D400BBAA7E /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		2A87E1E418F4CF7A00359335 /* TradeViewController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "TradeViewController-iPad.xib"; sourceTree = "<group>"; };
 		2A87E1E618F4D8C500359335 /* SearchBar-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SearchBar-iPad.xib"; sourceTree = "<group>"; };
@@ -232,12 +234,11 @@
 		2AA961D818F0CDBF005891F5 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		2AA961DA18F0CDCD005891F5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2AA961E618F1B972005891F5 /* Icon120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon120x120.png; sourceTree = "<group>"; };
+		2AAE7A7318F85AB4003DF7EC /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		2AB8DF8618F316D600C1F641 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		2AB8DFA018F3381100C1F641 /* DeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceCell.h; sourceTree = "<group>"; };
 		2AB8DFA118F3381100C1F641 /* DeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceCell.m; sourceTree = "<group>"; };
 		2AB8DFA318F3383C00C1F641 /* DeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceCell.xib; sourceTree = "<group>"; };
-		2AC1708018F45161008CDA57 /* RGBluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGBluetooth.h; sourceTree = "<group>"; };
-		2AC1708118F45161008CDA57 /* RGBluetooth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGBluetooth.m; sourceTree = "<group>"; };
 		2AC1708618F4C2AB008CDA57 /* StickerTableViewController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "StickerTableViewController-iPad.xib"; sourceTree = "<group>"; };
 		2AC1708818F4C497008CDA57 /* StickerCell-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "StickerCell-iPad.xib"; sourceTree = "<group>"; };
 		2AC5149D18EDBEDC00F51DDC /* alemanha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alemanha.jpg; sourceTree = "<group>"; };
@@ -333,7 +334,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AB8DF8718F316D600C1F641 /* CoreBluetooth.framework in Frameworks */,
+				2AAE7A7418F85AB4003DF7EC /* MultipeerConnectivity.framework in Frameworks */,
 				2AA961DB18F0CDCD005891F5 /* AVFoundation.framework in Frameworks */,
 				2AA961D918F0CDBF005891F5 /* libz.1.2.5.dylib in Frameworks */,
 				2AA961D718F0CDB1005891F5 /* CoreMedia.framework in Frameworks */,
@@ -433,6 +434,7 @@
 		2A106DBF18EA55BE00D2FC98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2AAE7A7318F85AB4003DF7EC /* MultipeerConnectivity.framework */,
 				2AB8DF8618F316D600C1F641 /* CoreBluetooth.framework */,
 				2AA961DA18F0CDCD005891F5 /* AVFoundation.framework */,
 				2AA961D818F0CDBF005891F5 /* libz.1.2.5.dylib */,
@@ -545,8 +547,8 @@
 			children = (
 				2AB8DF8218F312D600C1F641 /* Trade */,
 				2AB8DF8018F312C400C1F641 /* Sticker */,
-				2AC1708018F45161008CDA57 /* RGBluetooth.h */,
-				2AC1708118F45161008CDA57 /* RGBluetooth.m */,
+				2A70822C18F87BD30005EEC8 /* SessionDelegateContainer.h */,
+				2A70822D18F87BD30005EEC8 /* SessionDelegateContainer.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -916,7 +918,6 @@
 				2A56128C18EB055400A3BAF0 /* StickerTableViewController.m in Sources */,
 				2AA474A518EB52480052EF14 /* StickerController.m in Sources */,
 				2AC5153718EE1A2100F51DDC /* IntroductionTableViewHeader.m in Sources */,
-				2AC1708218F45161008CDA57 /* RGBluetooth.m in Sources */,
 				2A598F1118EE68CD003665D3 /* TutorialViewController.m in Sources */,
 				2A56129518EB0E5900A3BAF0 /* StickerCell.m in Sources */,
 				2A106E4A18EA6CB500D2FC98 /* Sticker.m in Sources */,
@@ -925,6 +926,7 @@
 				2A87E1EB18F59CE400359335 /* GZIP.m in Sources */,
 				2A106DD318EA55BE00D2FC98 /* AppDelegate.m in Sources */,
 				2A02131518F2FD1200092545 /* TradeViewController.m in Sources */,
+				2A70822E18F87BD30005EEC8 /* SessionDelegateContainer.m in Sources */,
 				2A46DBEF18EF24D60039451C /* TradeSystemTutorialViewController.m in Sources */,
 				2AE30EB218F730B0002C515B /* TradeCell.m in Sources */,
 				2A106DCF18EA55BE00D2FC98 /* main.m in Sources */,

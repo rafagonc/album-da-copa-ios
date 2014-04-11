@@ -19,7 +19,7 @@
         self.stickersHeGaveMe = [[NSMutableArray alloc] init];
         self.stickersIGiveHim = [[NSMutableArray alloc] init];
         NSError *error;
-        self.receivedStickerArray = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
+        self.receivedStickerArray = [NSJSONSerialization JSONObjectWithData:[jsonData gunzippedData] options:NSJSONReadingAllowFragments error:&error];
         if (error) {
             jsonReadingErrorRaised = YES;
         }

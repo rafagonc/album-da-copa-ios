@@ -7,13 +7,16 @@
 //
 
 #import "TradeViewController.h"
+#import "SessionDelegateContainer.h"
 
 @interface TradeViewController ()
-@property (nonatomic,strong) CBUUID *uuid;
-@property (nonatomic,strong) CBPeripheral *connectedPeripheral;
-@property (nonatomic,strong) CBMutableService *service;
-@property (nonatomic,strong) CBMutableCharacteristic *serviceCharacteristic;
+@property (nonatomic, strong) MCBrowserViewController *browserVC;
+@property (nonatomic, strong) MCAdvertiserAssistant *advertiser;
+@property (nonatomic, strong) MCSession *mySession;
+@property (nonatomic, strong) MCPeerID *myPeerID;
 @end
+
+static NSString *const serviceType = @"session";
 
 @implementation TradeViewController
 
@@ -30,33 +33,32 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     [self setupTableView];
+    [self setUpMultipeer];
     [self decorator];
     
 }
--(void)viewDidAppear:(BOOL)animated {
-    [self setupBluetooth];
+-(void)setUpMultipeer {
+    //  Setup peer ID
+    SessionDelegateContainer *delegateContainer = [[SessionDelegateContainer alloc] init];
+    self.myPeerID = [[MCPeerID alloc] initWithDisplayName:[UIDevice currentDevice].name];
+    
+    //  Setup session
+    self.mySession = [[MCSession alloc] initWithPeer:self.myPeerID];
+    self.mySession.delegate = self;
+    
+    //  Setup BrowserViewController
+    self.browserVC = [[MCBrowserViewController alloc] initWithServiceType:serviceType session:self.mySession];
+    self.browserVC.delegate = self;
+    [self presentViewController:self.browserVC animated:YES completion:nil];
+
+    
+    //  Setup Advertiser
+    self.advertiser = [[MCAdvertiserAssistant alloc] initWithServiceType:serviceType discoveryInfo:nil session:self.mySession];
+    [self.advertiser start];
 }
 -(void)setupTableView {
     self.tradeTableView.delegate = self;
     self.tradeTableView.dataSource = self;
-}
--(void)setupBluetooth {
-    self.devices = [[NSMutableArray alloc] init];
-    self.isSendingData = NO;
-    [self.tradeTableView reloadData];
-    bluetoothManager = [[RGBluetooth alloc] initWithDataToSent:[StickerController jsonFromAllStickers] andDelegate:self];
-    [self.activity startAnimating];
-    self.uuid = [CBUUID UUIDWithString:UUID_BLUETOOTH];
-    [bluetoothManager startScanning:^(NSMutableArray *devices) {
-        self.devices = devices;
-        [self.tradeTableView reloadData];
-    }];
-
-}
--(void)startSendingData {
-    [bluetoothManager centralSendDataToPeripheralWithProgress:^(double progress) {
-        NSLog(@"%f",progress);
-    }];
 }
 -(void)decorator {
     UIColor *flatBlue = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];
@@ -64,15 +66,24 @@
     self.followTable.backgroundColor = flatBlue;
 }
 
-#pragma mark RGBLUETOOTH DELEGATE
--(NSData *)peripheralDidReceiveDataFromCentral:(NSData *)data {
-    TradeController *trade = [[TradeController alloc] initWithJSONData:data];
-    NSMutableArray *returningArray = [trade startComparingStickersToFindPossibleExchanges];
-    return [NSJSONSerialization dataWithJSONObject:returningArray options:NSJSONWritingPrettyPrinted error:nil];
+#pragma mark - BROWSER
+-(void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController {
+    [browserViewController dismissViewControllerAnimated:YES completion:nil];
 }
--(void)centralDidCompleteSendingDataToPeripheral:(BOOL)success {
-    NSLog(@"%d",success);
+-(void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController {
+    [browserViewController dismissViewControllerAnimated:YES completion:nil];
+    [self performSelector:@selector(sendData) withObject:nil afterDelay:0.2];
+   
 }
+-(void)sendData {
+    NSError *error;
+    NSLog(@"%@",[self.mySession connectedPeers]);
+    if (![self.mySession sendData:[StickerController jsonFromAllStickers] toPeers:[self.mySession connectedPeers] withMode:MCSessionSendDataUnreliable error:&error]) {
+        NSLog(@"%@",error);
+    }
+    
+}
+
 
 #pragma mark - TABLE VIEW DELEGATE
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -92,17 +103,25 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     CBPeripheral *peri = self.devices[indexPath.row];
-    [bluetoothManager connectToDevice:peri WithCallback:^(BOOL success, BOOL isCentral) {
-        if (success) {
-            [self.activity stopAnimating];
-            [self startSendingData];
-        }
-    }];
+
 
 }
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (scrollView.contentOffset.y > 0) return;
     self.followTable.frame = CGRectMake(self.followTable.frame.origin.x, self.followTable.frame.origin.y, self.followTable.frame.size.width, -scrollView.contentOffset.y);
+}
+
+
+
+
+-(void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state {
+
+    
+}
+-(void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID {
+    TradeController *trade = [[TradeController alloc] initWithJSONData:data];
+    NSMutableArray *stickers = [trade startComparingStickersToFindPossibleExchanges];
+    NSLog(@"%@",stickers);
 }
 
 #pragma mark - DEALLOC

@@ -9,13 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "DeviceCell.h"
-#import "RGBluetooth.h"
 #import "TradeController.h"
-#define UUID_BLUETOOTH @"2BF1F041-EE1D-4C0E-9242-BC6AE7C45E9E"
+#import <MultipeerConnectivity/MultipeerConnectivity.h>
 
-@interface TradeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,RGBluetoothDelegate> {
+@interface TradeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, MCBrowserViewControllerDelegate,MCSessionDelegate> {
     BOOL isPad;
-    RGBluetooth *bluetoothManager;
 }
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activity;
