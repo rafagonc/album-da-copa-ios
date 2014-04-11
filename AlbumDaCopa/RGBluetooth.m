@@ -126,10 +126,16 @@
     CBATTRequest *request = requests[0];
     NSString *s = [[NSString alloc] initWithData:request.value encoding:NSUTF8StringEncoding];
     if (s && [s isEqualToString:NOT_CONTINUE_SENDING_DATA]) {
+<<<<<<< HEAD
         self.centralDataToReceive.data = [[self.delegate peripheralDidReceiveDataFromCentral:[self.centralDataToSend.receivedData gunzippedData]] gzippedDataWithCompressionLevel:1];
         if (!self.centralDataToReceive.completed) [peripheral updateValue:[self.centralDataToSend nextChunkOfData] forCharacteristic:(CBMutableCharacteristic *)request.characteristic onSubscribedCentrals:nil];
         else [peripheral updateValue:[NOT_CONTINUE_READING_DATA dataUsingEncoding:NSUTF8StringEncoding] forCharacteristic:(CBMutableCharacteristic *)request.characteristic onSubscribedCentrals:nil];
         [peripheral respondToRequest:request withResult:CBATTErrorSuccess];
+=======
+        NSData *unzippedData = [self.receivedData gunzippedData];
+        [self.delegate peripheralDidReceiveDataFromCentral:unzippedData];
+        [peripheral updateValue:[NOT_CONTINUE_SENDING_DATA dataUsingEncoding:NSUTF8StringEncoding] forCharacteristic:(CBMutableCharacteristic *)request.characteristic onSubscribedCentrals:nil];
+>>>>>>> FETCH_HEAD
         return;
     }
     [self.centralDataToSend.receivedData appendData:request.value];
