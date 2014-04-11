@@ -65,9 +65,10 @@
 }
 
 #pragma mark RGBLUETOOTH DELEGATE
--(void)peripheralDidReceiveDataFromCentral:(NSData *)data {
+-(NSData *)peripheralDidReceiveDataFromCentral:(NSData *)data {
     TradeController *trade = [[TradeController alloc] initWithJSONData:data];
-    NSMutableArray *allExchanges = [trade startComparingStickersToFindPossibleExchanges];
+    NSMutableArray *returningArray = [trade startComparingStickersToFindPossibleExchanges];
+    return [NSJSONSerialization dataWithJSONObject:returningArray options:NSJSONWritingPrettyPrinted error:nil];
 }
 -(void)centralDidCompleteSendingDataToPeripheral:(BOOL)success {
     NSLog(@"%d",success);

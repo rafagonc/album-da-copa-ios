@@ -10,9 +10,9 @@
 #import "RGBluetooth.h"
 
 @interface RGBluetooth ()
-@property (strong, nonatomic) NSData *dataToSend;
-@property (nonatomic, readwrite) NSInteger sendDataIndex;
-@property (nonatomic,strong) NSMutableData *receivedData;
+@property (strong,nonatomic) RGBluetoothData *centralDataToSend;
+@property (strong,nonatomic) RGBluetoothData *centralDataToReceive;
+
 @end
 
 @implementation RGBluetooth
@@ -21,15 +21,14 @@
 @synthesize peripheralManager;
 
 #pragma mark - INIT
--(id)initWithDataToSent:(NSData *)toSent andDelegate:(id<RGBluetoothDelegate>)delegate {
+-(id)initWithDataToSent:(NSData *)toSent1 andDelegate:(id<RGBluetoothDelegate>)delegate {
     if (self = [super init]) {
         self.delegate = delegate;
         self.uuid = [CBUUID UUIDWithString:UUID_BLUETOOTH];
         self.centralManager  = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:@{CBCentralManagerScanOptionAllowDuplicatesKey: @YES}];
         self.peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil options:nil];
-        self.dataToSend = [toSent gzippedDataWithCompressionLevel:1];
-        self.receivedData = [[NSMutableData alloc] init];
-        self.sendDataIndex = 0;
+        self.centralDataToReceive = [[RGBluetoothData alloc] initWithData:[NSData data] andType:Write];
+        toSent = toSent1;
         isPeripheral = NO;
         hasSendData = NO;
     }
@@ -42,6 +41,7 @@
     self.discoverBlock = callback;
 }
 -(void)connectToDevice:(CBPeripheral *)peripheral WithCallback:(ConnectToDeviceBlock)callback {
+    self.centralDataToSend = [[RGBluetoothData alloc] initWithData:[toSent gzippedDataWithCompressionLevel:1] andType:Write];
     [self.centralManager connectPeripheral:peripheral options:nil];
     self.connectBlock = callback;
 }
@@ -89,14 +89,18 @@
     }
 }
 -(void)peripheral:(CBPeripheral *)peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
-    [peripheral writeValue:[self getNextChunkOfData] forCharacteristic:characteristic type:CBCharacteristicWriteWithResponse];
+    [peripheral writeValue:[self.centralDataToSend nextChunkOfData] forCharacteristic:characteristic type:CBCharacteristicWriteWithResponse];
 }
 -(void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
     NSString *s = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
     if ([s isEqualToString:CONTINUE_SENDING_DATA]) {
-        [peripheral writeValue:[self getNextChunkOfData] forCharacteristic:characteristic type:CBCharacteristicWriteWithResponse];
+        self.progressBlock(self.centralDataToSend.progress);
+        [peripheral writeValue:[self.centralDataToSend nextChunkOfData] forCharacteristic:characteristic type:CBCharacteristicWriteWithResponse];
+    } else if ([s isEqualToString:NOT_CONTINUE_READING_DATA]) {
+        NSLog(@"finished");
     } else {
-        hasSendData = YES;
+        [self.centralDataToSend.receivedData appendData:characteristic.value];
+        [peripheral writeValue:[NOT_CONTINUE_SENDING_DATA dataUsingEncoding:NSUTF8StringEncoding] forCharacteristic:characteristic type:CBCharacteristicWriteWithResponse];
         [self.delegate centralDidCompleteSendingDataToPeripheral:YES];
     }
 
@@ -122,35 +126,26 @@
     CBATTRequest *request = requests[0];
     NSString *s = [[NSString alloc] initWithData:request.value encoding:NSUTF8StringEncoding];
     if (s && [s isEqualToString:NOT_CONTINUE_SENDING_DATA]) {
-        NSData *unzippedData = [self.receivedData gunzippedData];
-        NSLog(@"%@",unzippedData);
-        [self.delegate peripheralDidReceiveDataFromCentral:unzippedData];
-        [peripheral updateValue:[NOT_CONTINUE_SENDING_DATA dataUsingEncoding:NSUTF8StringEncoding] forCharacteristic:(CBMutableCharacteristic *)request.characteristic onSubscribedCentrals:nil];
+        self.centralDataToReceive.data = [[self.delegate peripheralDidReceiveDataFromCentral:[self.centralDataToSend.receivedData gunzippedData]] gzippedDataWithCompressionLevel:1];
+        if (!self.centralDataToReceive.completed) [peripheral updateValue:[self.centralDataToSend nextChunkOfData] forCharacteristic:(CBMutableCharacteristic *)request.characteristic onSubscribedCentrals:nil];
+        else [peripheral updateValue:[NOT_CONTINUE_READING_DATA dataUsingEncoding:NSUTF8StringEncoding] forCharacteristic:(CBMutableCharacteristic *)request.characteristic onSubscribedCentrals:nil];
+        [peripheral respondToRequest:request withResult:CBATTErrorSuccess];
         return;
     }
-    [self.receivedData appendData:request.value];
+    [self.centralDataToSend.receivedData appendData:request.value];
     [peripheral updateValue:[CONTINUE_SENDING_DATA dataUsingEncoding:NSUTF8StringEncoding] forCharacteristic:(CBMutableCharacteristic *)request.characteristic onSubscribedCentrals:nil];
     [peripheral respondToRequest:request withResult:CBATTErrorSuccess];
 
 }
 
 #pragma mark - DATA
--(NSData *)getNextChunkOfData {
-    if (self.sendDataIndex >= self.dataToSend.length) {
-        return [NOT_CONTINUE_SENDING_DATA dataUsingEncoding:NSUTF8StringEncoding];
-    }
-    NSData *chunk = [NSData dataWithBytes:self.dataToSend.bytes+self.sendDataIndex length:AMOUNT_OF_CHUNK];
-    self.sendDataIndex += AMOUNT_OF_CHUNK;
-    self.progressBlock((double)self.sendDataIndex/(double)self.dataToSend.length);
-    return chunk;
-}
+
 -(void)failToSendData {
     if (!hasSendData) {
         [self.centralManager cancelPeripheralConnection:centralToPeripheral];
         [self.delegate centralDidCompleteSendingDataToPeripheral:NO];
     }
 }
-
 
 
 

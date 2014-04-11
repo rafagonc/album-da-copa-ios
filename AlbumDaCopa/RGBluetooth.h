@@ -14,15 +14,18 @@ typedef void (^ProgressBlock)(double progress);
 
 @protocol RGBluetoothDelegate <NSObject>
 
--(void)peripheralDidReceiveDataFromCentral:(NSData *)data;
+-(NSData *)peripheralDidReceiveDataFromCentral:(NSData *)data;
 -(void)centralDidCompleteSendingDataToPeripheral:(BOOL)success;
 
 @end
 
 
 #define NOT_CONTINUE_SENDING_DATA @"N"
+#define NOT_CONTINUE_READING_DATA @"R"
 #define CONTINUE_SENDING_DATA @"C"
 #define AMOUNT_OF_CHUNK 20
+
+#import "RGBluetoothData.h"
 
 @interface RGBluetooth : NSObject <CBCentralManagerDelegate, CBPeripheralManagerDelegate, CBPeripheralDelegate> {
     CBCentralManager *centralManager;
@@ -30,6 +33,7 @@ typedef void (^ProgressBlock)(double progress);
     NSMutableArray *devices;
     CBMutableCharacteristic *tradeCharacteristic;
     CBMutableService *tradeService;
+    NSData *toSent;
     CBPeripheral *centralToPeripheral;
     BOOL isPeripheral,isConnected, hasSendData;
     
