@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
-#import "DeviceCell.h"
+#import "TradeCell.h"
 #import "TradeController.h"
 #import <MultipeerConnectivity/MultipeerConnectivity.h>
 
@@ -16,9 +16,11 @@
     BOOL isPad;
 }
 
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activity;
+
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
 @property (weak, nonatomic) IBOutlet UITableView *tradeTableView;
 @property (weak, nonatomic) IBOutlet UIView *followTable;
+@property (nonatomic,strong) NSMutableArray *tradeData;
 
 #pragma mark - BLUETOOTH
 @property (nonatomic) BOOL isSendingData;

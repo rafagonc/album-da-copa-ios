@@ -10,9 +10,9 @@
 
 @interface TradeCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIButton *checkButton;
-@property (weak, nonatomic) IBOutlet UILabel *inChangeIndex;
+@property (weak, nonatomic) IBOutlet UILabel *givingIndex;
 
-@property (weak, nonatomic) IBOutlet UILabel *inChangeOfName;
-@property (weak, nonatomic) IBOutlet UILabel *myStickerIndex;
-@property (weak, nonatomic) IBOutlet UILabel *myStickerName;
+@property (weak, nonatomic) IBOutlet UILabel *receivingName;
+@property (weak, nonatomic) IBOutlet UILabel *receivingIndex;
+@property (weak, nonatomic) IBOutlet UILabel *givingName;
 @end

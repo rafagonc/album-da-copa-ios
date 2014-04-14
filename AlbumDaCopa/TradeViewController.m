@@ -7,7 +7,6 @@
 //
 
 #import "TradeViewController.h"
-#import "SessionDelegateContainer.h"
 
 @interface TradeViewController ()
 @property (nonatomic, strong) MCBrowserViewController *browserVC;
@@ -32,14 +31,19 @@ static NSString *const serviceType = @"session";
 #pragma mark - VIEW
 -(void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+    
     [self setupTableView];
     [self setUpMultipeer];
     [self decorator];
     
 }
+-(void)viewDidAppear:(BOOL)animated {
+    [self.advertiser start];
+}
 -(void)setUpMultipeer {
     //  Setup peer ID
-    SessionDelegateContainer *delegateContainer = [[SessionDelegateContainer alloc] init];
     self.myPeerID = [[MCPeerID alloc] initWithDisplayName:[UIDevice currentDevice].name];
     
     //  Setup session
@@ -49,30 +53,30 @@ static NSString *const serviceType = @"session";
     //  Setup BrowserViewController
     self.browserVC = [[MCBrowserViewController alloc] initWithServiceType:serviceType session:self.mySession];
     self.browserVC.delegate = self;
-    [self presentViewController:self.browserVC animated:YES completion:nil];
 
     
     //  Setup Advertiser
     self.advertiser = [[MCAdvertiserAssistant alloc] initWithServiceType:serviceType discoveryInfo:nil session:self.mySession];
-    [self.advertiser start];
 }
 -(void)setupTableView {
     self.tradeTableView.delegate = self;
     self.tradeTableView.dataSource = self;
+
+    
 }
 -(void)decorator {
     UIColor *flatBlue = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];
     self.tradeTableView.tableHeaderView.backgroundColor = flatBlue;
     self.followTable.backgroundColor = flatBlue;
+    self.searchButton.backgroundColor = flatBlue;
 }
 
-#pragma mark - BROWSER
+#pragma mark - BROWSER DELEGATE
 -(void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController {
     [browserViewController dismissViewControllerAnimated:YES completion:nil];
 }
 -(void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController {
     [browserViewController dismissViewControllerAnimated:YES completion:nil];
-    [self performSelector:@selector(sendData) withObject:nil afterDelay:0.2];
    
 }
 -(void)sendData {
@@ -84,25 +88,34 @@ static NSString *const serviceType = @"session";
     
 }
 
+#pragma mark - ACTIONS
+- (IBAction)procurarDispositivos:(id)sender {
+    [self presentViewController:self.browserVC animated:YES completion:nil];
+}
+
 
 #pragma mark - TABLE VIEW DELEGATE
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.devices.count;
+    return self.tradeData.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellID = @"Cell";
-    DeviceCell *cell = (DeviceCell *)[tableView dequeueReusableCellWithIdentifier:cellID];
+    TradeCell *cell = (TradeCell *)[tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
-        cell = [[NSBundle mainBundle] loadNibNamed:@"DeviceCell" owner:self options:nil][0];
+        cell = [[NSBundle mainBundle] loadNibNamed:@"TradeCell" owner:self options:nil][0];
     }
+    NSDictionary *tradeDict = self.tradeData[indexPath.row];
+    NSInteger givingIndex = [tradeDict[@"give"] integerValue];
+    NSInteger receiveIndex = [tradeDict[@"receive"] integerValue];
     
-    CBPeripheral *peri = self.devices[indexPath.row];
-    cell.deviceName.text = peri.name;
+    cell.givingIndex.text = [NSString stringWithFormat:@"%ld",(long)givingIndex];
+    cell.receivingIndex.text = [NSString stringWithFormat:@"%ld",(long)receiveIndex];
+
+    
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    CBPeripheral *peri = self.devices[indexPath.row];
 
 
 }
@@ -113,15 +126,17 @@ static NSString *const serviceType = @"session";
 
 
 
-
+#pragma mark - SESSION DELEGATE
 -(void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state {
-
-    
+    if (state == MCSessionStateConnected) {
+        [self.browserVC dismissViewControllerAnimated:YES completion:nil];
+        [self sendData];
+    }
 }
 -(void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID {
     TradeController *trade = [[TradeController alloc] initWithJSONData:data];
-    NSMutableArray *stickers = [trade startComparingStickersToFindPossibleExchanges];
-    NSLog(@"%@",stickers);
+    self.tradeData = [trade startComparingStickersToFindPossibleExchanges];
+    [self.tradeTableView reloadData];
 }
 
 #pragma mark - DEALLOC
