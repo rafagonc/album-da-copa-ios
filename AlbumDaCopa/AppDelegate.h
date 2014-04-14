@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "StickerTableViewController.h"
 #import "TradeViewController.h"
+#import <AdColony/AdColony.h>
 
 
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, AdColonyDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

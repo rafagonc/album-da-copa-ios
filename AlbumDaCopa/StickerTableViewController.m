@@ -27,10 +27,15 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     
+    self.upView = [[Up alloc] initWithMasterTableView:self.tableView];
+    self.upView.frame = CGRectMake(0, 20, 320, 50);
+    [self.view addSubview:self.upView];
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(assignValueToViews) name:ChangedStatsNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:ReloadTableNotification object:nil];
     
     
     [self setupNormalHeader];
@@ -38,26 +43,6 @@
     [self decorator];
 
 }
-
-#pragma mark - PSSIBLE UPDATE
-//-(void)setupNavigationBar {
-//    doneOrTradeButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 2, 70, 26)];
-//    doneOrTradeButton.backgroundColor = [UIColor colorWithRed:(40/255.0) green:(89/255.0) blue:(127/255.0) alpha:1];
-//    [doneOrTradeButton setTitle:self.shouldBeginIntroduction? @"Done" : @"Trade" forState:UIControlStateNormal];
-//    [doneOrTradeButton.layer setCornerRadius:10];
-//    [doneOrTradeButton addTarget:self action:@selector(buttonFinishedAction:) forControlEvents:UIControlEventTouchUpInside];
-//    [doneOrTradeButton.layer setMasksToBounds:YES];
-//    doneOrTradeButton.titleLabel.font = [UIFont boldSystemFontOfSize:15.0];
-//    doneOrTradeButton.titleLabel.textColor = [UIColor whiteColor];
-//    
-//    [self.navigationItem setTitleView:doneOrTradeButton];
-//}
-//-(void)setupIntroductionViews {
-//    IntroductionTableViewHeader *introView = [[IntroductionTableViewHeader alloc] init];
-//    [introView addTitleLabel:@"Marque as figurinhas que você ja tem no álbum. Coloque também as repetidas para poder usar o sistema de trocas." andSearchBarWithDelegate:self];
-//    introView.backgroundColor = [UIColor colorWithRed:(246/255.0) green:(246/255.0) blue:(246/255.0) alpha:1];
-//    [self.tableView setTableHeaderView:introView];
-//}
 
 #pragma mark LAYOUT
 -(void)setupNormalHeader {
@@ -81,7 +66,9 @@
 }
 
 #pragma mark - GENERAL METHODS
-
+-(void)showAd {
+    [AdColony playVideoAdForZone:ADCOLONY__ZONE withDelegate:nil];
+}
 
 #pragma mark - KVO
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
@@ -169,6 +156,10 @@
     self.normalHeader.percentComplete.text = [[NSString stringWithFormat:@"%.2f",[values[0] doubleValue]] stringByAppendingString:@"%"];
     self.normalHeader.remainToCompleteLabel.text = [NSString stringWithFormat:@"%d/640",[values[1] intValue]];
     
+}
+-(void)reloadTable {
+    self.stickers = [StickerController allStickers];
+    [self.tableView reloadData];
 }
 
 #pragma mark - DEALLOC

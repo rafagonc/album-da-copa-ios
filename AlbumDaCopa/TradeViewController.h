@@ -14,11 +14,13 @@
 
 @interface TradeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, MCBrowserViewControllerDelegate,MCSessionDelegate> {
     BOOL isPad;
+    BOOL isConnected;
 }
 
 
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
 @property (weak, nonatomic) IBOutlet UITableView *tradeTableView;
+@property (nonatomic,strong) NSArray *neededStickers;
 @property (weak, nonatomic) IBOutlet UIView *followTable;
 @property (nonatomic,strong) NSMutableArray *tradeData;
 

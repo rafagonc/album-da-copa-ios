@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "Sticker.h"
-#import <AdColony/AdColony.h>
 
 #define ADCOLONY__APPID @"app7c272267bce04bcfbd"
 #define ADCOLONY__ZONE @"vz5be979460cde4b7c8f"
@@ -26,16 +25,22 @@
 #pragma mark - LAUCHING OPTIONS
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [AdColony configureWithAppID:ADCOLONY__APPID zoneIDs:@[ADCOLONY__ZONE] delegate:nil logging:YES];
+    [AdColony configureWithAppID:ADCOLONY__APPID zoneIDs:@[ADCOLONY__ZONE] delegate:self logging:YES];
     
     StickerTableViewController *stickerTableView = [[StickerTableViewController alloc] init];
+    stickerTableView.tabBarItem.title = @"Álbum";
+    stickerTableView.tabBarItem.image = [UIImage imageNamed:@"Bookmarks.png"];
+    
     TradeViewController *tradeViewController = [[TradeViewController alloc] init];
+    tradeViewController.tabBarItem.title = @"Trocas";
+    tradeViewController.tabBarItem.image = [UIImage imageNamed:@"Opposite_Arrows.png"];
+
+
+    
     UITabBarController *tabBar = [[UITabBarController alloc] init];
     tabBar.viewControllers = @[stickerTableView, tradeViewController];
     
     [self checkIfFirstTimeForTableViewObserver:stickerTableView];
-    [AdColony playVideoAdForZone:ADCOLONY__ZONE withDelegate:nil];
-    
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];
@@ -146,6 +151,19 @@
 }
 -(NSURL *)applicationDocumentsDirectory {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+
+#pragma mark - ADCOLONY
+-(void)onAdColonyAdAvailabilityChange:(BOOL)available inZone:(NSString *)zoneID {
+    if (available) {
+        UITabBarController *tabBar = (UITabBarController *)self.window.rootViewController;
+        StickerTableViewController *stickerView = tabBar.viewControllers[0];
+        [stickerView showAd];
+    }
+}
+-(void)onAdColonyV4VCReward:(BOOL)success currencyName:(NSString *)currencyName currencyAmount:(int)amount inZone:(NSString *)zoneID {
+    
 }
 
 @end

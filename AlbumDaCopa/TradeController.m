@@ -25,20 +25,20 @@
         }
     } return self;
 }
-
 -(NSMutableArray *)startComparingStickersToFindPossibleExchanges {
     NSArray *myStickers = [StickerController allStickers];
-    NSArray *myLeftoversAvaliable = [StickerController findLeftoversAvaliable];
-    NSArray *hisLeftoversAvaliable =  [self findHisLeftoversAvalible];
+    self.myLeftovers = [StickerController findLeftoversAvaliable];;
+    self.hisLeftovers = [self findHisLeftoversAvalible];
+
     
-    for (NSDictionary *dict in hisLeftoversAvaliable) {
+    for (NSDictionary *dict in self.hisLeftovers) {
         Sticker *sticker = myStickers[[dict[@"index"] intValue]];
         if (!sticker.onAlbum.boolValue) {
             [self.stickersHeGaveMe addObject:[NSDictionary dictionaryWithObjectsAndKeys:sticker.index,@"index",sticker.type,@"type" ,nil]];
         }
     }
     
-    for (Sticker *sticker in myLeftoversAvaliable) {
+    for (Sticker *sticker in self.myLeftovers) {
         NSDictionary *dict = self.receivedStickerArray[sticker.index.intValue];
         if (![dict[@"onAlbum"] boolValue]) {
             [self.stickersIGiveHim addObject:[NSDictionary dictionaryWithObjectsAndKeys:dict[@"index"],@"index",dict[@"type"],@"type" ,nil]];
@@ -78,7 +78,6 @@
     
     return allExchanges;
 }
-
 -(NSArray *)findHisLeftoversAvalible {
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"(leftovers > 0)"];
     return [self.receivedStickerArray filteredArrayUsingPredicate:pred];

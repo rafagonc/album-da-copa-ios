@@ -14,7 +14,11 @@
 #import "IntroductionTableViewHeader.h"
 #import "TutorialViewController.h"
 #import "StatusAndSearchTableViewHeader.h"
+#import <AdColony/AdColony.h>
+#import "Up.h"
 #define ChangedStatsNotification @"changedStats"
+#define ReloadTableNotification @"reloadTable"
+#define ADCOLONY__ZONE @"vz5be979460cde4b7c8f"
 
 @interface StickerTableViewController : UIViewController <UISearchBarDelegate,UITableViewDelegate, UITableViewDataSource,UIScrollViewDelegate> {
     UIButton *doneOrTradeButton;
@@ -26,7 +30,7 @@
 @property (nonatomic) BOOL shouldBeginIntroduction;
 
 #pragma mark - OUTLETS
-
+@property (nonatomic,strong) Up *upView;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIView *statusBarCover;
@@ -35,6 +39,7 @@
 
 #pragma mark - METHODS
 -(id)init;
+-(void)showAd;
 
 
 @end

@@ -17,6 +17,11 @@
 @property (nonatomic,strong) NSMutableArray *stickersIGiveHim;
 @property (nonatomic,strong) NSMutableArray *stickersHeGaveMe;
 
+@property (nonatomic,strong)
+NSArray *myLeftovers;
+
+@property (nonatomic,strong)
+NSArray *hisLeftovers ;
 
 #pragma mark - METHODS
 -(NSMutableArray *)startComparingStickersToFindPossibleExchanges;
