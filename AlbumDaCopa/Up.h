@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface Up : UIView
 
 @property (weak, nonatomic) IBOutlet UIButton *upButton;

@@ -10,11 +10,13 @@
 
 @implementation Up
 
+
 - (id)initWithMasterTableView:(UITableView *)tableView {
-    self = [[NSBundle mainBundle] loadNibNamed:@"Up" owner:self options:nil][0];
+    self = [[NSBundle mainBundle] loadNibNamed:UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad? @"Up-iPad" : @"Up" owner:self options:nil][0];
     if (self) {
+        self.frame = CGRectMake(0, 20 ,UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad? 768 : 320, 50);
         self.masterTableView = tableView;
-        [self observeValueForKeyPath:@"contentOffset" ofObject:self.masterTableView change:nil context:nil];
+        [self.masterTableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
         UIColor *flatBlue = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];
         self.upButton.backgroundColor = flatBlue;
     }
@@ -26,6 +28,15 @@
 }
 
 
-
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if (!change) return;
+    double y = [change[@"new"] CGPointValue].y;
+    [self animateUpViewWithAlpha:y > 200.0f];
+}
+-(void)animateUpViewWithAlpha:(BOOL)alpha {
+    [UIView animateWithDuration:0.3 animations:^{
+        self.alpha = alpha;
+    }];
+}
 
 @end

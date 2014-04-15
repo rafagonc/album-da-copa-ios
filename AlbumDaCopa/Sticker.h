@@ -21,6 +21,7 @@
 @property (nonatomic, retain) NSNumber * leftovers;
 @property (nonatomic, retain) NSString *bagdeImageName;
 @property (nonatomic, retain) NSString *countryImageName;
+@property (nonatomic, retain) NSDate *dateAdded;
 
 
 

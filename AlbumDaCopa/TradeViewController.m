@@ -68,6 +68,7 @@ static NSString *const serviceType = @"session";
 }
 -(void)decorator {
     UIColor *flatBlue = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];
+    [[UINavigationBar appearance] setBarTintColor:flatBlue];
     self.tradeTableView.tableHeaderView.backgroundColor = flatBlue;
     self.followTable.backgroundColor = flatBlue;
     self.searchButton.backgroundColor = flatBlue;
@@ -111,28 +112,51 @@ static NSString *const serviceType = @"session";
 
 #pragma mark - ACTIONS
 -(IBAction)procurarDispositivos:(id)sender {
+    if (isConnected) {
+        JLActionSheet *actionSheet = [[JLActionSheet alloc] initWithTitle:nil delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@[@"Desconectar"]];
+        [actionSheet setDidDismissBlock:^(JLActionSheet *actionSheet, NSInteger buttonIndex) {
+            if (buttonIndex == 1) {
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    isConnected = NO;
+                    [self.mySession disconnect];
+                    [self.tradeData removeAllObjects];
+                    [self.searchButton setTitle:@"Procurar Dispositivos" forState:UIControlStateNormal];
+                    [self.tradeTableView reloadData];
+                });
+            }
+        }];
+        [actionSheet setStyle:JLSTYLE_SUPERCLEAN];
+        [actionSheet showInView:self.view];
+        
+        return;
+    }
+    
     [self presentViewController:self.browserVC animated:YES completion:nil];
 }
 
 #pragma mark - TABLE VIEW DELEGATE
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return !isConnected? 1 : self.tradeData.count;
+    return !isConnected? 1 : self.tradeData.count + 1;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return (!isConnected && !isPad)? 138.0f : 90.0f;
+    if (!isConnected && !isPad) return 257.0f; else if (isPad && !isConnected) return 245.0f; else return 90.0f;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellID = @"Cell";
-    TradeCell *cell = (TradeCell *)[tableView dequeueReusableCellWithIdentifier:cellID];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"%@ - %ld", isConnected? @"con" : @"not con", (long)indexPath.row]];
     if (!cell) {
-        if (isConnected) cell = [[NSBundle mainBundle] loadNibNamed:isPad? @"TradeCell-iPad" : @"TradeCell" owner:self options:nil][0];
+        if (isConnected) {
+            if (indexPath.row == self.tradeData.count) cell = [[NSBundle mainBundle] loadNibNamed:isPad? @"ExplanationCell2-iPad" : @"ExplanationCell2" owner:self options:nil][0];
+            else cell = [[NSBundle mainBundle] loadNibNamed:isPad? @"TradeCell-iPad" : @"TradeCell" owner:self options:nil][0];
+        }
         else cell = [[NSBundle mainBundle] loadNibNamed:isPad? @"ExplanationCell-iPad" : @"ExplanationCell" owner:self options:nil][0];
     }
-    if (!isConnected)  return cell;
+    if (!isConnected || indexPath.row == self.tradeData.count)  return cell;
     
     NSDictionary *tradeDict = self.tradeData[indexPath.row];
-    cell.givingSticker =[self.neededStickers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.index == %d", [tradeDict[@"give"] integerValue]]][0];
-    cell.receivingSticekr = [self.neededStickers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.index == %d", [tradeDict[@"receive"] integerValue]]][0];;
+    TradeCell *tradeCell = (TradeCell *)cell;
+    tradeCell.givingSticker =[self.neededStickers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.index == %d", [tradeDict[@"give"] integerValue]]][0];
+    tradeCell.receivingSticekr = [self.neededStickers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.index == %d", [tradeDict[@"receive"] integerValue]]][0];;
     
     return cell;
 }
@@ -154,18 +178,19 @@ static NSString *const serviceType = @"session";
     }
 }
 -(void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID {
-    isConnected = YES;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        isConnected = YES;
+        [self.searchButton setTitle:peerID.displayName forState:UIControlStateNormal];
         TradeController *trade = [[TradeController alloc] initWithJSONData:data];
         self.tradeData = [trade startComparingStickersToFindPossibleExchanges];
+        if (!self.tradeData.count) {
+            [[[UIAlertView alloc] initWithTitle:@"Não existem trocas disponíveis." message:@"Verifique se todas suas figurinhas repetidas estão configuradas corretamente." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] show];
+        }
         if (![self getNeededStickers]) return;
         [self.tradeTableView reloadData];
-        [self performSelector:@selector(reloadTable) withObject:nil afterDelay:0.3];
     });
     
-}
--(void)reloadTable {
-    [self.tradeTableView setNeedsDisplay];
+    
 }
 
 #pragma mark - DEALLOC

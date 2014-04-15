@@ -34,8 +34,6 @@
     TradeViewController *tradeViewController = [[TradeViewController alloc] init];
     tradeViewController.tabBarItem.title = @"Trocas";
     tradeViewController.tabBarItem.image = [UIImage imageNamed:@"Opposite_Arrows.png"];
-
-
     
     UITabBarController *tabBar = [[UITabBarController alloc] init];
     tabBar.viewControllers = @[stickerTableView, tradeViewController];

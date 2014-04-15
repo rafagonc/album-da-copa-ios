@@ -7,14 +7,14 @@
 //
 
 #import "StatusAndSearchTableViewHeader.h"
-
 @implementation StatusAndSearchTableViewHeader
+@synthesize segControl;
 
-- (id)init {
-    self = [super initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
+-(id)init {
+    self = [super initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 190)];
     if (self) {
         NSLog(@"%d",SCREEN_WIDTH);
-        [self setBackgroundColor:[UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1]];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(assignValuesToSegControl:) name:AssingValuesToSegControl object:nil];
     }
     return self;
 }
@@ -26,6 +26,7 @@
     [self addSubview:searchBar];
     
     UIView *statusContainer = [[UIView alloc] initWithFrame:CGRectMake(0, searchBar.frame.size.height, SCREEN_WIDTH, 50)];
+    [statusContainer setBackgroundColor:[UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1]];
     [self addSubview:statusContainer];
     
     
@@ -48,8 +49,17 @@
     self.remainToCompleteLabel.textAlignment = NSTextAlignmentCenter;
     [statusContainer addSubview:self.remainToCompleteLabel];
     
+    segControl = [[SDSegmentedControl alloc] initWithItems:@[@"Todas", [NSString stringWithFormat:@"Repetidas(%lu)", (unsigned long)[StickerController findLeftoversAvaliable].count], [NSString stringWithFormat:@"Faltam(%lu)", (unsigned long)[StickerController toGet].count]]];
+    [segControl setFrame:CGRectMake(0, statusContainer.frame.origin.y + statusContainer.frame.size.height, SCREEN_WIDTH, 40)];
+    [segControl setBackgroundColor:[UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1]];
+    [segControl setTitleTextAttributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:15.0f]} forState:UIControlStateNormal];
+    [segControl addTarget:self action:@selector(changeTableView:) forControlEvents:UIControlEventValueChanged];
+    [self addSubview:segControl];
+    
+    
+    
     self.banner = [[NSBundle mainBundle] loadNibNamed:@"ADBanner" owner:self options:nil][0];
-    [self.banner setFrame:CGRectMake(0, statusContainer.frame.size.height + searchBar.frame.size.height + 6, 320, 50)];
+    [self.banner setFrame:CGRectMake(0, segControl.frame.origin.y + segControl.frame.size.height, SCREEN_WIDTH, 50)];
     self.banner.delegate =self;
     [self addSubview:self.banner];
     
@@ -60,6 +70,26 @@
     [activity startAnimating];
     
   
+}
+-(void)changeTableView:(SDSegmentedControl *)sender {
+    StickerTableViewController *stickerTable = (StickerTableViewController *)[[[self nextResponder] nextResponder] nextResponder];
+    if (sender.selectedSegmentIndex == 0) {
+        stickerTable.stickers = [StickerController allStickers];
+    } else if (sender.selectedSegmentIndex == 1) {
+        stickerTable.stickers = [StickerController findLeftoversAvaliable];
+    } else {
+        stickerTable.stickers = [StickerController toGet];
+    }
+    [stickerTable.tableView reloadData];
+}
+-(void)assignValuesToSegControl:(NSNotification *)not {
+    NSString *s = (NSString *)not.object;
+    if ([s isEqualToString:@"leftovers"]) {
+        [segControl setTitle:[NSString stringWithFormat:@"Repetidas(%lu)", (unsigned long)[StickerController findLeftoversAvaliable].count] forSegmentAtIndex:1];
+    } else {
+        [segControl setTitle:[NSString stringWithFormat:@"Faltam(%lu)", (unsigned long)[StickerController toGet].count] forSegmentAtIndex:2];
+
+    }
 }
 
 #pragma mark - BANNER DELEGATE

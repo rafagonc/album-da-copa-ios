@@ -28,7 +28,6 @@
     [super viewDidLoad];
     
     self.upView = [[Up alloc] initWithMasterTableView:self.tableView];
-    self.upView.frame = CGRectMake(0, 20, 320, 50);
     [self.view addSubview:self.upView];
     
     self.tableView.delegate = self;
@@ -53,17 +52,11 @@
 }
 -(void)decorator {
     UIColor *flatBlue = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];
-    
-    [[UINavigationBar appearance] setBarTintColor:flatBlue];
-    [[UINavigationBar appearance] setBarTintColor:flatBlue];
     self.statusBarCover.backgroundColor = flatBlue;
     self.sliderHandlerView.backgroundColor = flatBlue;
     self.view.backgroundColor = flatBlue;
-    
-    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
-    self.navigationController.navigationBar.clipsToBounds = YES;
-
 }
+
 
 #pragma mark - GENERAL METHODS
 -(void)showAd {

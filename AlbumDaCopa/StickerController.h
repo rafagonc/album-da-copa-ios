@@ -15,4 +15,5 @@
 +(NSData *)jsonFromAllStickers;
 +(NSArray *)findLeftoversAvaliable;
 +(NSArray *)statsForTheAlbum;
++(NSArray *)toGet;
 @end

@@ -11,10 +11,12 @@
 #import "TradeCell.h"
 #import "TradeController.h"
 #import <MultipeerConnectivity/MultipeerConnectivity.h>
+#import "JLActionSheet.h"
+#import "ExplanationCell.h"
 
 @interface TradeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, MCBrowserViewControllerDelegate,MCSessionDelegate> {
-    BOOL isPad;
     BOOL isConnected;
+    BOOL isPad;
 }
 
 
@@ -24,9 +26,6 @@
 @property (weak, nonatomic) IBOutlet UIView *followTable;
 @property (nonatomic,strong) NSMutableArray *tradeData;
 
-#pragma mark - BLUETOOTH
-@property (nonatomic) BOOL isSendingData;
-@property (nonatomic,strong) NSMutableArray *devices;
 
 
 @end

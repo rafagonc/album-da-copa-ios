@@ -16,7 +16,7 @@
 
 #pragma mark - INIT
 -(id)init {
-    self = [super initWithNibName:@"TutorialViewController" bundle:nil];
+    self = [super initWithNibName:UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad? @"TutorialViewController-iPad" : @"TutorialViewController" bundle:nil];
     if (self) {
     }
     return self;

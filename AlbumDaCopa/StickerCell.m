@@ -27,9 +27,11 @@
     _hasIt = hasIt;
     if (hasIt) {
         self.sticker.onAlbum = @YES;
+        self.sticker.dateAdded = [NSDate date];
         [self.checkButton setBackgroundImage:[UIImage imageNamed:@"Check.png"] forState:UIControlStateNormal];
     } else {
         self.sticker.onAlbum = @NO;
+        self.sticker.dateAdded = nil;
         self.leftoversTextField.text = @"+";
         [self.checkButton setBackgroundImage:[UIImage imageNamed:@"Delete.png"] forState:UIControlStateNormal];
     }
@@ -57,7 +59,7 @@
     self.hasIt = !self.hasIt;
     [[NSNotificationCenter defaultCenter] postNotificationName:ChangedStatsNotification object:nil];
     self.stickerHasChanges = YES;
-
+    [[NSNotificationCenter defaultCenter] postNotificationName:AssingValuesToSegControl object:@"toGet" userInfo:nil];
 }
 
 #pragma mark - METHODS
@@ -98,5 +100,6 @@
     NSInteger leftovers = [[self.leftoversTextField.text stringByReplacingOccurrencesOfString:@"+" withString:@""] integerValue];
     self.sticker.leftovers = @(leftovers);
     self.stickerHasChanges = YES;
+    [[NSNotificationCenter defaultCenter] postNotificationName:AssingValuesToSegControl object:@"leftovers" userInfo:nil];
 }
 @end

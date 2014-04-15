@@ -19,6 +19,7 @@
 @dynamic type;
 @dynamic index;
 @dynamic leftovers;
+@dynamic dateAdded;
 
 #pragma mark - CODING
 -(id)initWithCoder:(NSCoder *)aDecoder {

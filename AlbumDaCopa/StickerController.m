@@ -16,12 +16,8 @@
     NSManagedObjectContext *context = [AppDelegate staticManagedObjectContext];
     NSFetchRequest *fetchR = [[NSFetchRequest alloc] init];
     [fetchR setEntity:[NSEntityDescription entityForName:@"Sticker" inManagedObjectContext:context]];
-    NSArray *resultArray = [context executeFetchRequest:fetchR error:nil];
-    NSArray *sortedArray = [resultArray sortedArrayWithOptions:NSSortStable usingComparator:^NSComparisonResult(Sticker *obj1, Sticker *obj2) {
-        return [obj1.index compare:obj2.index];
-    }];
-    
-    return sortedArray;
+    [fetchR setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"index" ascending:YES]]];
+    return [context executeFetchRequest:fetchR error:nil];
 }
 +(void)createAllStickersToDatabase {
     NSManagedObjectContext *context = [AppDelegate staticManagedObjectContext];
@@ -53,12 +49,19 @@
     NSManagedObjectContext *context = [AppDelegate staticManagedObjectContext];
     NSFetchRequest *fetchR = [[NSFetchRequest alloc] init];
     [fetchR setEntity:[NSEntityDescription entityForName:@"Sticker" inManagedObjectContext:context]];
-    [fetchR setPredicate:[NSPredicate predicateWithFormat:@"self.leftovers > 0"]];
-    NSArray *sortedArray = [[context executeFetchRequest:fetchR error:nil] sortedArrayWithOptions:NSSortStable usingComparator:^NSComparisonResult(Sticker *obj1, Sticker *obj2) {
-        return [obj1.index compare:obj2.index];
-    }];
-    return sortedArray;
+    [fetchR setPredicate:[NSPredicate predicateWithFormat:@"leftovers > 0"]];
+    [fetchR setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"index" ascending:YES]]];
+    return [context executeFetchRequest:fetchR error:nil];
 }
++(NSArray *)toGet {
+    NSManagedObjectContext *context = [AppDelegate staticManagedObjectContext];
+    NSFetchRequest *fetchR = [[NSFetchRequest alloc] init];
+    [fetchR setEntity:[NSEntityDescription entityForName:@"Sticker" inManagedObjectContext:context]];
+    [fetchR setPredicate:[NSPredicate predicateWithFormat:@"onAlbum == 0"]];
+    [fetchR setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"index" ascending:YES]]];
+    return [context executeFetchRequest:fetchR error:nil];
+}
+
 
 
 #pragma mark - TRANSFROM INTO JSON
@@ -75,5 +78,6 @@
     s = [s stringByReplacingOccurrencesOfString:@"\n" withString:@""];
     return [[s dataUsingEncoding:NSUTF8StringEncoding] gzippedDataWithCompressionLevel:1];
 }
+
 
 @end
