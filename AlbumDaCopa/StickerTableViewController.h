@@ -11,7 +11,6 @@
 #import "StickerCell.h"
 #import "StickerController.h"
 #import <iAd/iAd.h>
-#import "IntroductionTableViewHeader.h"
 #import "TutorialViewController.h"
 #import "StatusAndSearchTableViewHeader.h"
 #import <AdColony/AdColony.h>

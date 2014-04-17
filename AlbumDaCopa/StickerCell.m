@@ -67,12 +67,12 @@
     if ([s isEqualToString:@"Badge"]) {
         NSString *firstLetter = [[sticker.section substringWithRange:NSMakeRange(0, 1)] uppercaseString];
         NSString *team = [sticker.section stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:firstLetter];
-        return [NSString stringWithFormat:@"%@ - Símbolo", team];
+        return [NSString stringWithFormat:@"%@ - Bagde", team];
         
     } else if ([s isEqualToString:@"Team"]) {
         NSString *firstLetter = [[sticker.section substringWithRange:NSMakeRange(0, 1)] uppercaseString];
         NSString *team = [sticker.section stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:firstLetter];
-        return [NSString stringWithFormat:@"%@ - Time", team];
+        return [NSString stringWithFormat:@"%@ - Squad", team];
     } else return s;
 }
 -(BOOL)isNumber:(NSString *)text {

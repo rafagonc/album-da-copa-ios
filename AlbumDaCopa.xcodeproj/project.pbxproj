@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2A02131518F2FD1200092545 /* TradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A02131318F2FD1200092545 /* TradeViewController.m */; };
 		2A02131618F2FD1200092545 /* TradeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A02131418F2FD1200092545 /* TradeViewController.xib */; };
-		2A062A1318EF441300A2CFA3 /* stickersEnglish.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A062A1218EF441300A2CFA3 /* stickersEnglish.json */; };
 		2A106DC118EA55BE00D2FC98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A106DC018EA55BE00D2FC98 /* Foundation.framework */; };
 		2A106DC318EA55BE00D2FC98 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A106DC218EA55BE00D2FC98 /* CoreGraphics.framework */; };
 		2A106DC518EA55BE00D2FC98 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A106DC418EA55BE00D2FC98 /* UIKit.framework */; };
@@ -24,7 +23,6 @@
 		2A106DE218EA55BE00D2FC98 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A106DC618EA55BE00D2FC98 /* CoreData.framework */; };
 		2A106DEA18EA55BE00D2FC98 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A106DE818EA55BE00D2FC98 /* InfoPlist.strings */; };
 		2A106DEC18EA55BE00D2FC98 /* AlbumDaCopaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A106DEB18EA55BE00D2FC98 /* AlbumDaCopaTests.m */; };
-		2A106E3818EA686800D2FC98 /* stickers.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A106E3718EA686800D2FC98 /* stickers.json */; };
 		2A106E4A18EA6CB500D2FC98 /* Sticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A106E4918EA6CB500D2FC98 /* Sticker.m */; };
 		2A46DBEF18EF24D60039451C /* TradeSystemTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A46DBED18EF24D60039451C /* TradeSystemTutorialViewController.m */; };
 		2A46DBF018EF24D60039451C /* TradeSystemTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A46DBEE18EF24D60039451C /* TradeSystemTutorialViewController.xib */; };
@@ -39,6 +37,7 @@
 		2A598F1118EE68CD003665D3 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A598F0F18EE68CD003665D3 /* TutorialViewController.m */; };
 		2A598F1218EE68CD003665D3 /* TutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A598F1018EE68CD003665D3 /* TutorialViewController.xib */; };
 		2A598F1418EE703D003665D3 /* ADBanner.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A598F1318EE703D003665D3 /* ADBanner.xib */; };
+		2A5F0A6C18FF43EB005A4B55 /* stickers.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A5F0A6B18FF43EB005A4B55 /* stickers.json */; };
 		2A80449618ECA9D400BBAA7E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A80449518ECA9D400BBAA7E /* iAd.framework */; };
 		2A87E1E518F4CF7A00359335 /* TradeViewController-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A87E1E418F4CF7A00359335 /* TradeViewController-iPad.xib */; };
 		2A87E1E718F4D8C500359335 /* SearchBar-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A87E1E618F4D8C500359335 /* SearchBar-iPad.xib */; };
@@ -142,7 +141,6 @@
 		2AC5152E18EE0DB400F51DDC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC5152D18EE0DB400F51DDC /* MobileCoreServices.framework */; };
 		2AC5153018EE0DBC00F51DDC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC5152F18EE0DBC00F51DDC /* QuartzCore.framework */; };
 		2AC5153318EE19EC00F51DDC /* StatusAndSearchTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC5153218EE19EC00F51DDC /* StatusAndSearchTableViewHeader.m */; };
-		2AC5153718EE1A2100F51DDC /* IntroductionTableViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC5153618EE1A2100F51DDC /* IntroductionTableViewHeader.m */; };
 		2ACCB7EA18F0BD30006E6A94 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ACCB7E918F0BD30006E6A94 /* Default@2x.png */; };
 		2ACCB7EC18F0BEA1006E6A94 /* iOS Simulator Screen shot Apr 5, 2014, 7.40.52 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ACCB7EB18F0BEA1006E6A94 /* iOS Simulator Screen shot Apr 5, 2014, 7.40.52 PM.png */; };
 		2AD55DAC18EE4B1B002588E6 /* SearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AD55DAB18EE4B1B002588E6 /* SearchBar.xib */; };
@@ -176,7 +174,6 @@
 		2A02131218F2FD1200092545 /* TradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeViewController.h; sourceTree = "<group>"; };
 		2A02131318F2FD1200092545 /* TradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeViewController.m; sourceTree = "<group>"; };
 		2A02131418F2FD1200092545 /* TradeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TradeViewController.xib; sourceTree = "<group>"; };
-		2A062A1218EF441300A2CFA3 /* stickersEnglish.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stickersEnglish.json; sourceTree = "<group>"; };
 		2A106DBD18EA55BE00D2FC98 /* AlbumDaCopa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbumDaCopa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A106DC018EA55BE00D2FC98 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2A106DC218EA55BE00D2FC98 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -195,7 +192,6 @@
 		2A106DE718EA55BE00D2FC98 /* AlbumDaCopaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AlbumDaCopaTests-Info.plist"; sourceTree = "<group>"; };
 		2A106DE918EA55BE00D2FC98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A106DEB18EA55BE00D2FC98 /* AlbumDaCopaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumDaCopaTests.m; sourceTree = "<group>"; };
-		2A106E3718EA686800D2FC98 /* stickers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stickers.json; sourceTree = "<group>"; };
 		2A106E4818EA6CB500D2FC98 /* Sticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sticker.h; sourceTree = "<group>"; };
 		2A106E4918EA6CB500D2FC98 /* Sticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sticker.m; sourceTree = "<group>"; };
 		2A46DBEC18EF24D60039451C /* TradeSystemTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeSystemTutorialViewController.h; sourceTree = "<group>"; };
@@ -216,6 +212,7 @@
 		2A598F0F18EE68CD003665D3 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
 		2A598F1018EE68CD003665D3 /* TutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialViewController.xib; sourceTree = "<group>"; };
 		2A598F1318EE703D003665D3 /* ADBanner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ADBanner.xib; sourceTree = "<group>"; };
+		2A5F0A6B18FF43EB005A4B55 /* stickers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stickers.json; sourceTree = "<group>"; };
 		2A80449518ECA9D400BBAA7E /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		2A87E1E418F4CF7A00359335 /* TradeViewController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "TradeViewController-iPad.xib"; sourceTree = "<group>"; };
 		2A87E1E618F4D8C500359335 /* SearchBar-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "SearchBar-iPad.xib"; sourceTree = "<group>"; };
@@ -327,8 +324,6 @@
 		2AC5152F18EE0DBC00F51DDC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2AC5153118EE19EC00F51DDC /* StatusAndSearchTableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusAndSearchTableViewHeader.h; sourceTree = "<group>"; };
 		2AC5153218EE19EC00F51DDC /* StatusAndSearchTableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusAndSearchTableViewHeader.m; sourceTree = "<group>"; };
-		2AC5153518EE1A2100F51DDC /* IntroductionTableViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroductionTableViewHeader.h; sourceTree = "<group>"; };
-		2AC5153618EE1A2100F51DDC /* IntroductionTableViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroductionTableViewHeader.m; sourceTree = "<group>"; };
 		2ACCB7E918F0BD30006E6A94 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2ACCB7EB18F0BEA1006E6A94 /* iOS Simulator Screen shot Apr 5, 2014, 7.40.52 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iOS Simulator Screen shot Apr 5, 2014, 7.40.52 PM.png"; sourceTree = "<group>"; };
 		2AD55DAB18EE4B1B002588E6 /* SearchBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBar.xib; sourceTree = "<group>"; };
@@ -437,9 +432,8 @@
 			children = (
 				2AFA379C18FCD1470038889E /* Default~ipad.png */,
 				2ACCB7E918F0BD30006E6A94 /* Default@2x.png */,
-				2A106E3718EA686800D2FC98 /* stickers.json */,
-				2A062A1218EF441300A2CFA3 /* stickersEnglish.json */,
 				2ACCB7EB18F0BEA1006E6A94 /* iOS Simulator Screen shot Apr 5, 2014, 7.40.52 PM.png */,
+				2A5F0A6B18FF43EB005A4B55 /* stickers.json */,
 				2AC5151D18EDBEE800F51DDC /* photos.json */,
 				2AC5149C18EDBEDC00F51DDC /* Selecoes */,
 				2A106DC818EA55BE00D2FC98 /* AlbumDaCopa */,
@@ -743,8 +737,6 @@
 			children = (
 				2AC5153118EE19EC00F51DDC /* StatusAndSearchTableViewHeader.h */,
 				2AC5153218EE19EC00F51DDC /* StatusAndSearchTableViewHeader.m */,
-				2AC5153518EE1A2100F51DDC /* IntroductionTableViewHeader.h */,
-				2AC5153618EE1A2100F51DDC /* IntroductionTableViewHeader.m */,
 				2AD55DAB18EE4B1B002588E6 /* SearchBar.xib */,
 				2A598F1318EE703D003665D3 /* ADBanner.xib */,
 				2A87E1E618F4D8C500359335 /* SearchBar-iPad.xib */,
@@ -885,6 +877,7 @@
 				2AC514EB18EDBEDC00F51DDC /* escudo-alemanha.gif in Resources */,
 				2AC514F118EDBEDC00F51DDC /* escudo-brasil.gif in Resources */,
 				2AC5150018EDBEDC00F51DDC /* escudo-honduras.gif in Resources */,
+				2A5F0A6C18FF43EB005A4B55 /* stickers.json in Resources */,
 				2AFA379318FCC5EE0038889E /* ExplanationCell2.xib in Resources */,
 				2AC514FD18EDBEDC00F51DDC /* escudo-gana.gif in Resources */,
 				2AC514F418EDBEDC00F51DDC /* escudo-colombia.gif in Resources */,
@@ -892,7 +885,6 @@
 				2AC5151018EDBEDC00F51DDC /* holanda.jpg in Resources */,
 				2AC514EC18EDBEDC00F51DDC /* escudo-argelia.gif in Resources */,
 				2AC5151418EDBEDC00F51DDC /* italia.jpg in Resources */,
-				2A062A1318EF441300A2CFA3 /* stickersEnglish.json in Resources */,
 				2AADDBEA18FC73E3003AC695 /* Bookmarks.png in Resources */,
 				2A56129618EB0E5900A3BAF0 /* StickerCell.xib in Resources */,
 				2AC5150D18EDBEDC00F51DDC /* franca.jpg in Resources */,
@@ -914,7 +906,6 @@
 				2AC514E118EDBEDC00F51DDC /* belgica.jpg in Resources */,
 				2A106DD818EA55BE00D2FC98 /* Images.xcassets in Resources */,
 				2AC514FB18EDBEDC00F51DDC /* escudo-eua.gif in Resources */,
-				2A106E3818EA686800D2FC98 /* stickers.json in Resources */,
 				2AC5150918EDBEDC00F51DDC /* escudo-uk.gif in Resources */,
 				2AC514E618EDBEDC00F51DDC /* colombia.jpg in Resources */,
 				2AC514F318EDBEDC00F51DDC /* escudo-chile.gif in Resources */,
@@ -988,7 +979,6 @@
 				2AC5153318EE19EC00F51DDC /* StatusAndSearchTableViewHeader.m in Sources */,
 				2A56128C18EB055400A3BAF0 /* StickerTableViewController.m in Sources */,
 				2AA474A518EB52480052EF14 /* StickerController.m in Sources */,
-				2AC5153718EE1A2100F51DDC /* IntroductionTableViewHeader.m in Sources */,
 				2A598F1118EE68CD003665D3 /* TutorialViewController.m in Sources */,
 				2A56129518EB0E5900A3BAF0 /* StickerCell.m in Sources */,
 				2A106E4A18EA6CB500D2FC98 /* Sticker.m in Sources */,

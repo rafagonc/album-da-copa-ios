@@ -1,9 +1,9 @@
 {
-	"Alemanha" : {
+	"Deutschland" : {
 		"flag" : "alemanha.jpg",
 		"badge" : "escudo-alemanha.gif"
 	},
-	"Argélia" : {
+	"Algérie" : {
 		"flag" : "argelia.jpg",
 		"badge" : "escudo-argelia.gif"
 	},
@@ -14,11 +14,12 @@
 	"Australia" : {
 		"flag" : "australia.jpg",
 		"badge" : "escudo-australia.gif"
-	},"Bélgica" : {
+	},
+    "Belgique\/Belgiä" : {
 		"flag" : "belgica.jpg",
 		"badge" : "escudo-belgica.gif"
 	},
-	"Bosnia e Herzegovina" : {
+	"Bosna i Hercegovina" : {
 		"flag" : "bosnia.jpg",
 		"badge" : "escudo-bosnia.gif"
 	},
@@ -26,7 +27,7 @@
 		"flag" : "brasil.jpg",
 		"badge" : "escudo-brasil.gif"
 	},
-	"Camarões" : {
+	"Cameroun" : {
 		"flag" : "camaroes.jpg",
 		"badge" : "escudo-camaroes.gif"
 	},
@@ -38,11 +39,11 @@
 		"flag" : "colombia.jpg",
 		"badge" : "escudo-colombia.gif"
 	},
-	"Costa do Marfim" : {
+	"Côte d'Ivoire" : {
 		"flag" : "costadomarfim.jpg",
 		"badge" : "escudo-costa-do-marfim.gif"
 	},
-	"Croacia" : {
+	"Hrvatska" : {
 		"flag" : "croacia.jpg",
 		"badge" : "escudo-croacia.gif"
 	},
@@ -50,15 +51,15 @@
 		"flag" : "costarica.jpg",
 		"badge" : "escudo-costarica.gif"
 	},
-	"Equador" : {
+	"Ecuador" : {
 		"flag" : "equador.jpg",
 		"badge" : "escudo-equador.gif"
 	},
-	"Espanha" : {
+	"España" : {
 		"flag" : "espanha.jpg",
 		"badge" : "escudo-espanha.gif"
 	},
-	"Korea" : {
+	"Korea Republic" : {
 		"flag" : "koreia.jpg",
 		"badge" : "escudo-coreia.gif"
 	},
@@ -66,19 +67,19 @@
 		"flag" : "estadosunidos.jpg",
 		"badge" : "escudo-estadosunidos.gif"
 	},
-	"França" : {
+	"France" : {
 		"flag" : "franca.jpg",
 		"badge" : "escudo-franca.gif"
 	},
-	"Gana" : {
+	"Ghana" : {
 		"flag" : "gana.jpg",
 		"badge" : "escudo-gana.gif"
 	},
-	"Grécia" : {
+	"Hellas" : {
 		"flag" : "grecia.jpg",
 		"badge" : "escudo-grecia.gif"
 	},
-	"Holanda" : {
+	"Nederland" : {
 		"flag" : "holanda.jpg",
 		"badge" : "escudo-holanda.gif"
 	},
@@ -90,11 +91,11 @@
         "flag" : "mexico.jpg",
 		"badge" : "escudo-mexico.gif"
     },
-    "Japão" : {
+    "Japan" : {
         "flag" : "japao.jpg",
 		"badge" : "escudo-japao.gif"
     },
-    "Uruguai" : {
+    "Uruguay" : {
         "flag" : "uruguai.jpg",
 		"badge" : "escudo-uruguai.gif"
     },
@@ -102,7 +103,7 @@
         "flag" : "russia.jpg",
 		"badge" : "escudo-russia.gif"
     },
-    "Suiça" : {
+    "Switzerland" : {
         "flag" : "suica.jpg",
 		"badge" : "escudo-suica.gif"
     },
@@ -110,7 +111,7 @@
         "flag" : "nigeria.jpg",
 		"badge" : "escudo-nigeria.gif"
     },
-    "Inglaterra" : {
+    "England" : {
         "flag" : "inglaterra.jpg",
 		"badge" : "escudo-uk.gif"
     },
@@ -118,11 +119,11 @@
         "flag" : "portugal.jpg",
 		"badge" : "escudo-porgutal.gif"
     },
-    "Itália" : {
+    "Italia" : {
         "flag" : "italia.jpg",
 		"badge" : "escudo-italia.gif"
     },
-    "Irã" : {
+    "Iran" : {
         "flag" : "ira.jpg",
 		"badge" : "escudo-ira.gif"
     }

@@ -28,11 +28,11 @@
     [AdColony configureWithAppID:ADCOLONY__APPID zoneIDs:@[ADCOLONY__ZONE] delegate:self logging:YES];
     
     StickerTableViewController *stickerTableView = [[StickerTableViewController alloc] init];
-    stickerTableView.tabBarItem.title = @"Álbum";
+    stickerTableView.tabBarItem.title = @"Collection";
     stickerTableView.tabBarItem.image = [UIImage imageNamed:@"Bookmarks.png"];
     
     TradeViewController *tradeViewController = [[TradeViewController alloc] init];
-    tradeViewController.tabBarItem.title = @"Trocas";
+    tradeViewController.tabBarItem.title = @"Exchanges";
     tradeViewController.tabBarItem.image = [UIImage imageNamed:@"Opposite_Arrows.png"];
     
     UITabBarController *tabBar = [[UITabBarController alloc] init];

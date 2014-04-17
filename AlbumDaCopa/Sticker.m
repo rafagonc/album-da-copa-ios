@@ -48,7 +48,7 @@
     self.countryImageName = photosDict[stickerDict[@"section"]][@"flag"];
     
     if (!photosDict[stickerDict[@"section"]] ) {
-        if ([stickerDict[@"section"] isEqualToString:@"Introdução"] || [stickerDict[@"section"] isEqualToString:@"Estádios"]) return;
+        if ([stickerDict[@"section"] isEqualToString:@"Introduction"] || [stickerDict[@"section"] isEqualToString:@"Stadiums"]) return;
         NSAssert(0,@"Arruma Photos JSON - %@", stickerDict[@"section"]);
     }
  

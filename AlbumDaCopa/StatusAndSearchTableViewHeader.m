@@ -20,7 +20,7 @@
 }
 -(void)addViewsWithSearchBarDelegate:(UIViewController<UISearchBarDelegate> *)viewController {
     UISearchBar *searchBar = [[NSBundle mainBundle] loadNibNamed:UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad? @"SearchBar-iPad" : @"SearchBar" owner:self options:nil][0];
-    searchBar.placeholder = @"Procure por Número, Time, ou Jogador";
+    searchBar.placeholder = @"Search For Player, Team or Number";
     searchBar.delegate = viewController;
     searchBar.backgroundColor = [UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1];
     [self addSubview:searchBar];
@@ -49,7 +49,7 @@
     self.remainToCompleteLabel.textAlignment = NSTextAlignmentCenter;
     [statusContainer addSubview:self.remainToCompleteLabel];
     
-    segControl = [[SDSegmentedControl alloc] initWithItems:@[@"Todas", [NSString stringWithFormat:@"Repetidas(%lu)", (unsigned long)[StickerController findLeftoversAvaliable].count], [NSString stringWithFormat:@"Faltam(%lu)", (unsigned long)[StickerController toGet].count]]];
+    segControl = [[SDSegmentedControl alloc] initWithItems:@[@"All", [NSString stringWithFormat:@"Leftovers(%lu)", (unsigned long)[StickerController findLeftoversAvaliable].count], [NSString stringWithFormat:@"Need(%lu)", (unsigned long)[StickerController toGet].count]]];
     [segControl setFrame:CGRectMake(0, statusContainer.frame.origin.y + statusContainer.frame.size.height, SCREEN_WIDTH, 40)];
     [segControl setBackgroundColor:[UIColor colorWithRed:(56/255.0) green:(104/255.0) blue:(145/255.0) alpha:1]];
     [segControl setTitleTextAttributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:15.0f]} forState:UIControlStateNormal];
@@ -85,9 +85,9 @@
 -(void)assignValuesToSegControl:(NSNotification *)not {
     NSString *s = (NSString *)not.object;
     if ([s isEqualToString:@"leftovers"]) {
-        [segControl setTitle:[NSString stringWithFormat:@"Repetidas(%lu)", (unsigned long)[StickerController findLeftoversAvaliable].count] forSegmentAtIndex:1];
+        [segControl setTitle:[NSString stringWithFormat:@"Leftovers(%lu)", (unsigned long)[StickerController findLeftoversAvaliable].count] forSegmentAtIndex:1];
     } else {
-        [segControl setTitle:[NSString stringWithFormat:@"Faltam(%lu)", (unsigned long)[StickerController toGet].count] forSegmentAtIndex:2];
+        [segControl setTitle:[NSString stringWithFormat:@"Need(%lu)", (unsigned long)[StickerController toGet].count] forSegmentAtIndex:2];
 
     }
 }
