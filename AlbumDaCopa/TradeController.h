@@ -10,7 +10,7 @@
 
 @interface TradeController : NSObject
 #pragma mark - INIT
--(id)initWithJSONData:(NSData *)jsonData;
+-(id)initWithJSONData:(NSArray *)jsonData;
 
 #pragma mark - PROPERTIES
 @property (nonatomic,strong) NSArray *receivedStickerArray;

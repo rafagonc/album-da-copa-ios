@@ -62,10 +62,16 @@
     return [context executeFetchRequest:fetchR error:nil];
 }
 
-
+#pragma mark - PLUS ACTIONS
++(void)deleteAllAlbum {
+    for (Sticker *s in [[self class] allStickers]) {
+        s.leftovers = @0;
+        s.onAlbum = @0;
+    }
+}
 
 #pragma mark - TRANSFROM INTO JSON
-+(NSData *)jsonFromAllStickers {
++(NSData *)jsonFromAllStickers:(MultipeerAction)action {
     NSArray *allStickers = [StickerController allStickers];
     NSMutableArray *newStickersWithDictsInsteadOfObjects = [[NSMutableArray alloc] initWithCapacity:allStickers.count];
     for (Sticker *s in allStickers) {

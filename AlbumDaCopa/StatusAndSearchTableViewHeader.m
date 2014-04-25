@@ -74,22 +74,18 @@
 -(void)changeTableView:(SDSegmentedControl *)sender {
     StickerTableViewController *stickerTable = (StickerTableViewController *)[[[self nextResponder] nextResponder] nextResponder];
     if (sender.selectedSegmentIndex == 0) {
-        stickerTable.stickers = [StickerController allStickers];
+        stickerTable.rootStickers = [StickerController allStickers];
     } else if (sender.selectedSegmentIndex == 1) {
-        stickerTable.stickers = [StickerController findLeftoversAvaliable];
+        stickerTable.rootStickers = [StickerController findLeftoversAvaliable];
     } else {
-        stickerTable.stickers = [StickerController toGet];
+        stickerTable.rootStickers = [StickerController toGet];
     }
+    stickerTable.stickers = stickerTable.rootStickers;
     [stickerTable.tableView reloadData];
 }
 -(void)assignValuesToSegControl:(NSNotification *)not {
-    NSString *s = (NSString *)not.object;
-    if ([s isEqualToString:@"leftovers"]) {
-        [segControl setTitle:[NSString stringWithFormat:@"Repetidas(%lu)", (unsigned long)[StickerController findLeftoversAvaliable].count] forSegmentAtIndex:1];
-    } else {
-        [segControl setTitle:[NSString stringWithFormat:@"Faltam(%lu)", (unsigned long)[StickerController toGet].count] forSegmentAtIndex:2];
-
-    }
+    [segControl setTitle:[NSString stringWithFormat:@"Repetidas(%lu)", (unsigned long)[StickerController findLeftoversAvaliable].count] forSegmentAtIndex:1];
+    [segControl setTitle:[NSString stringWithFormat:@"Faltam(%lu)", (unsigned long)[StickerController toGet].count] forSegmentAtIndex:2];
 }
 
 #pragma mark - BANNER DELEGATE

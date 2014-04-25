@@ -57,7 +57,6 @@
     self.view.backgroundColor = flatBlue;
 }
 
-
 #pragma mark - GENERAL METHODS
 -(void)showAd {
     [AdColony playVideoAdForZone:ADCOLONY__ZONE withDelegate:nil];
@@ -71,6 +70,7 @@
         [self performSelector:@selector(presentTutorial) withObject:nil afterDelay:1];
     }
     self.stickers = [StickerController allStickers];
+    self.rootStickers = [StickerController allStickers];
     [self.tableView reloadData];
 
 
@@ -106,7 +106,7 @@
 #pragma mark - SEARCH BAR DELEGATE
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     if (searchBar.text.length == 0) {
-        self.stickers = [StickerController allStickers];
+        self.stickers = self.rootStickers;
         [self.tableView reloadData];
         return;
     }
@@ -116,7 +116,7 @@
     
     NSPredicate *compoundPredicate = [NSCompoundPredicate orPredicateWithSubpredicates:[self isNumber:searchBar.text]?@[indexPredicate] : @[namePredicate,sectionPredicate]];
     
-    self.stickers = [[StickerController allStickers] filteredArrayUsingPredicate:compoundPredicate];
+    self.stickers = [self.rootStickers filteredArrayUsingPredicate:compoundPredicate];
     [self.tableView reloadData];
 }
 -(BOOL)isNumber:(NSString *)text {
@@ -151,8 +151,9 @@
     
 }
 -(void)reloadTable {
-    self.stickers = [StickerController allStickers];
+    self.stickers = self.rootStickers;
     [self.tableView reloadData];
+    
 }
 
 #pragma mark - DEALLOC

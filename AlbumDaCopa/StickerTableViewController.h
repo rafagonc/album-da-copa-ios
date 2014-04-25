@@ -19,6 +19,7 @@
 #define ChangedStatsNotification @"changedStats"
 #define ReloadTableNotification @"reloadTable"
 #define ADCOLONY__ZONE @"vz5be979460cde4b7c8f"
+#define CellNotification @"changeCell"
 
 @interface StickerTableViewController : UIViewController <UISearchBarDelegate,UITableViewDelegate, UITableViewDataSource,UIScrollViewDelegate> {
     UIButton *doneOrTradeButton;
@@ -27,6 +28,7 @@
 
 #pragma mark - PROPERTIES
 @property (nonatomic,strong) NSArray *stickers;
+@property (nonatomic,strong) NSArray *rootStickers;
 @property (nonatomic) BOOL shouldBeginIntroduction;
 
 #pragma mark - OUTLETS

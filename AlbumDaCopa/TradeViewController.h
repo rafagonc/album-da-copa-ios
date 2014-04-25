@@ -13,6 +13,12 @@
 #import <MultipeerConnectivity/MultipeerConnectivity.h>
 #import "JLActionSheet.h"
 #import "ExplanationCell.h"
+#import "UIActionSheet+Blocks.h"
+#import "UIAlertView+Blocks.h"
+
+#define TradeStringAction @"trade"
+#define CopyStringAction @"copy"
+
 
 @interface TradeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, MCBrowserViewControllerDelegate,MCSessionDelegate> {
     BOOL isConnected;
@@ -21,6 +27,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
+@property (nonatomic) MultipeerAction mAction;
 @property (weak, nonatomic) IBOutlet UITableView *tradeTableView;
 @property (nonatomic,strong) NSArray *neededStickers;
 @property (weak, nonatomic) IBOutlet UIView *followTable;

@@ -26,6 +26,11 @@
 		2A106DEC18EA55BE00D2FC98 /* AlbumDaCopaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A106DEB18EA55BE00D2FC98 /* AlbumDaCopaTests.m */; };
 		2A106E3818EA686800D2FC98 /* stickers.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A106E3718EA686800D2FC98 /* stickers.json */; };
 		2A106E4A18EA6CB500D2FC98 /* Sticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A106E4918EA6CB500D2FC98 /* Sticker.m */; };
+		2A3D81431909F3B1005DA454 /* black22.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3D81421909F3B1005DA454 /* black22.png */; };
+		2A3D81451909F48E005DA454 /* plus24.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3D81441909F48E005DA454 /* plus24.png */; };
+		2A3D81471909F54C005DA454 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A3D81461909F54C005DA454 /* plus.png */; };
+		2A3D814A1909F65B005DA454 /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D81491909F65B005DA454 /* UIActionSheet+Blocks.m */; };
+		2A3D814D1909FCFF005DA454 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D814C1909FCFF005DA454 /* UIAlertView+Blocks.m */; };
 		2A46DBEF18EF24D60039451C /* TradeSystemTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A46DBED18EF24D60039451C /* TradeSystemTutorialViewController.m */; };
 		2A46DBF018EF24D60039451C /* TradeSystemTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A46DBEE18EF24D60039451C /* TradeSystemTutorialViewController.xib */; };
 		2A56128C18EB055400A3BAF0 /* StickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A56128A18EB055400A3BAF0 /* StickerTableViewController.m */; };
@@ -198,6 +203,13 @@
 		2A106E3718EA686800D2FC98 /* stickers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stickers.json; sourceTree = "<group>"; };
 		2A106E4818EA6CB500D2FC98 /* Sticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sticker.h; sourceTree = "<group>"; };
 		2A106E4918EA6CB500D2FC98 /* Sticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sticker.m; sourceTree = "<group>"; };
+		2A3D81421909F3B1005DA454 /* black22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black22.png; sourceTree = "<group>"; };
+		2A3D81441909F48E005DA454 /* plus24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus24.png; sourceTree = "<group>"; };
+		2A3D81461909F54C005DA454 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		2A3D81481909F65B005DA454 /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
+		2A3D81491909F65B005DA454 /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
+		2A3D814B1909FCFF005DA454 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		2A3D814C1909FCFF005DA454 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
 		2A46DBEC18EF24D60039451C /* TradeSystemTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeSystemTutorialViewController.h; sourceTree = "<group>"; };
 		2A46DBED18EF24D60039451C /* TradeSystemTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeSystemTutorialViewController.m; sourceTree = "<group>"; };
 		2A46DBEE18EF24D60039451C /* TradeSystemTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TradeSystemTutorialViewController.xib; sourceTree = "<group>"; };
@@ -250,6 +262,7 @@
 		2AADDBF318FC773A003AC695 /* Up.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Up.m; sourceTree = "<group>"; };
 		2AAE7A7318F85AB4003DF7EC /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		2AB8DF8618F316D600C1F641 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		2AB9A8431901964F005B50A1 /* AlbumDaCopa 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "AlbumDaCopa 2.xcdatamodel"; sourceTree = "<group>"; };
 		2AC1708618F4C2AB008CDA57 /* StickerTableViewController-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "StickerTableViewController-iPad.xib"; sourceTree = "<group>"; };
 		2AC1708818F4C497008CDA57 /* StickerCell-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "StickerCell-iPad.xib"; sourceTree = "<group>"; };
 		2AC5149D18EDBEDC00F51DDC /* alemanha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alemanha.jpg; sourceTree = "<group>"; };
@@ -414,6 +427,10 @@
 		2A03822618F3963600DB5A4A /* External */ = {
 			isa = PBXGroup;
 			children = (
+				2A3D814B1909FCFF005DA454 /* UIAlertView+Blocks.h */,
+				2A3D814C1909FCFF005DA454 /* UIAlertView+Blocks.m */,
+				2A3D81481909F65B005DA454 /* UIActionSheet+Blocks.h */,
+				2A3D81491909F65B005DA454 /* UIActionSheet+Blocks.m */,
 				2AEFE7F118FD135500568CED /* SDSegmentedControl */,
 				2AFA378818FCBE490038889E /* JLActionSheet */,
 				2A87E1E818F59CE400359335 /* GZIP */,
@@ -509,6 +526,9 @@
 		2A106DC918EA55BE00D2FC98 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2A3D81461909F54C005DA454 /* plus.png */,
+				2A3D81441909F48E005DA454 /* plus24.png */,
+				2A3D81421909F3B1005DA454 /* black22.png */,
 				2AFA379818FCD06A0038889E /* Icon76x76.png */,
 				2AFA379A18FCD0B20038889E /* Icon152x152.png */,
 				2AADDBEB18FC7427003AC695 /* Opposite_Arrows.png */,
@@ -869,6 +889,7 @@
 				2AC514E518EDBEDC00F51DDC /* chile.jpg in Resources */,
 				2AC5151918EDBEDC00F51DDC /* portugal.jpg in Resources */,
 				2AC514F018EDBEDC00F51DDC /* escudo-bosnia.gif in Resources */,
+				2A3D81451909F48E005DA454 /* plus24.png in Resources */,
 				2AADDBE418FC6D41003AC695 /* ExplanationCell-iPad.xib in Resources */,
 				2A56129A18EB181600A3BAF0 /* Delete.png in Resources */,
 				2AC5150118EDBEDC00F51DDC /* escudo-ira.gif in Resources */,
@@ -887,10 +908,12 @@
 				2AC5150018EDBEDC00F51DDC /* escudo-honduras.gif in Resources */,
 				2AFA379318FCC5EE0038889E /* ExplanationCell2.xib in Resources */,
 				2AC514FD18EDBEDC00F51DDC /* escudo-gana.gif in Resources */,
+				2A3D81471909F54C005DA454 /* plus.png in Resources */,
 				2AC514F418EDBEDC00F51DDC /* escudo-colombia.gif in Resources */,
 				2AADDBE818FC73C4003AC695 /* Bookmarks@2x.png in Resources */,
 				2AC5151018EDBEDC00F51DDC /* holanda.jpg in Resources */,
 				2AC514EC18EDBEDC00F51DDC /* escudo-argelia.gif in Resources */,
+				2A3D81431909F3B1005DA454 /* black22.png in Resources */,
 				2AC5151418EDBEDC00F51DDC /* italia.jpg in Resources */,
 				2A062A1318EF441300A2CFA3 /* stickersEnglish.json in Resources */,
 				2AADDBEA18FC73E3003AC695 /* Bookmarks.png in Resources */,
@@ -989,12 +1012,14 @@
 				2A56128C18EB055400A3BAF0 /* StickerTableViewController.m in Sources */,
 				2AA474A518EB52480052EF14 /* StickerController.m in Sources */,
 				2AC5153718EE1A2100F51DDC /* IntroductionTableViewHeader.m in Sources */,
+				2A3D814A1909F65B005DA454 /* UIActionSheet+Blocks.m in Sources */,
 				2A598F1118EE68CD003665D3 /* TutorialViewController.m in Sources */,
 				2A56129518EB0E5900A3BAF0 /* StickerCell.m in Sources */,
 				2A106E4A18EA6CB500D2FC98 /* Sticker.m in Sources */,
 				2AFA378F18FCBE490038889E /* JLActionButton.m in Sources */,
 				2A106DD618EA55BE00D2FC98 /* AlbumDaCopa.xcdatamodeld in Sources */,
 				2A87E1EB18F59CE400359335 /* GZIP.m in Sources */,
+				2A3D814D1909FCFF005DA454 /* UIAlertView+Blocks.m in Sources */,
 				2AEFE7F018FD135200568CED /* SDSegmentedControl.m in Sources */,
 				2A106DD318EA55BE00D2FC98 /* AppDelegate.m in Sources */,
 				2A02131518F2FD1200092545 /* TradeViewController.m in Sources */,
@@ -1123,8 +1148,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_CXX_LIBRARY = "libstdc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rafael Gonzalves (A7R335TQR4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rafael Gonzalves (8P5355PV9G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rafael Gonzalves (8P5355PV9G)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1141,7 +1166,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "83E5C4F8-4875-4352-94F6-9AF72642E838";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1154,8 +1179,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_CXX_LIBRARY = "libstdc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rafael Gonzalves (A7R335TQR4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rafael Gonzalves (8P5355PV9G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rafael Gonzalves (8P5355PV9G)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1172,7 +1197,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "83E5C4F8-4875-4352-94F6-9AF72642E838";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1256,6 +1281,7 @@
 		2A106DD418EA55BE00D2FC98 /* AlbumDaCopa.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				2AB9A8431901964F005B50A1 /* AlbumDaCopa 2.xcdatamodel */,
 				2A106DD518EA55BE00D2FC98 /* AlbumDaCopa.xcdatamodel */,
 			);
 			currentVersion = 2A106DD518EA55BE00D2FC98 /* AlbumDaCopa.xcdatamodel */;

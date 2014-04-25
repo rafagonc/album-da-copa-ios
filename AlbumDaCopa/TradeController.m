@@ -14,12 +14,12 @@
 @end
 
 @implementation TradeController
--(id)initWithJSONData:(NSData *)jsonData {
+-(id)initWithJSONData:(NSArray *)jsonData {
     if (self = [super init]) {
         self.stickersHeGaveMe = [[NSMutableArray alloc] init];
         self.stickersIGiveHim = [[NSMutableArray alloc] init];
         NSError *error;
-        self.receivedStickerArray = [NSJSONSerialization JSONObjectWithData:[jsonData gunzippedData] options:NSJSONReadingAllowFragments error:&error];
+        self.receivedStickerArray = jsonData;
         if (error) {
             jsonReadingErrorRaised = YES;
         }

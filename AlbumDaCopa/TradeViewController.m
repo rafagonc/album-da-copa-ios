@@ -36,6 +36,8 @@ static NSString *const serviceType = @"session";
     
     isConnected = NO;
     
+    self.mAction = Trade;
+    
     [self setupTableView];
     [self setUpMultipeer];
     [self decorator];
@@ -95,6 +97,7 @@ static NSString *const serviceType = @"session";
 
 #pragma mark - BROWSER DELEGATE
 -(void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController {
+    self.mAction = Trade;
     [browserViewController dismissViewControllerAnimated:YES completion:nil];
 }
 -(void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController {
@@ -103,18 +106,13 @@ static NSString *const serviceType = @"session";
 }
 -(void)sendData {
     NSError *error;
-    NSLog(@"%@",[self.mySession connectedPeers]);
-    if (![self.mySession sendData:[StickerController jsonFromAllStickers] toPeers:[self.mySession connectedPeers] withMode:MCSessionSendDataUnreliable error:&error]) {
-        NSLog(@"%@",error);
-    }
-    
+    if (![self.mySession sendData:[StickerController jsonFromAllStickers:self.mAction] toPeers:[self.mySession connectedPeers] withMode:MCSessionSendDataUnreliable error:&error]) NSLog(@"%@",error);
 }
 
 #pragma mark - ACTIONS
 -(IBAction)procurarDispositivos:(id)sender {
     if (isConnected) {
-        JLActionSheet *actionSheet = [[JLActionSheet alloc] initWithTitle:nil delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@[@"Desconectar"]];
-        [actionSheet setDidDismissBlock:^(JLActionSheet *actionSheet, NSInteger buttonIndex) {
+        [UIAlertView showWithTitle:@"Alerta" message:[NSString stringWithFormat:@"Deseja desconectar do respectivo dispositivo: %@ ?", self.mySession.connectedPeers.count? [self.mySession.connectedPeers[0] displayName] : @""] cancelButtonTitle:@"Não" otherButtonTitles:@[@"Sim"] tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
             if (buttonIndex == 1) {
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     isConnected = NO;
@@ -124,14 +122,33 @@ static NSString *const serviceType = @"session";
                     [self.tradeTableView reloadData];
                 });
             }
+            return;
         }];
-        [actionSheet setStyle:JLSTYLE_SUPERCLEAN];
-        [actionSheet showInView:self.view];
-        
         return;
     }
     
     [self presentViewController:self.browserVC animated:YES completion:nil];
+}
+-(IBAction)plusAction:(UIButton *)sender {
+    [UIActionSheet showInView:self.view withTitle:@"Opções. Para sair clique no resto da tela." cancelButtonTitle:@"Cancelar" destructiveButtonTitle:nil otherButtonTitles:@[ @"Deletar Álbum",@"Informações do Aplicativo"] tapBlock:^(UIActionSheet *actionSheet, NSInteger buttonIndex) {
+        if (buttonIndex == 1) {
+            [UIAlertView showWithTitle:@"Informações" message:@"Esse aplicativo foi criado por Rafael Gonçalves" cancelButtonTitle:@"Ok" otherButtonTitles:nil tapBlock:nil];
+            
+            
+        } else if (buttonIndex == 0) {
+            [UIAlertView showWithTitle:@"Tem Certeza?" message:@"Ao confirmar esse alerta, você perderá todas as informações e figurinhas do seu álbum." cancelButtonTitle:@"NÃO!!" otherButtonTitles:@[@"Ok"] tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex2) {
+                if (buttonIndex2 == 1) {
+                    [StickerController deleteAllAlbum];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:CellNotification object:nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:ChangedStatsNotification object:nil];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:AssingValuesToSegControl object:@"toGet" userInfo:nil];
+                }
+            }];
+            
+            
+        }
+        
+    }];
 }
 
 #pragma mark - TABLE VIEW DELEGATE
@@ -181,16 +198,26 @@ static NSString *const serviceType = @"session";
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         isConnected = YES;
         [self.searchButton setTitle:peerID.displayName forState:UIControlStateNormal];
-        TradeController *trade = [[TradeController alloc] initWithJSONData:data];
+        [self didReceivedStickersFromOtherDevice:data];
+            });
+    
+    
+}
+-(void)didReceivedStickersFromOtherDevice:(NSData *)jsonData {
+    NSError *error;
+    NSArray *dict  = [NSJSONSerialization JSONObjectWithData:[jsonData gunzippedData] options:NSJSONReadingAllowFragments error:&error];
+    if (error || !dict.count) {
+        return;
+    }
+        TradeController *trade = [[TradeController alloc] initWithJSONData:dict];
         self.tradeData = [trade startComparingStickersToFindPossibleExchanges];
         if (!self.tradeData.count) {
             [[[UIAlertView alloc] initWithTitle:@"Não existem trocas disponíveis." message:@"Verifique se todas suas figurinhas repetidas estão configuradas corretamente." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil] show];
         }
         if (![self getNeededStickers]) return;
         [self.tradeTableView reloadData];
-    });
-    
-    
+
+ 
 }
 
 #pragma mark - DEALLOC

@@ -13,6 +13,7 @@
 #pragma mark - AWAKE
 -(void)awakeFromNib {
     [super awakeFromNib];
+    
     self.leftoversTextField.delegate = self;
     self.nameLabel.font = [UIFont boldSystemFontOfSize:15.0];
 }
@@ -27,17 +28,18 @@
     _hasIt = hasIt;
     if (hasIt) {
         self.sticker.onAlbum = @YES;
-        self.sticker.dateAdded = [NSDate date];
         [self.checkButton setBackgroundImage:[UIImage imageNamed:@"Check.png"] forState:UIControlStateNormal];
     } else {
         self.sticker.onAlbum = @NO;
-        self.sticker.dateAdded = nil;
+        self.sticker.leftovers = @0;
         self.leftoversTextField.text = @"+";
         [self.checkButton setBackgroundImage:[UIImage imageNamed:@"Delete.png"] forState:UIControlStateNormal];
     }
     [[AppDelegate staticManagedObjectContext] save:nil];
 }
 -(void)setSticker:(Sticker *)sticker {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeCell) name:CellNotification object:nil];
+
     _sticker = sticker;
     self.hasIt = sticker.onAlbum.boolValue;
     self.nameLabel.text = [self fixStickerString:sticker.name andSticker:sticker];
@@ -57,8 +59,8 @@
 #pragma mark - CHECK ACTION
 - (IBAction)checkAction:(id)sender {
     self.hasIt = !self.hasIt;
-    [[NSNotificationCenter defaultCenter] postNotificationName:ChangedStatsNotification object:nil];
     self.stickerHasChanges = YES;
+    [[NSNotificationCenter defaultCenter] postNotificationName:ChangedStatsNotification object:nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:AssingValuesToSegControl object:@"toGet" userInfo:nil];
 }
 
@@ -101,5 +103,8 @@
     self.sticker.leftovers = @(leftovers);
     self.stickerHasChanges = YES;
     [[NSNotificationCenter defaultCenter] postNotificationName:AssingValuesToSegControl object:@"leftovers" userInfo:nil];
+}
+-(void)changeCell {
+    self.hasIt = NO;
 }
 @end
